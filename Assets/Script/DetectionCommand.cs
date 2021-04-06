@@ -6,26 +6,28 @@ namespace Script
 {
     public class DetectionCommand : Command
     {
+        private readonly Transform _transform;
         private readonly Transform _target;
         private readonly NavMeshAgent _agent;
         private readonly float _lookRadius;
         private float _distance;
 
         public DetectionCommand(
+            Transform transform,
             Transform target,
             NavMeshAgent agent,
-            float lookRadius,
-            float distance
+            float lookRadius
             )
         {
+            _transform = transform;
             _target = target;
             _agent = agent;
             _lookRadius = lookRadius;
-            _distance = distance;
         }
 
         public override IEnumerator Execute()
         {
+            _distance = Vector3.Distance(_target.position, _transform.position);
             //add a sound of war for npc
             if (_distance <= _lookRadius)
             {
