@@ -1,7 +1,10 @@
+using System.Collections;
+using UnityEngine;
+
 namespace Script
 {
-    public abstract class Command
+    public abstract class Command 
     {
-        public abstract void Execute();
+        public abstract IEnumerator Execute();
     }
 }
