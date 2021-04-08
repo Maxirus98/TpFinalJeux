@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using Unity.UNetWeaver;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -21,6 +19,7 @@ namespace Script
 
         public override IEnumerator Execute()
         {
+            
             foreach (var transform in _transforms)
             { 
                 _agent.SetDestination(transform.position); 
