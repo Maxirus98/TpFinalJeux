@@ -21,14 +21,14 @@ public class NpcController : MonoBehaviour
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _agent = GetComponent<NavMeshAgent>();
         _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());
-        //SetDetectionCommand();
+        SetDetectionCommand();
         SetNavigationCommand(_agent,_checkpoints);
         StartCoroutine(_navigationCommand.Execute());
     }
 
     void Update()
     {
-        //StartCoroutine(_detectionCommand.Execute());
+        StartCoroutine(_detectionCommand.Execute());
     }
     private void SetDetectionCommand()
     {
