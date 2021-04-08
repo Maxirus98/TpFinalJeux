@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace Script
 {
@@ -16,14 +18,15 @@ namespace Script
             _agent = agent;
             _agent.isStopped = false;
         }
-
+        
+        //Passer le NpcState??
         public override IEnumerator Execute()
         {
-            
-            foreach (var transform in _transforms)
-            { 
-                _agent.SetDestination(transform.position); 
-                yield return new WaitForSeconds(5f);
+            while (true)
+            {
+                int position = (int)Random.Range(0f,_transforms.Count-1);
+                _agent.SetDestination(_transforms[position].position); 
+                yield return new WaitForSeconds(10f);
             }
         }
     }

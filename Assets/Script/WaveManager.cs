@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WaveManager : MonoBehaviour
 {
@@ -18,23 +20,17 @@ public class WaveManager : MonoBehaviour
         //replace by a boolean
         while (stop)
         {
+            int position = (int) Random.Range(0f, prefabsNPC.Count-1);
+            InstantiateAsChild(prefabsNPC[position],1,50);
             yield return new WaitForSeconds(time);
-            foreach (var npc in prefabsNPC)
-            {
-                InstanciateAsChild(npc,1,50);
-            }
         }
     }
-    private void InstanciateAsChild(GameObject prefab, float x, float y)
+    private void InstantiateAsChild(GameObject prefab, float x, float y)
     {
-        GameObject npc = Instantiate(prefab, new Vector3(GenerateRandomValue(x,y),0,GenerateRandomValue(x,y)), Quaternion.identity);
+        GameObject npc = Instantiate(prefab, new Vector3(Random.Range(x,y),0,Random.Range(x,y)), Quaternion.identity);
         npc.name = prefab.name;
         npc.transform.parent = transform;
         _nbrNpcs++;
     }
     
-    private float GenerateRandomValue(float min, float max)
-    {
-        return Random.Range(min, max);;
-    }
 }

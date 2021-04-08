@@ -14,22 +14,30 @@ public class NpcController : MonoBehaviour
     private NavMeshAgent _agent;
     private List<Transform> _checkpoints;
     private DetectionCommand _detectionCommand;
+    private NavigationCommand _navigationCommand;
 
     void Start()
     {
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _agent = GetComponent<NavMeshAgent>();
         _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());
-        SetDetectionCommand(_target,_agent);
+        //SetDetectionCommand();
+        SetNavigationCommand(_agent,_checkpoints);
+        StartCoroutine(_navigationCommand.Execute());
     }
 
     void Update()
     {
-        StartCoroutine(_detectionCommand.Execute());
+        //StartCoroutine(_detectionCommand.Execute());
     }
-    private void SetDetectionCommand(Transform target,  NavMeshAgent agent)
+    private void SetDetectionCommand()
     {
-        _detectionCommand = new DetectionCommand(  transform,target, agent, lookRadius);
+        _detectionCommand = new DetectionCommand(transform,_target, _agent, lookRadius);
+    }
+
+    private void SetNavigationCommand(NavMeshAgent agent, List<Transform> checkpoints)
+    {
+        _navigationCommand = new NavigationCommand(agent, checkpoints);
     }
     private void OnDrawGizmosSelected()
     {
