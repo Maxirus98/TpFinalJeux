@@ -9,10 +9,11 @@ public class PlayerAnimator : MonoBehaviour
     private const float LOCOMOTION_SMOOTH_TIME = .1f;
     private Animator _animator;
     private NavMeshAgent _agent;
-
+    [SerializeField] private GameObject nuage;
 
     public bool _isAttacking = false;
     private float _attackNumber;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,10 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButton("Jump"))
+        {
+            CallCriDuTonnerre();
+        }
         //agent current speed / agent maximum speed
         float speedPercent = _agent.velocity.magnitude / _agent.speed * 10;
         //Will take 0.1 sec to change animation
@@ -39,7 +44,13 @@ public class PlayerAnimator : MonoBehaviour
         //StartCoroutine(CoroutineAttack());
         
     }
-    
+
+    private void CallCriDuTonnerre()
+    {
+        var cloneNuage = Instantiate(nuage, transform.position,
+            Quaternion.Euler(90, 0, 0));
+        Destroy(cloneNuage, 1f);
+    }    
     public IEnumerator CoroutineAttack()
     {
         yield return new WaitForSeconds(0.5f);
