@@ -19,6 +19,9 @@ public class MouseManager : MonoBehaviour
 
     [SerializeField] private Interactable focus;
     [SerializeField] private PlayerAnimator _playerAnimator;
+    
+    private static readonly float coolDownPeriodAttack = 0.5f;
+    public float TimeStamp { get; set; }
 
     //2e étape, déclarer le handler
     public EventVector3 OnClickEnvironment;
@@ -42,7 +45,7 @@ public class MouseManager : MonoBehaviour
             }
            
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && TimeStamp <= Time.time)
         {
             RaycastHit hit;
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, _attackableLayer.value))
@@ -53,8 +56,7 @@ public class MouseManager : MonoBehaviour
                 {
                     SetFocus(interactable);
                     _playerAnimator.Attack();
-                    StartCoroutine(_playerAnimator.CoroutineAttack());
-                    
+                    TimeStamp = Time.time + coolDownPeriodAttack;
                 }
             }
         }
