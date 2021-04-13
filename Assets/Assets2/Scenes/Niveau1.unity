@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+>>>>>>> fbaa4618d9c7ae8ab95131befc738f521c7f3490
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -550,6 +554,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149e23bd6bcec9f4c8be38951957b17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  nuage: {fileID: 3945899008282555542, guid: 0f1157fc093c43b47a304ac264a6ee80, type: 3}
+>>>>>>> fbaa4618d9c7ae8ab95131befc738f521c7f3490
   _isAttacking: 0
 --- !u!195 &817269062 stripped
 NavMeshAgent:
@@ -814,6 +822,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &8512674371210031988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,3 +912,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f1157fc093c43b47a304ac264a6ee80, type: 3}
+=======
+>>>>>>> fbaa4618d9c7ae8ab95131befc738f521c7f3490
