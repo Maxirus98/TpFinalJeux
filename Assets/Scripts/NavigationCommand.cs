@@ -26,7 +26,7 @@ namespace Script
             {
                 int position = (int)Random.Range(0f,_checkpoints.Count-1);
                 _agent.SetDestination(_checkpoints[position].position); 
-                yield return new WaitForSeconds(10f);
+                yield return new WaitForSeconds(5f);
             }
         }
     }
