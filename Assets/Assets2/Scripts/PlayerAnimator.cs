@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 public class PlayerAnimator : MonoBehaviour
 {
     private const float LOCOMOTION_SMOOTH_TIME = .1f;
@@ -20,7 +19,6 @@ public class PlayerAnimator : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,7 +32,6 @@ public class PlayerAnimator : MonoBehaviour
         _animator.SetFloat("speedPercent", speedPercent, LOCOMOTION_SMOOTH_TIME, Time.deltaTime);
         
     }
-
     public void Attack()
     {
         _isAttacking = true;
@@ -44,7 +41,6 @@ public class PlayerAnimator : MonoBehaviour
         //StartCoroutine(CoroutineAttack());
         
     }
-
     private void CallCriDuTonnerre()
     {
         var cloneNuage = Instantiate(nuage, transform.position,
@@ -57,7 +53,6 @@ public class PlayerAnimator : MonoBehaviour
         _isAttacking = false;
         _animator.SetBool("isAttacking", _isAttacking);
     }
-
     void SetAttackNumber()
     {
         if (_attackNumber < 2)
@@ -69,5 +64,4 @@ public class PlayerAnimator : MonoBehaviour
             _attackNumber = 0;
         }
     }
-
 }

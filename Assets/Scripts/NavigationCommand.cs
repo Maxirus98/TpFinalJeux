@@ -9,12 +9,12 @@ namespace Script
 {
     public class NavigationCommand : Command
     {
-        private readonly List<Transform> _transforms;
+        private readonly List<Transform> _checkpoints;
         private readonly NavMeshAgent _agent;
 
-        public NavigationCommand(NavMeshAgent agent,List<Transform> transforms)
+        public NavigationCommand(NavMeshAgent agent,List<Transform> checkpoints)
         {
-            _transforms = transforms;
+            _checkpoints = checkpoints;
             _agent = agent;
             _agent.isStopped = false;
         }
@@ -24,8 +24,8 @@ namespace Script
         {
             while (true)
             {
-                int position = (int)Random.Range(0f,_transforms.Count-1);
-                _agent.SetDestination(_transforms[position].position); 
+                int position = (int)Random.Range(0f,_checkpoints.Count-1);
+                _agent.SetDestination(_checkpoints[position].position); 
                 yield return new WaitForSeconds(10f);
             }
         }
