@@ -10,7 +10,7 @@ public class PlayerAnimator : MonoBehaviour
     private Animator _animator;
     private NavMeshAgent _agent;
     [SerializeField] private GameObject nuage;
-
+    [SerializeField] private GameObject rifle;
     public bool _isAttacking = false;
     private float _attackNumber;
     
@@ -48,7 +48,7 @@ public class PlayerAnimator : MonoBehaviour
     private void CallCriDuTonnerre()
     {
         var cloneNuage = Instantiate(nuage, transform.position,
-            Quaternion.Euler(90, 0, 0));
+            Quaternion.AngleAxis(90, new Vector3(1, 0, 0)));
         Destroy(cloneNuage, 1f);
     }    
     public IEnumerator CoroutineAttack()
