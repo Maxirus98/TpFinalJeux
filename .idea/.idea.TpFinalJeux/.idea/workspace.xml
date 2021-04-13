@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8c0253-c9f0-427d-9f42-a0ae3c0402b6" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" afterDir="false" />
@@ -382,6 +383,9 @@
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
 >>>>>>> 78051d0241ce797f25bc07714b437dcdff123afe
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" afterDir="false" />
+>>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,10 +413,13 @@
       <option value="$PROJECT_DIR$/Assets/Script/NpcController.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/NavigationCommand.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/WaveManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" />
       <option value="$PROJECT_DIR$/Assets/Assets2/Scripts/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/Assets2/Scenes/Niveau1.unity" />
+<<<<<<< HEAD
+=======
+      <option value="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" />
+>>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qasmxdfO9UviOwtBhqKOgo1bsG" />
@@ -469,8 +476,12 @@
       <workItem from="1618316105789" duration="2741000" />
 =======
       <workItem from="1618316520834" duration="816000" />
+<<<<<<< HEAD
       <workItem from="1618317507093" duration="816000" />
 >>>>>>> 78051d0241ce797f25bc07714b437dcdff123afe
+=======
+      <workItem from="1618317507093" duration="1539000" />
+>>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
     </task>
     <servers />
   </component>
