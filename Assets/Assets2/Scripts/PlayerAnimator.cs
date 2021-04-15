@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
@@ -13,10 +14,12 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private GameObject nuage;
     [SerializeField] private GameObject rifle;
     private Vector3 riflePosition;
-    private Vector3 rifleAngle;
+    private Quaternion rifleQuaternion;
     private Vector3 rifleOffset;
     private GameObject cloneRifle;
     [SerializeField] private GameObject bullet;
+
+    private Quaternion riflePivot;
     
     public bool _isAttacking = false;
     private float _attackNumber;
@@ -30,7 +33,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
-        rifleOffset = new Vector3(1f, 1f, 0f);
+        riflePivot = Quaternion.FromToRotation (Vector3.back, Vector3.left);
     }
 
     // Update is called once per frame
@@ -38,9 +41,14 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (cloneRifle)
         {
-            riflePosition = transform.position + rifleOffset;
-            rifleAngle = transform.rotation.eulerAngles;
+            var position = transform.position;
+            riflePosition = position + rifleOffset;
             cloneRifle.transform.position = riflePosition;
+            cloneRifle.transform.rotation = Quaternion.FromToRotation (Vector3.forward, Vector3.left);
+
+            cloneRifle.transform.localPosition = Quaternion.RotateTowards(transform.rotation, riflePivot, 20 * Time.deltaTime)
+                                                 * cloneRifle.transform.localPosition;
+            cloneRifle.transform.localPosition = Quaternion.LookRotation(cloneRifle.transform.localPosition * -1, Vector3.left) * cloneRifle.transform.localPosition;
         }
         if (Input.GetButton("Jump") && TimeStamp <= Time.time)
         {
@@ -59,11 +67,6 @@ public class PlayerAnimator : MonoBehaviour
 
     }
 
-    private IEnumerator WaitFor(float coolDownPeriod)
-    {
-        yield return new WaitForSeconds(coolDownPeriod);
-    }
-
     public void Attack()
     {
         _isAttacking = true;
@@ -71,7 +74,6 @@ public class PlayerAnimator : MonoBehaviour
         _animator.SetFloat("AttackNumber", _attackNumber);
         SetAttackNumber();
         //StartCoroutine(CoroutineAttack());
-
     }
 
     private void CallCriDuTonnerre()
@@ -86,7 +88,7 @@ public class PlayerAnimator : MonoBehaviour
     private void SprayAndPray()
     {
         SprayAndPraySpawnGun();
-        StartCoroutine(WaitFor(coolDownPeriodSpells));
+        StartCoroutine(Cooldown.WaitFor(coolDownPeriodSpells));
         TimeStamp = Time.time + coolDownPeriodSpells;
     }
     
@@ -103,10 +105,6 @@ public class PlayerAnimator : MonoBehaviour
         Destroy(cloneBullet, 1f);
     }
 
-    private void SprayAndPrayRotateAround()
-    {
-        
-    }
 
     public IEnumerator CoroutineAttack()
     {

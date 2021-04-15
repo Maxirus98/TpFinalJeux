@@ -37,6 +37,7 @@
           </e>
           <e p="Scripts" t="Include">
             <e p="Attackable.cs" t="Include" />
+            <e p="Cooldown.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
