@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpiderDimension.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpiderDimension.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +36,10 @@
       <option value="$PROJECT_DIR$/Assets/Assets2/Scenes/Niveau1.unity" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WaveManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qasmxdfO9UviOwtBhqKOgo1bsG" />
@@ -94,7 +93,7 @@
       <workItem from="1617916634895" duration="788000" />
       <workItem from="1618316520834" duration="816000" />
       <workItem from="1618317507093" duration="2367000" />
-      <workItem from="1618513444507" duration="7276000" />
+      <workItem from="1618513444507" duration="8141000" />
     </task>
     <servers />
   </component>
