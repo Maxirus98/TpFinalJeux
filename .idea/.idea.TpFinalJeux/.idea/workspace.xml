@@ -4,6 +4,7 @@
     <list default="true" id="3d8c0253-c9f0-427d-9f42-a0ae3c0402b6" name="Default Changelist" comment="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" afterDir="false" />
@@ -389,6 +390,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" afterDir="false" />
 >>>>>>> 0aa08559762e9cb4cd59de01a40ff76ba4600922
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SpiderDimension.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SpiderDimension.unity" afterDir="false" />
+>>>>>>> 0e4d730a7146d0d9a1b267ed501f49162e5a9289
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" afterDir="false" />
 >>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
     </list>
@@ -425,9 +431,17 @@
 =======
 =======
       <option value="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" />
+<<<<<<< HEAD
 >>>>>>> 0aa08559762e9cb4cd59de01a40ff76ba4600922
       <option value="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" />
 >>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
+=======
+      <option value="$PROJECT_DIR$/Assets/Scripts/WaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemController.cs" />
+>>>>>>> 0e4d730a7146d0d9a1b267ed501f49162e5a9289
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qasmxdfO9UviOwtBhqKOgo1bsG" />
@@ -493,8 +507,12 @@
 >>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
 =======
       <workItem from="1618317507093" duration="2367000" />
+<<<<<<< HEAD
       <workItem from="1618513444507" duration="2119000" />
 >>>>>>> 0aa08559762e9cb4cd59de01a40ff76ba4600922
+=======
+      <workItem from="1618513444507" duration="7276000" />
+>>>>>>> 0e4d730a7146d0d9a1b267ed501f49162e5a9289
     </task>
     <servers />
   </component>

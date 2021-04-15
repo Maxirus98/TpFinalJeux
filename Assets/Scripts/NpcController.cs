@@ -15,8 +15,6 @@ public class NpcController : MonoBehaviour
     private NavMeshAgent _agent;
     private List<Transform> _checkpoints;
     private readonly List<Command> _commands = new List<Command>() ;
-    private DetectionCommand _detectionCommand;
-    private NavigationCommand _navigationCommand;
 
     void Start()
     {
