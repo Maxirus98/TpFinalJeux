@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class PlayerAnimator : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PlayerAnimator : MonoBehaviour
     private NavMeshAgent _agent;
     [SerializeField] private GameObject nuage;
     [SerializeField] private GameObject rifle;
+    private Vector3 riflePosition;
+    private Vector3 rifleAngle;
+    private Vector3 rifleOffset;
     private GameObject cloneRifle;
     [SerializeField] private GameObject bullet;
     
@@ -26,17 +30,24 @@ public class PlayerAnimator : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
+        rifleOffset = new Vector3(1f, 1f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (cloneRifle)
+        {
+            riflePosition = transform.position + rifleOffset;
+            rifleAngle = transform.rotation.eulerAngles;
+            cloneRifle.transform.position = riflePosition;
+        }
         if (Input.GetButton("Jump") && TimeStamp <= Time.time)
         {
             CallCriDuTonnerre();
         }
 
-        if (Input.GetButton("Fire2") && TimeStamp <= Time.time)
+        if (Input.GetButton("Fire3") && TimeStamp <= Time.time)
         {
             SprayAndPray();
         }
@@ -81,7 +92,7 @@ public class PlayerAnimator : MonoBehaviour
     
     private void SprayAndPraySpawnGun()
     {
-        cloneRifle = Instantiate(rifle, transform.position, Quaternion.identity);
+        cloneRifle = Instantiate(rifle, riflePosition, Quaternion.Euler(90, 180, 0));
         Destroy(cloneRifle, 5);
     }
     private void SprayAndPrayShooting()
