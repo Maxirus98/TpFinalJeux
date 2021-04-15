@@ -20003,6 +20003,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
+      propertyPath: stop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
+      propertyPath: time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
       propertyPath: prefabsNPC.Array.data[0]
       value: 
       objectReference: {fileID: 1305053113}

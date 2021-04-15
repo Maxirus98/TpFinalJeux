@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3d8c0253-c9f0-427d-9f42-a0ae3c0402b6" name="Default Changelist" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" afterDir="false" />
@@ -384,6 +385,10 @@
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
 >>>>>>> 78051d0241ce797f25bc07714b437dcdff123afe
 =======
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TpFinalJeux/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" afterDir="false" />
+>>>>>>> 0aa08559762e9cb4cd59de01a40ff76ba4600922
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" afterDir="false" />
 >>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
     </list>
@@ -413,11 +418,14 @@
       <option value="$PROJECT_DIR$/Assets/Script/NpcController.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/NavigationCommand.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/WaveManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" />
       <option value="$PROJECT_DIR$/Assets/Assets2/Scripts/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/Assets2/Scenes/Niveau1.unity" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+      <option value="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" />
+>>>>>>> 0aa08559762e9cb4cd59de01a40ff76ba4600922
       <option value="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" />
 >>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
     </changedPaths>
@@ -477,11 +485,16 @@
 =======
       <workItem from="1618316520834" duration="816000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1618317507093" duration="816000" />
 >>>>>>> 78051d0241ce797f25bc07714b437dcdff123afe
 =======
       <workItem from="1618317507093" duration="1539000" />
 >>>>>>> c5ce312a2c6bb30db6a69adf36d10608378a54ff
+=======
+      <workItem from="1618317507093" duration="2367000" />
+      <workItem from="1618513444507" duration="2119000" />
+>>>>>>> 0aa08559762e9cb4cd59de01a40ff76ba4600922
     </task>
     <servers />
   </component>

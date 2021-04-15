@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Script;
 using UnityEngine;
 using UnityEngine.AI;
@@ -13,6 +14,7 @@ public class NpcController : MonoBehaviour
     private float _distance;
     private NavMeshAgent _agent;
     private List<Transform> _checkpoints;
+    private readonly List<Command> _commands = new List<Command>() ;
     private DetectionCommand _detectionCommand;
     private NavigationCommand _navigationCommand;
 
@@ -21,24 +23,14 @@ public class NpcController : MonoBehaviour
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _agent = GetComponent<NavMeshAgent>();
         _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());
-        
-        SetDetectionCommand();
-        SetNavigationCommand();
-        StartCoroutine(_navigationCommand.Execute());
+        _commands.Add(new NavigationCommand(_agent, _checkpoints));
+        _commands.Add(new DetectionCommand(transform,_target, _agent, lookRadius));
+        StartCoroutine(_commands[0].Execute());
     }
 
     void Update()
     {
-        StartCoroutine(_detectionCommand.Execute());
-    }
-    private void SetDetectionCommand()
-    {
-        _detectionCommand = new DetectionCommand(transform,_target, _agent, lookRadius);
-    }
-
-    private void SetNavigationCommand()
-    {
-        _navigationCommand = new NavigationCommand(_agent, _checkpoints);
+       StartCoroutine(_commands[1].Execute());
     }
     private void OnDrawGizmosSelected()
     {
