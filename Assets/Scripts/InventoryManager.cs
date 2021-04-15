@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    /*
+    * 1) Define a delegate -> contract between the publisher and the subscriber,
+    *   determines the signature of the method that will be called when the publisher publish
+    * 2)Define an event based on that delegate
+    * 3)Raise the event
+    *                     
+    */
     #region Singleton
-    private static InventoryManager _instance;
+    private InventoryManager _instance;
+    public InventoryManager GetInstance()
+    {
+        return _instance;
+    }
 
     private void Awake()
     {
@@ -17,17 +26,36 @@ public class InventoryManager : MonoBehaviour
         }
     }
     #endregion
-
+    public delegate void OnItemChanged();
+    public OnItemChanged _onItemChangedCallBack;
     public List<Item> items = new List<Item>();
-
-    public void AddItem(Item item)
+    private int _space = 15;
+    public bool AddItem(Item item)
     {
-        if(!item.isDefaultItem)
+        if (!item.isDefaultItem && items.Count < _space)
+        {
             items.Add(item);
+            
+            if(CheckIfCallBackIsNull())
+                _onItemChangedCallBack.Invoke();
+            return true;
+        }
+        return false;
     }
-
-    public void RemoveItem(Item item)
+    public bool RemoveItem(Item item)
     {
-        items.Remove(item);
+        if (items.Count > 0)
+        {
+            items.Remove(item);
+            
+            if(CheckIfCallBackIsNull())
+                _onItemChangedCallBack.Invoke();
+            return true;
+        }
+        return false;
+    }
+    private bool CheckIfCallBackIsNull()
+    {
+        return _onItemChangedCallBack != null;
     }
 }

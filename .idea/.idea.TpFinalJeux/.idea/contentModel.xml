@@ -92,6 +92,7 @@
           <e p="Command.cs" t="Include" />
           <e p="DetectionCommand.cs" t="Include" />
           <e p="InventoryManager.cs" t="Include" />
+          <e p="InventoryUI.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="ItemController.cs" t="Include" />
           <e p="NavigationCommand.cs" t="Include" />

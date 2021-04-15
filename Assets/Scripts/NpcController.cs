@@ -21,8 +21,10 @@ public class NpcController : MonoBehaviour
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _agent = GetComponent<NavMeshAgent>();
         _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());
+        
         _commands.Add(new NavigationCommand(_agent, _checkpoints));
         _commands.Add(new DetectionCommand(transform,_target, _agent, lookRadius));
+        
         StartCoroutine(_commands[0].Execute());
     }
 

@@ -1,33 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
 
 public class ItemController : Interactable
 {
     // Start is called before the first frame update
+    private InventoryManager _inventoryManager;
     public Item item;
     void Start()
     {
+        _inventoryManager = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
         Interact();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
-
     public override void Interact()
     {
         base.Interact();
         PickUpItem();
     }
-
     public void PickUpItem()
     {
-        print("picking this item" + item.name);
-        
-        Destroy(gameObject);
+        if (_inventoryManager.AddItem(item))
+        {
+            print("picking this item" + _inventoryManager.items[0].name);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
