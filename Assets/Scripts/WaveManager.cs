@@ -8,7 +8,7 @@ public class WaveManager : MonoBehaviour
 {
     public List<GameObject> prefabsNPC;
     public float time = 10f;
-    public bool stop = true;
+    public bool stop = false;
     private int _nbrNpcs = 0;
     void Start()
     {
@@ -18,7 +18,7 @@ public class WaveManager : MonoBehaviour
     public IEnumerator GenerateNpc()
     {
         //replace by a boolean
-        while (stop)
+        while (!stop)
         {
             int position = (int) Random.Range(0f, prefabsNPC.Count-1);
             InstantiateAsChild(prefabsNPC[position],1,50);

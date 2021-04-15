@@ -34,8 +34,8 @@
       <option value="$PROJECT_DIR$/Assets/Script/WaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Assets2/Scripts/PlayerAnimator.cs" />
       <option value="$PROJECT_DIR$/Assets/Assets2/Scenes/Niveau1.unity" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/NavigationCommand.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/NpcController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qasmxdfO9UviOwtBhqKOgo1bsG" />
@@ -89,6 +89,7 @@
       <workItem from="1617916634895" duration="788000" />
       <workItem from="1618316520834" duration="816000" />
       <workItem from="1618317507093" duration="2367000" />
+      <workItem from="1618513444507" duration="2119000" />
     </task>
     <servers />
   </component>
