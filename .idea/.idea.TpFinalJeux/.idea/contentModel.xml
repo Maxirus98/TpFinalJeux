@@ -37,6 +37,7 @@
           </e>
           <e p="Scripts" t="Include">
             <e p="Attackable.cs" t="Include" />
+            <e p="BulletScript.cs" t="Include" />
             <e p="Cooldown.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
@@ -44,6 +45,7 @@
             <e p="MouseManager.cs" t="Include" />
             <e p="PlayerAnimator.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="RifleScript.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
             <e p="UiManager.cs" t="Include" />
           </e>

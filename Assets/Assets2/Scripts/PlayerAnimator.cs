@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class PlayerAnimator : MonoBehaviour
 {
@@ -12,50 +15,64 @@ public class PlayerAnimator : MonoBehaviour
     private Animator _animator;
     private NavMeshAgent _agent;
     [SerializeField] private GameObject nuage;
+    
     [SerializeField] private GameObject rifle;
+    [SerializeField] private Transform target;
     private Vector3 riflePosition;
-    private Quaternion rifleQuaternion;
     private Vector3 rifleOffset;
     private GameObject cloneRifle;
+    private int bulletSpeed;
+    private float rifleRange = 3f;
+    
     [SerializeField] private GameObject bullet;
 
-    private Quaternion riflePivot;
-    
     public bool _isAttacking = false;
     private float _attackNumber;
-    private  static readonly float coolDownPeriodSpells = 5f;
-    
 
-    public float TimeStamp { get; set; }
+    private  static readonly float coolDownPeriodSpells = 5f;
+    private  static readonly float coolDownPeriodAttacks = 0.5f;
+    private  static readonly float fireRate = 0.5f;
+
+
+    public float TimeStampSpells { get; set; }
+    public float TimeStampAttacks { get; set; }
+    public float TimeStampFireRate { get; set; }
+    
 
     // Start is called before the first frame update
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
-        riflePivot = Quaternion.FromToRotation (Vector3.back, Vector3.left);
+        rifleOffset = new Vector3(1, 1, 0);
+
     }
+    // Pour faire apparaitre les items en tournant dans le World
+    //cloneRifle.transform.Rotate(Vector3.up, Space.World);
 
     // Update is called once per frame
     void Update()
     {
         if (cloneRifle)
         {
-            var position = transform.position;
-            riflePosition = position + rifleOffset;
+            //Suivre le joueur
+            riflePosition = transform.position + rifleOffset;
             cloneRifle.transform.position = riflePosition;
-            cloneRifle.transform.rotation = Quaternion.FromToRotation (Vector3.forward, Vector3.left);
+            
+            //Rotate en fonction des ennemis
+            Vector3 direction = target.position - cloneRifle.transform.position;
+            Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(90, 0, 0);
+            cloneRifle.transform.rotation = rotation;
+            StartCoroutine(Cooldown.WaitFor(0.1f));
 
-            cloneRifle.transform.localPosition = Quaternion.RotateTowards(transform.rotation, riflePivot, 20 * Time.deltaTime)
-                                                 * cloneRifle.transform.localPosition;
-            cloneRifle.transform.localPosition = Quaternion.LookRotation(cloneRifle.transform.localPosition * -1, Vector3.left) * cloneRifle.transform.localPosition;
+            SprayAndPrayShooting();
         }
-        if (Input.GetButton("Jump") && TimeStamp <= Time.time)
+        if (Input.GetButton("Jump") && TimeStampSpells <= Time.time)
         {
             CallCriDuTonnerre();
         }
 
-        if (Input.GetButton("Fire3") && TimeStamp <= Time.time)
+        if (Input.GetButton("Fire3") && TimeStampSpells <= Time.time)
         {
             SprayAndPray();
         }
@@ -69,11 +86,14 @@ public class PlayerAnimator : MonoBehaviour
 
     public void Attack()
     {
-        _isAttacking = true;
-        _animator.SetBool("isAttacking", _isAttacking);
-        _animator.SetFloat("AttackNumber", _attackNumber);
-        SetAttackNumber();
-        //StartCoroutine(CoroutineAttack());
+        if (TimeStampSpells <= Time.time)
+        {
+            _isAttacking = true;
+            _animator.SetBool("isAttacking", _isAttacking);
+            _animator.SetFloat("AttackNumber", _attackNumber);
+            StartCoroutine(CoroutineAttack());
+        }
+       
     }
 
     private void CallCriDuTonnerre()
@@ -81,36 +101,46 @@ public class PlayerAnimator : MonoBehaviour
         var cloneNuage = Instantiate(nuage, transform.position,
             Quaternion.AngleAxis(90, new Vector3(1, 0, 0)));
         Destroy(cloneNuage, 1f);
-        //StartCoroutine(waitFor(coolDownPeriodSpells));
-        TimeStamp = Time.time + coolDownPeriodSpells;
+        StartCoroutine(Cooldown.WaitFor(coolDownPeriodSpells));
+        TimeStampSpells = Time.time + coolDownPeriodSpells;
     }
 
     private void SprayAndPray()
     {
         SprayAndPraySpawnGun();
         StartCoroutine(Cooldown.WaitFor(coolDownPeriodSpells));
-        TimeStamp = Time.time + coolDownPeriodSpells;
+        TimeStampSpells = Time.time + coolDownPeriodSpells;
     }
     
     private void SprayAndPraySpawnGun()
     {
         cloneRifle = Instantiate(rifle, riflePosition, Quaternion.Euler(90, 180, 0));
-        Destroy(cloneRifle, 5);
+            Destroy(cloneRifle, 5);
+        
     }
     private void SprayAndPrayShooting()
     {
-        var cloneBullet = Instantiate(bullet, cloneRifle.transform.GetChild(3).position, Quaternion.Euler(90, 0, 0));
-        var bulletRb = cloneBullet.GetComponent<Rigidbody>();
-        bulletRb.AddForce(Vector3.back * 10, ForceMode.Impulse);
-        Destroy(cloneBullet, 1f);
+        if (Vector3.Distance(cloneRifle.transform.position, target.position) <= 6f && TimeStampFireRate <= Time.time)
+        {
+            var gunBarrel = cloneRifle.transform.GetChild(3);
+            var cloneBullet = Instantiate(bullet, gunBarrel.position, Quaternion.identity);
+            var bulletRb = cloneBullet.GetComponent<Rigidbody>();
+            bulletSpeed = 300;
+            bulletRb.AddForce(bulletRb.transform.right * bulletSpeed); 
+            TimeStampFireRate = Time.time + fireRate;
+            
+            Destroy(cloneBullet, 1f);
+           
+        }
     }
-
 
     public IEnumerator CoroutineAttack()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(coolDownPeriodAttacks);
+        TimeStampAttacks= Time.time + coolDownPeriodAttacks;
         _isAttacking = false;
         _animator.SetBool("isAttacking", _isAttacking);
+        SetAttackNumber();
     }
     void SetAttackNumber()
     {
