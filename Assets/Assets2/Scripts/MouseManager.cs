@@ -53,8 +53,7 @@ public class MouseManager : MonoBehaviour
                 {
                     SetFocus(interactable);
                     _playerAnimator.Attack();
-                    StartCoroutine(_playerAnimator.CoroutineAttack());
-                    
+
                 }
             }
         }
