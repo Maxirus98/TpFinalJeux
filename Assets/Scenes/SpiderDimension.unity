@@ -13004,7 +13004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6bd9a19a650f948a87b76d3a79ff25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 11400000, guid: 828ed2a78d490bc44a3468ff8c1f9256, type: 2}
 --- !u!1 &336029112
 GameObject:
   m_ObjectHideFlags: 0
@@ -21672,6 +21673,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fde6de8f04ff9f840bb5d6a0220b01a9, type: 3}
+--- !u!114 &759203550 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 881090731391490434, guid: ab8bf16cd53f260418c05f393e8d9c2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4970748506093255122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edae325bc77a9394bb3603796043cb6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &773749261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49499,6 +49512,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1819240285}
     m_Modifications:
+    - target: {fileID: 4970748506533730103, guid: ab8bf16cd53f260418c05f393e8d9c2a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970748506533730103, guid: ab8bf16cd53f260418c05f393e8d9c2a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970748506533730103, guid: ab8bf16cd53f260418c05f393e8d9c2a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 759203550}
+    - target: {fileID: 4970748506533730103, guid: ab8bf16cd53f260418c05f393e8d9c2a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970748506533730103, guid: ab8bf16cd53f260418c05f393e8d9c2a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickRemoveButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970748506533730103, guid: ab8bf16cd53f260418c05f393e8d9c2a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4970748506615434380, guid: ab8bf16cd53f260418c05f393e8d9c2a,
         type: 3}
       propertyPath: m_Name

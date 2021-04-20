@@ -60,16 +60,20 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraController.cs" t="Include" />
-          <e p="Command.cs" t="Include" />
-          <e p="DetectionCommand.cs" t="Include" />
-          <e p="InventoryManager.cs" t="Include" />
-          <e p="InventorySlotUI.cs" t="Include" />
-          <e p="InventoryUI.cs" t="Include" />
+          <e p="InventoryScripts" t="Include">
+            <e p="InventoryManager.cs" t="Include" />
+            <e p="InventorySlotUI.cs" t="Include" />
+            <e p="InventoryUI.cs" t="Include" />
+          </e>
           <e p="Item.cs" t="Include" />
           <e p="ItemController.cs" t="Include" />
-          <e p="NavigationCommand.cs" t="Include" />
-          <e p="NpcController.cs" t="Include" />
-          <e p="WaveManager.cs" t="Include" />
+          <e p="NpcScripts" t="Include">
+            <e p="Command.cs" t="Include" />
+            <e p="DetectionCommand.cs" t="Include" />
+            <e p="NavigationCommand.cs" t="Include" />
+            <e p="NpcController.cs" t="Include" />
+            <e p="WaveManager.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
