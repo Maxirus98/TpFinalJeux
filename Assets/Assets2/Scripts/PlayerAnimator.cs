@@ -6,6 +6,7 @@ using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
+using UnityEngine.UIElements;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
@@ -123,10 +124,11 @@ public class PlayerAnimator : MonoBehaviour
         if (Vector3.Distance(cloneRifle.transform.position, target.position) <= 6f && TimeStampFireRate <= Time.time)
         {
             var gunBarrel = cloneRifle.transform.GetChild(3);
+            gunBarrel.LookAt(target.transform);
             var cloneBullet = Instantiate(bullet, gunBarrel.position, Quaternion.identity);
             var bulletRb = cloneBullet.GetComponent<Rigidbody>();
-            bulletSpeed = 300;
-            bulletRb.AddForce(bulletRb.transform.right * bulletSpeed); 
+            bulletSpeed = 10;
+            bulletRb.velocity = gunBarrel.transform.rotation * Vector3.forward * bulletSpeed;
             TimeStampFireRate = Time.time + fireRate;
             
             Destroy(cloneBullet, 1f);
