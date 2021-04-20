@@ -1,16 +1,17 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class InventorySlotUI : MonoBehaviour
 {
-    public Item _item;
+    private Item _item;
     public Image _icon;
-    public Button removeButton;
+    private Button _removeButton;
 
      void Awake()
      {
-         removeButton = GetComponentsInChildren<Button>()[1];
+         _removeButton = GetComponentsInChildren<Button>()[1];
      }
 
     public void PutItemInSlot(Item item)
@@ -18,7 +19,7 @@ public class InventorySlotUI : MonoBehaviour
         _item = item;
         _icon.sprite = item.icon;
         _icon.enabled = true;
-        removeButton.interactable = true;
+        _removeButton.interactable = true;
         print("put in slot");
     }
 
@@ -27,11 +28,20 @@ public class InventorySlotUI : MonoBehaviour
         _item = null;
         _icon.sprite = null;
         _icon.enabled = false;
-        removeButton.interactable = false;
+        _removeButton.interactable = false;
     }
 
     public void OnClickRemoveButton()
     {
         InventoryManager._instance.RemoveItem(_item);
+        //Ici pt le faire instantiate au sol
+    }
+
+    public void UseItem()
+    {
+        if (_item != null)
+        {
+            _item.Use();
+        }
     }
 }

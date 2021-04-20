@@ -31,7 +31,6 @@ public class InventoryManager : MonoBehaviour
         if (!item.isDefaultItem && items.Count < _space)
         {
             items.Add(item);
-            _instance.OnItemChangedCallBack.Invoke();
             if (CheckIfCallBackIsNull())
             {
                 print("Invoke");
