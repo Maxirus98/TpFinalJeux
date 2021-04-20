@@ -8,7 +8,7 @@ public class ItemController : Interactable
     void Start()
     {
         _inventoryManager = InventoryManager._instance;
-        Interact();
+        Interact();//Will be removed after UI of PickingUP Item is made
     }
     public override void Interact()
     {
@@ -20,7 +20,7 @@ public class ItemController : Interactable
         bool wasPickedUp = _inventoryManager.AddItem(item);
         if (wasPickedUp)
         {
-            print("picking this item" + _inventoryManager.items[0].name);
+            Debug.Log("picking this item" + _inventoryManager.items[0].name);
             Destroy(gameObject);
         }
     }

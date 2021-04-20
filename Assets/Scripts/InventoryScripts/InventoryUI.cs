@@ -9,9 +9,11 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     private InventoryManager _inventoryManager;
     private List<InventorySlotUI> _inventorySlotUIs;
+    private GameObject _inventoryUI;
 
     private void Awake()
     {
+        _inventoryUI = gameObject;
         _inventoryManager = InventoryManager._instance;
         _inventoryManager.OnItemChangedCallBack += UpdateUI;
         _inventorySlotUIs =
@@ -29,7 +31,7 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            gameObject.SetActive(!gameObject.activeSelf);
+            _inventoryUI.SetActive(!_inventoryUI.activeSelf);
         }
     }
 
