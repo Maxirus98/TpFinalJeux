@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -8,7 +7,7 @@ public class InventoryUI : MonoBehaviour
     private InventoryManager _inventoryManager;
     void Start()
     {
-        _inventoryManager = GetComponentInParent<InventoryManager>();
+        _inventoryManager = GetComponentInParent<InventoryManager>().GetInstance();
         _inventoryManager._onItemChangedCallBack += UpdateUI;
     }
 

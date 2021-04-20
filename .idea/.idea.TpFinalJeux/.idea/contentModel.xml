@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-44898168.00" t="ExcludeRecursive" />
-    <e p="C:\Users\dupui\Documents\TpFinalJeux" t="IncludeRecursive">
+    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-53696505.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mansa\Documents\OneDrive\Documents\techniqueInformatique\quatriemeSession\gaming\projects\TpFinalJeux" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -63,6 +63,7 @@
           <e p="Command.cs" t="Include" />
           <e p="DetectionCommand.cs" t="Include" />
           <e p="InventoryManager.cs" t="Include" />
+          <e p="InventorySlotUI.cs" t="Include" />
           <e p="InventoryUI.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="ItemController.cs" t="Include" />
