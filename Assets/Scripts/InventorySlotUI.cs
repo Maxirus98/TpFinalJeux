@@ -3,14 +3,15 @@ using UnityEngine.UI;
 
 public class InventorySlotUI : MonoBehaviour
 {
-    Item _item;
-    Image _icon;
+    public Item _item;
+    public Image _icon;
 
     public void PutItemInSlot(Item item)
     {
         _item = item;
         _icon.sprite = item.icon;
         _icon.enabled = true;
+        print("put in slot");
     }
 
     public void ClearItemFromSlot()

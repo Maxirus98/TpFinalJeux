@@ -7,9 +7,8 @@ public class ItemController : Interactable
     public Item item;
     void Start()
     {
-        _inventoryManager = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+        _inventoryManager = InventoryManager._instance;
         Interact();
-        
     }
     public override void Interact()
     {
@@ -18,12 +17,10 @@ public class ItemController : Interactable
     }
     public void PickUpItem()
     {
-        if (_inventoryManager.AddItem(item))
+        bool wasPickedUp = _inventoryManager.AddItem(item);
+        if (wasPickedUp)
         {
             print("picking this item" + _inventoryManager.items[0].name);
-        }
-        else
-        {
             Destroy(gameObject);
         }
     }

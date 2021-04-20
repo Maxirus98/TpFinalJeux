@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -11,23 +12,18 @@ public class InventoryManager : MonoBehaviour
     *                     
     */
     #region Singleton
-    private InventoryManager _instance;
-    public InventoryManager GetInstance()
-    {
-        return _instance;
-    }
-
+    public static InventoryManager _instance;
     private void Awake()
     {
-        if (_instance == null)
+        if (_instance != null)
         {
-            print("single instance of inventory");
-            _instance = this;
+            print("More than one instance found");
         }
+        _instance = this;
     }
     #endregion
     public delegate void OnItemChanged();
-    public OnItemChanged _onItemChangedCallBack;
+    public OnItemChanged OnItemChangedCallBack;
     public List<Item> items = new List<Item>();
     private int _space = 15;
     public bool AddItem(Item item)
@@ -35,9 +31,12 @@ public class InventoryManager : MonoBehaviour
         if (!item.isDefaultItem && items.Count < _space)
         {
             items.Add(item);
-            
-            if(CheckIfCallBackIsNull())
-                _onItemChangedCallBack.Invoke();
+            _instance.OnItemChangedCallBack.Invoke();
+            if (CheckIfCallBackIsNull())
+            {
+                print("Invoke");
+                _instance.OnItemChangedCallBack.Invoke();
+            }
             return true;
         }
         return false;
@@ -47,15 +46,15 @@ public class InventoryManager : MonoBehaviour
         if (items.Count > 0)
         {
             items.Remove(item);
-            
+
             if(CheckIfCallBackIsNull())
-                _onItemChangedCallBack.Invoke();
+                _instance.OnItemChangedCallBack.Invoke();
             return true;
         }
         return false;
     }
     private bool CheckIfCallBackIsNull()
     {
-        return _onItemChangedCallBack != null;
+        return _instance.OnItemChangedCallBack != null;
     }
 }

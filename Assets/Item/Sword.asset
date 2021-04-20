@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   name: Sword
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 82165d0f3559eed47be6496c90dd1e07, type: 3}
   isDefaultItem: 0
