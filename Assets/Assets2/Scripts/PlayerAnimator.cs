@@ -12,13 +12,17 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerAnimator : MonoBehaviour
 {
+    
+    // TODO : Enlever les méthodes qui n'ont pas rapport avec l'animation du personnage
+     
     private const float LOCOMOTION_SMOOTH_TIME = .1f;
     private Animator _animator;
     private NavMeshAgent _agent;
     [SerializeField] private GameObject nuage;
     
     [SerializeField] private GameObject rifle;
-    [SerializeField] private Transform target;
+    [SerializeField] private List<Transform> targets;
+    public Transform currentTarget;
     private Vector3 riflePosition;
     private Vector3 rifleOffset;
     private GameObject cloneRifle;
@@ -31,7 +35,7 @@ public class PlayerAnimator : MonoBehaviour
     private float _attackNumber;
 
     private  static readonly float coolDownPeriodSpells = 5f;
-    private  static readonly float coolDownPeriodAttacks = 0.5f;
+    private  static readonly float coolDownPeriodAttacks = 1f;
     private  static readonly float fireRate = 0.5f;
 
 
@@ -46,6 +50,8 @@ public class PlayerAnimator : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
         rifleOffset = new Vector3(1, 1, 0);
+        targets = new List<Transform>();
+        LookForTargets(); //Il va falloir ajouter a chaque spawn d'ennemi à la liste de target
 
     }
     // Pour faire apparaitre les items en tournant dans le World
@@ -60,8 +66,9 @@ public class PlayerAnimator : MonoBehaviour
             riflePosition = transform.position + rifleOffset;
             cloneRifle.transform.position = riflePosition;
             
+            CheckForClosestTarget();
             //Rotate en fonction des ennemis
-            Vector3 direction = target.position - cloneRifle.transform.position;
+            Vector3 direction = currentTarget.position - cloneRifle.transform.position;
             Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(90, 0, 0);
             cloneRifle.transform.rotation = rotation;
             StartCoroutine(Cooldown.WaitFor(0.1f));
@@ -116,23 +123,44 @@ public class PlayerAnimator : MonoBehaviour
     private void SprayAndPraySpawnGun()
     {
         cloneRifle = Instantiate(rifle, riflePosition, Quaternion.Euler(90, 180, 0));
-            Destroy(cloneRifle, 5);
+            Destroy(cloneRifle, coolDownPeriodSpells);
         
     }
     private void SprayAndPrayShooting()
     {
-        if (Vector3.Distance(cloneRifle.transform.position, target.position) <= 6f && TimeStampFireRate <= Time.time)
+        if (Vector3.Distance(cloneRifle.transform.position, currentTarget.position) <= 6f && TimeStampFireRate <= Time.time)
         {
             var gunBarrel = cloneRifle.transform.GetChild(3);
-            gunBarrel.LookAt(target.transform);
+            gunBarrel.LookAt(currentTarget.transform);
             var cloneBullet = Instantiate(bullet, gunBarrel.position, Quaternion.identity);
             var bulletRb = cloneBullet.GetComponent<Rigidbody>();
             bulletSpeed = 10;
             bulletRb.velocity = gunBarrel.transform.rotation * Vector3.forward * bulletSpeed;
             TimeStampFireRate = Time.time + fireRate;
-            
-            Destroy(cloneBullet, 1f);
-           
+
+        }
+    }
+
+    private void LookForTargets()
+    {
+        var others = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var go in others)
+        {
+            targets.Add(go.transform);
+        }
+
+        currentTarget = targets[0];
+    }
+
+    private void CheckForClosestTarget()
+    {
+        foreach(Transform target in targets)
+        {
+            if (Vector3.Distance(transform.position, target.position) <
+                Vector3.Distance(transform.position, currentTarget.position))
+            {
+                currentTarget = target;
+            }
         }
     }
 

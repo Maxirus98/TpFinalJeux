@@ -31,8 +31,8 @@ public class UiManager : MonoBehaviour
         CurrentCharacter.SetActive(false);
         //if(!(CurrentCharacter is null))Destroy(CurrentCharacter);
         if (index + incrementeur < 0)
-            index = 5;
-        else if (index + incrementeur > 5)
+            index = personnagesPrincipaux.Length - 1;
+        else if (index + incrementeur > personnagesPrincipaux.Length - 1)
         {
             index = 0;
         }
