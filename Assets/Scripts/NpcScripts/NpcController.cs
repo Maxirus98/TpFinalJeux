@@ -18,6 +18,7 @@ public class NpcController : MonoBehaviour
 
     void Start()
     {
+        //Mettre .transform
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _agent = GetComponent<NavMeshAgent>();
         _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());

@@ -8,12 +8,6 @@ public class ItemController : Interactable
     void Start()
     {
         _inventoryManager = InventoryManager._instance;
-        Interact();//Will be removed after UI of PickingUP Item is made
-    }
-    public override void Interact()
-    {
-        base.Interact();
-        PickUpItem();
     }
     public void PickUpItem()
     {
