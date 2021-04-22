@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class InventoryUI : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject panel;
+    public GameObject title;
     private InventoryManager _inventoryManager;
     private List<InventorySlotUI> _inventorySlotUIs;
     private GameObject _inventoryUI;
@@ -19,19 +21,14 @@ public class InventoryUI : MonoBehaviour
         _inventorySlotUIs =
             new List<InventorySlotUI>(GetComponentInChildren<Transform>().GetComponentsInChildren<InventorySlotUI>());
     }
-
-    void Start()
-    {
-        //_inventoryManager = InventoryManager._instance;
-        //_inventoryManager.OnItemChangedCallBack += UpdateUI;
-        //_inventorySlotUIs = new List<InventorySlotUI>(GetComponentInChildren<Transform>().GetComponentsInChildren<InventorySlotUI>());
-    }
-
     void Update()
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            _inventoryUI.SetActive(!_inventoryUI.activeSelf);
+            panel.SetActive(!panel.activeSelf);
+            title.SetActive(!title.activeSelf);
+           // _inventoryUI.SetActive(!_inventoryUI.activeSelf);
+            
         }
     }
 

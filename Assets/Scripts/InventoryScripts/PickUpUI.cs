@@ -32,10 +32,4 @@ public class PickUpUI : MonoBehaviour
             canvas.gameObject.SetActive(false);
         }
     }
-
-    public IEnumerator SetActiveInactive()
-    {
-        canvas.gameObject.SetActive(false);
-        yield return new WaitForSeconds(0.01f);
-    }
 }
