@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Security.Cryptography;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
+using Object = UnityEngine.Object;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
@@ -20,24 +23,29 @@ public class PlayerAnimator : MonoBehaviour
     private NavMeshAgent _agent;
     [SerializeField] private GameObject nuage;
     
-    [SerializeField] private GameObject rifle;
     [SerializeField] private List<Transform> targets;
     public Transform currentTarget;
+    
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private GameObject rifle;
     private Vector3 riflePosition;
     private Vector3 rifleOffset;
     private GameObject cloneRifle;
     private int bulletSpeed;
     private float rifleRange = 3f;
     
-    [SerializeField] private GameObject bullet;
-
+    
     public bool _isAttacking = false;
     private float _attackNumber;
 
     private  static readonly float coolDownPeriodSpells = 5f;
     private  static readonly float coolDownPeriodAttacks = 1f;
     private  static readonly float fireRate = 0.5f;
-
+    
+    [SerializeField] private GameObject empaler;
+    private GameObject empalerClone;
+    private Vector3 empalerPosition;
+    private Vector3 empalerOffset;
 
     public float TimeStampSpells { get; set; }
     public float TimeStampAttacks { get; set; }
@@ -50,6 +58,7 @@ public class PlayerAnimator : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
         rifleOffset = new Vector3(1, 1, 0);
+        empalerOffset = new Vector3(0, 1, 0);
         targets = new List<Transform>();
         LookForTargets(); //Il va falloir ajouter a chaque spawn d'ennemi à la liste de target
 
@@ -63,9 +72,11 @@ public class PlayerAnimator : MonoBehaviour
         if (cloneRifle)
         {
             //Suivre le joueur
+            
             riflePosition = transform.position + rifleOffset;
             cloneRifle.transform.position = riflePosition;
-            
+            empalerPosition = transform.position + empalerOffset;
+            empalerClone.transform.position = empalerPosition;
             CheckForClosestTarget();
             //Rotate en fonction des ennemis
             Vector3 direction = currentTarget.position - cloneRifle.transform.position;
@@ -82,7 +93,8 @@ public class PlayerAnimator : MonoBehaviour
 
         if (Input.GetButton("Fire3") && TimeStampSpells <= Time.time)
         {
-            SprayAndPray();
+            //SprayAndPray();
+            Empaler();
         }
 
         //agent current speed / agent maximum speed
@@ -140,6 +152,18 @@ public class PlayerAnimator : MonoBehaviour
 
         }
     }
+
+    private void Empaler()
+    {
+        SpawnEmpaler();
+    }
+
+    private void SpawnEmpaler()
+    {
+        empalerClone = Instantiate(empaler, empalerPosition, Quaternion.identity);
+        Destroy(empalerClone, coolDownPeriodSpells);
+    }
+
 
     private void LookForTargets()
     {
