@@ -1,31 +1,24 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
-using System.Security.Cryptography;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Animations;
-using UnityEngine.Serialization;
-using UnityEngine.UIElements;
-using Object = UnityEngine.Object;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    
+
     // TODO : Enlever les méthodes qui n'ont pas rapport avec l'animation du personnage
-     
+
     private const float LOCOMOTION_SMOOTH_TIME = .1f;
     private Animator _animator;
     private NavMeshAgent _agent;
     [SerializeField] private GameObject nuage;
-    
+
     [SerializeField] private List<Transform> targets;
     public Transform currentTarget;
-    
+
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject rifle;
     private Vector3 riflePosition;
@@ -33,24 +26,24 @@ public class PlayerAnimator : MonoBehaviour
     private GameObject cloneRifle;
     private int bulletSpeed;
     private float rifleRange = 3f;
-    
-    
+
+
     public bool _isAttacking = false;
     private float _attackNumber;
 
-    private  static readonly float coolDownPeriodSpells = 5f;
-    private  static readonly float coolDownPeriodAttacks = 1f;
-    private  static readonly float fireRate = 0.5f;
-    
+    private static readonly float coolDownPeriodSpells = 5f;
+    private static readonly float coolDownPeriodAttacks = 1f;
+    private static readonly float fireRate = 0.5f;
+
     [SerializeField] private GameObject empaler;
     private GameObject empalerClone;
     private Vector3 empalerPosition;
-    private Vector3 empalerOffset;
+    private float vitesseEmpaler = 20000f;
 
     public float TimeStampSpells { get; set; }
     public float TimeStampAttacks { get; set; }
     public float TimeStampFireRate { get; set; }
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +51,6 @@ public class PlayerAnimator : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
         rifleOffset = new Vector3(1, 1, 0);
-        empalerOffset = new Vector3(0, 1, 0);
         targets = new List<Transform>();
         LookForTargets(); //Il va falloir ajouter a chaque spawn d'ennemi à la liste de target
 
@@ -69,23 +61,6 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cloneRifle)
-        {
-            //Suivre le joueur
-            
-            riflePosition = transform.position + rifleOffset;
-            cloneRifle.transform.position = riflePosition;
-            empalerPosition = transform.position + empalerOffset;
-            empalerClone.transform.position = empalerPosition;
-            CheckForClosestTarget();
-            //Rotate en fonction des ennemis
-            Vector3 direction = currentTarget.position - cloneRifle.transform.position;
-            Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(90, 0, 0);
-            cloneRifle.transform.rotation = rotation;
-            StartCoroutine(Cooldown.WaitFor(0.1f));
-
-            SprayAndPrayShooting();
-        }
         if (Input.GetButton("Jump") && TimeStampSpells <= Time.time)
         {
             CallCriDuTonnerre();
@@ -112,8 +87,9 @@ public class PlayerAnimator : MonoBehaviour
             _animator.SetBool("isAttacking", _isAttacking);
             _animator.SetFloat("AttackNumber", _attackNumber);
             StartCoroutine(CoroutineAttack());
+            
         }
-       
+
     }
 
     private void CallCriDuTonnerre()
@@ -130,17 +106,35 @@ public class PlayerAnimator : MonoBehaviour
         SprayAndPraySpawnGun();
         StartCoroutine(Cooldown.WaitFor(coolDownPeriodSpells));
         TimeStampSpells = Time.time + coolDownPeriodSpells;
+        
+        /*if (cloneRifle)
+        {
+            //Suivre le joueur
+            riflePosition = transform.position + rifleOffset;
+            cloneRifle.transform.position = riflePosition;
+
+            CheckForClosestTarget();
+            //Rotate en fonction des ennemis
+            Vector3 direction = currentTarget.position - cloneRifle.transform.position;
+            Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(90, 0, 0);
+            cloneRifle.transform.rotation = rotation;
+            StartCoroutine(Cooldown.WaitFor(0.1f));
+
+            SprayAndPrayShooting();
+        }*/
     }
-    
+
     private void SprayAndPraySpawnGun()
     {
         cloneRifle = Instantiate(rifle, riflePosition, Quaternion.Euler(90, 180, 0));
-            Destroy(cloneRifle, coolDownPeriodSpells);
-        
+        Destroy(cloneRifle, coolDownPeriodSpells);
+
     }
+
     private void SprayAndPrayShooting()
     {
-        if (Vector3.Distance(cloneRifle.transform.position, currentTarget.position) <= 6f && TimeStampFireRate <= Time.time)
+        if (Vector3.Distance(cloneRifle.transform.position, currentTarget.position) <= 6f &&
+            TimeStampFireRate <= Time.time)
         {
             var gunBarrel = cloneRifle.transform.GetChild(3);
             gunBarrel.LookAt(currentTarget.transform);
@@ -156,14 +150,21 @@ public class PlayerAnimator : MonoBehaviour
     private void Empaler()
     {
         SpawnEmpaler();
+        ThrustEmpaler();
+        StartCoroutine(Cooldown.WaitFor(coolDownPeriodSpells));
+        TimeStampSpells = Time.time + coolDownPeriodSpells;
     }
 
     private void SpawnEmpaler()
     {
-        empalerClone = Instantiate(empaler, empalerPosition, Quaternion.identity);
-        Destroy(empalerClone, coolDownPeriodSpells);
+        empalerClone = Instantiate(empaler, (transform.position + transform.forward), transform.rotation);
+        Destroy(empalerClone, 2);
     }
 
+    private void ThrustEmpaler()
+    {
+        empalerClone.GetComponent<Rigidbody>().AddForce(transform.forward * (vitesseEmpaler * Time.deltaTime));
+    }
 
     private void LookForTargets()
     {
@@ -190,10 +191,11 @@ public class PlayerAnimator : MonoBehaviour
 
     public IEnumerator CoroutineAttack()
     {
+        //Change for Animation Time?
         yield return new WaitForSeconds(coolDownPeriodAttacks);
-        TimeStampAttacks= Time.time + coolDownPeriodAttacks;
         _isAttacking = false;
         _animator.SetBool("isAttacking", _isAttacking);
+        TimeStampAttacks= Time.time + coolDownPeriodAttacks;
         SetAttackNumber();
     }
     void SetAttackNumber()
