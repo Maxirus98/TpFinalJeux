@@ -3,14 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
-
+[RequireComponent(typeof(Targeter))]
 public class SprayAndPray : Spell
 {
     private GameObject cloneRifle;
-
-    [SerializeField] private Transform currentTarget;
-    [SerializeField] private List<Transform> targets;
+    private Targeter targeter;
     
+
     [SerializeField] private GameObject bullet;
     private float bulletSpeed;
     public float TimeStampFireRate { get; set; }
@@ -21,8 +20,8 @@ public class SprayAndPray : Spell
 
     private void Start()
     {
-        LookForTargets();
-    }
+        targeter = GetComponent<Targeter>();
+    }   
 
     // Update is called once per frame
     void Update()
@@ -37,7 +36,7 @@ public class SprayAndPray : Spell
         
             CheckForClosestTarget();
             //Rotate en fonction des ennemis
-            Vector3 direction = currentTarget.position - cloneRifle.transform.position;
+            Vector3 direction = targeter.currentTarget.position - cloneRifle.transform.position;
             Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(90, 0, 0);
             cloneRifle.transform.rotation = rotation;
             StartCoroutine(Cooldown.WaitFor(fireRate));
@@ -61,11 +60,11 @@ public class SprayAndPray : Spell
         maxRange = 10f;
         fireRate = 0.5f;
         
-        if (Vector3.Distance(cloneRifle.transform.position, currentTarget.position) <= maxRange &&
+        if (Vector3.Distance(cloneRifle.transform.position, targeter.currentTarget.position) <= maxRange &&
             TimeStampFireRate <= Time.time)
         {
             var gunBarrel = cloneRifle.transform.GetChild(3);
-            gunBarrel.LookAt(currentTarget.transform);
+            gunBarrel.LookAt(targeter.currentTarget.transform);
             var cloneBullet = Instantiate(bullet, gunBarrel.position, Quaternion.Euler(0, 90, 0));
             var bulletRb = cloneBullet.GetComponent<Rigidbody>();
             bulletSpeed = 10;
@@ -83,27 +82,16 @@ public class SprayAndPray : Spell
         TimeStamp = Time.time + cooldown;
     }
 
-    public void LookForTargets()
-    {
-        var others = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (var go in others)
-        {
-            targets.Add(go.transform);
-        }
-
-        currentTarget = targets[0];
-    }
-
     public void CheckForClosestTarget()
     {
-        foreach(Transform target in targets)
+        foreach(Transform target in targeter.targets)
         {
             if (target)
             {
                 if (Vector3.Distance(transform.position, target.position) <
-                    Vector3.Distance(transform.position, currentTarget.position))
+                    Vector3.Distance(transform.position, targeter.currentTarget.position))
                 {
-                    currentTarget = target;
+                    targeter.currentTarget = target;
                 }
             }
                 
