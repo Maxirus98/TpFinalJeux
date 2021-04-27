@@ -36,23 +36,28 @@
             </e>
           </e>
           <e p="Scripts" t="Include">
-            <e p="Attackable.cs" t="Include" />
-            <e p="BulletScript.cs" t="Include" />
-            <e p="Cooldown.cs" t="Include" />
-            <e p="CriDuTonerre.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
-            <e p="Empaler.cs" t="Include" />
-            <e p="GameManager.cs" t="Include" />
-            <e p="HudManager.cs" t="Include" />
-            <e p="Interactable.cs" t="Include" />
-            <e p="MainMenuManager.cs" t="Include" />
-            <e p="MouseManager.cs" t="Include" />
-            <e p="PlayerAnimator.cs" t="Include" />
-            <e p="PlayerController.cs" t="Include" />
-            <e p="RifleScript.cs" t="Include" />
-            <e p="Singleton.cs" t="Include" />
-            <e p="Spell.cs" t="Include" />
-            <e p="SprayAndPray.cs" t="Include" />
+            <e p="HpScript.cs" t="Include" />
+            <e p="Manager" t="Include">
+              <e p="GameManager.cs" t="Include" />
+              <e p="Interactable.cs" t="Include" />
+              <e p="MainMenuManager.cs" t="Include" />
+              <e p="MouseManager.cs" t="Include" />
+              <e p="Singleton.cs" t="Include" />
+            </e>
+            <e p="PlayerScripts" t="Include">
+              <e p="PlayerAnimator.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+              <e p="PlayerStats.cs" t="Include" />
+            </e>
+            <e p="SpellScripts" t="Include">
+              <e p="BulletScript.cs" t="Include" />
+              <e p="Cooldown.cs" t="Include" />
+              <e p="CriDuTonerre.cs" t="Include" />
+              <e p="Empaler.cs" t="Include" />
+              <e p="Spell.cs" t="Include" />
+              <e p="SprayAndPray.cs" t="Include" />
+            </e>
             <e p="Targeter.cs" t="Include" />
           </e>
           <e p="Spells" t="Include">
