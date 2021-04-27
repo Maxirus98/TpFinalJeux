@@ -39,6 +39,7 @@
             <e p="Attackable.cs" t="Include" />
             <e p="BulletScript.cs" t="Include" />
             <e p="Cooldown.cs" t="Include" />
+            <e p="CriDuTonerre.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
@@ -47,6 +48,8 @@
             <e p="PlayerController.cs" t="Include" />
             <e p="RifleScript.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
+            <e p="Spell.cs" t="Include" />
+            <e p="SprayAndPray.cs" t="Include" />
             <e p="UiManager.cs" t="Include" />
           </e>
           <e p="Spells" t="Include">
