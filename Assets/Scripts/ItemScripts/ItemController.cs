@@ -14,7 +14,7 @@ public class ItemController : Interactable
         bool wasPickedUp = _inventoryManager.AddItem(item);
         if (wasPickedUp)
         {
-            Debug.Log("picking this item" + _inventoryManager.items[0].name);
+            Debug.Log("picking this item" + item.name);
             Destroy(gameObject);
         }
     }
