@@ -41,6 +41,7 @@
             <e p="Cooldown.cs" t="Include" />
             <e p="CriDuTonerre.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
+            <e p="Empaler.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="MouseManager.cs" t="Include" />
