@@ -34,9 +34,7 @@ public class InventorySlotUI : MonoBehaviour
     public void OnClickRemoveButton()
     {
         InventoryManager._instance.RemoveItem(_item);
-        //Ici pt le faire instantiate au sol
     }
-
     public void UseItem()
     {
         if (_item != null)

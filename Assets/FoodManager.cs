@@ -34,6 +34,6 @@ public class FoodManager : MonoBehaviour
 
     private Vector3 GenerateRandomVector3(float min, float max)
     {
-        return new Vector3(Random.Range(-48,48), -1, Random.Range(-24,24));
+        return new Vector3(Random.Range(-48,48), 0, Random.Range(-24,24));
     }
 }

@@ -89,7 +89,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310611259822616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3abfc7198c85ce649bd21dd41e50b870, type: 3}
   m_Name: 
@@ -106,10 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e68dc50ec667341ad77e83b6130181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 4654428850390916}
-  _player: {fileID: 0}
   item: {fileID: 11400000, guid: 2d89e06f444fb064898d25b884a6bc20, type: 2}
+  radius: 3
 --- !u!1 &1471514348549944
 GameObject:
   m_ObjectHideFlags: 0

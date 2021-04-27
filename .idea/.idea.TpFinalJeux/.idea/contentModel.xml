@@ -76,7 +76,6 @@
             <e p="InventoryManager.cs" t="Include" />
             <e p="InventorySlotUI.cs" t="Include" />
             <e p="InventoryUI.cs" t="Include" />
-            <e p="PickUpUI.cs" t="Include" />
           </e>
           <e p="ItemScripts" t="Include">
             <e p="FoodItem.cs" t="Include" />
