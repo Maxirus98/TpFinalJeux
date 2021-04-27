@@ -6,14 +6,17 @@ using UnityEngine.AI;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
+[RequireComponent(typeof(Targeter))]
 public class PlayerAnimator : MonoBehaviour
 {
+    private Targeter targeter;
     private Animator _animator;
     private NavMeshAgent _agent;
 
     public bool _isAttacking = false;
     private float _attackNumber;
     private static readonly float coolDownPeriodAttacks = 1f;
+    private float attackMaxRange;
     public float TimeStampAttacks { get; set; }
     
     // Start is called before the first frame update
@@ -21,6 +24,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
+        targeter = GetComponent<Targeter>();
     }
     // Pour faire apparaitre les items en tournant dans le World
     //cloneRifle.transform.Rotate(Vector3.up, Space.World);
@@ -36,7 +40,8 @@ public class PlayerAnimator : MonoBehaviour
 
     public void Attack()
     {
-        if (TimeStampAttacks <= Time.time)
+        attackMaxRange = 6f;
+        if (TimeStampAttacks <= Time.time && Vector3.Distance(transform.position, targeter.currentTarget.position) <= attackMaxRange)
         {
             _isAttacking = true;
             _animator.SetBool("isAttacking", _isAttacking);
@@ -64,5 +69,4 @@ public class PlayerAnimator : MonoBehaviour
             _attackNumber = 0;
         }
     }
-    
 }

@@ -43,7 +43,9 @@
             <e p="DescriptionBD.cs" t="Include" />
             <e p="Empaler.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
+            <e p="HudManager.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
+            <e p="MainMenuManager.cs" t="Include" />
             <e p="MouseManager.cs" t="Include" />
             <e p="PlayerAnimator.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
@@ -51,7 +53,7 @@
             <e p="Singleton.cs" t="Include" />
             <e p="Spell.cs" t="Include" />
             <e p="SprayAndPray.cs" t="Include" />
-            <e p="UiManager.cs" t="Include" />
+            <e p="Targeter.cs" t="Include" />
           </e>
           <e p="Spells" t="Include">
             <e p="Puddle" t="Include">
