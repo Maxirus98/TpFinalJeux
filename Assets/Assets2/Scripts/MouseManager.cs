@@ -35,9 +35,8 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, _clickableLayer.value))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000000, _clickableLayer.value))
             {
-            
                 OnClickEnvironment.Invoke(hit.point);
             }
            
