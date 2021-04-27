@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1103729609193184}
   m_LocalRotation: {x: -0.18301314, y: -0.6830158, z: 0.18301141, w: -0.6830098}
   m_LocalPosition: {x: 1.2940004, y: 0.129, z: -0.073}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4418294654674036}
   - {fileID: 4066448352327872}
@@ -110,10 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e68dc50ec667341ad77e83b6130181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 4554513892849508}
-  _player: {fileID: 0}
   item: {fileID: 0}
+  radius: 3
 --- !u!114 &5974139813862541174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,10 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e68dc50ec667341ad77e83b6130181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 4554513892849508}
-  _player: {fileID: 0}
   item: {fileID: 11400000, guid: 3fd863fcb8daa1d439b052199494f61a, type: 2}
+  radius: 3
 --- !u!1 &1183062911300714
 GameObject:
   m_ObjectHideFlags: 0

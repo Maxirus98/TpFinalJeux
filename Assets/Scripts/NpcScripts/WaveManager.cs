@@ -21,13 +21,13 @@ public class WaveManager : MonoBehaviour
         while (!stop)
         {
             int position = (int) Random.Range(0f, prefabsNPC.Count-1);
-            InstantiateAsChild(prefabsNPC[position],1,50);
+            InstantiateAsChild(prefabsNPC[position]);
             yield return new WaitForSeconds(time);
         }
     }
-    private void InstantiateAsChild(GameObject prefab, float x, float y)
+    private void InstantiateAsChild(GameObject prefab)
     {
-        GameObject npc = Instantiate(prefab, new Vector3(Random.Range(x,y),0,Random.Range(x,y)), Quaternion.identity);
+        GameObject npc = Instantiate(prefab, new Vector3(Random.Range(-48,48),-1,Random.Range(-24,24)), Quaternion.identity);
         npc.name = prefab.name;
         npc.transform.parent = transform;
         _nbrNpcs++;

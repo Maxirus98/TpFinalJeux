@@ -28,6 +28,7 @@ public class Interactable : MonoBehaviour
                 hasInteracted = true;
             }
         }
+        
     }
 
     public void OnFocused(Transform playerTransform)

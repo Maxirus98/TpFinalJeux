@@ -66,6 +66,5 @@ public class MouseManager : MonoBehaviour
             focus = newFocus;
         }
         newFocus.OnFocused(transform);
-       
     }
 }
