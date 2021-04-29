@@ -1,19 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    List<Cursor> _cursor;
-    void Start()
+    public List<Texture2D> texture2Ds;
+
+     void Start()
     {
+        DefaultCursor();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DefaultCursor()
     {
+        Cursor.SetCursor(texture2Ds[0],new Vector2(4,8),CursorMode.ForceSoftware);
     }
-    
-    
+
 }
+
+    
+    
