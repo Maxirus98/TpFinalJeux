@@ -13333,7 +13333,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328885639}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -23855,6 +23855,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2739874041141956208, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739874041141956208, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739874041141956209, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8538bd626cb3e80478f62e319f75e337, type: 2}
     - target: {fileID: 2739874041141956215, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
       propertyPath: m_Layer
@@ -24053,7 +24068,7 @@ PrefabInstance:
     - target: {fileID: 2743999601781926703, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.35
+      value: 3.97
       objectReference: {fileID: 0}
     - target: {fileID: 2743999601781926703, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
@@ -24100,7 +24115,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5127138314778078917, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
 --- !u!1001 &797281731
 PrefabInstance:
@@ -30164,6 +30180,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1305053119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305053113}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1307893405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49606,7 +49638,7 @@ RectTransform:
   m_Children:
   - {fileID: 134214733}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -50042,15 +50074,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804648052}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0772c045551d2f846af23faaf7a7d287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   go: {fileID: 3945899008282555542, guid: 0f1157fc093c43b47a304ac264a6ee80, type: 3}
   cooldown: 5
-  position: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1804648054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50058,15 +50088,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804648052}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f192a0fc0d69b0743b11c769feb492c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   go: {fileID: 1719131515888008, guid: 33f6247810b654041bccca4adbd93f45, type: 3}
   cooldown: 5
-  position: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 0, z: 0}
   bullet: {fileID: 1325836922669442, guid: eddd5dbbd5cba0343953e804ef2e05c8, type: 3}
   fireRate: 0
 --- !u!114 &1804648055
@@ -50084,6 +50112,20 @@ MonoBehaviour:
   maxHp: 100
   currentHp: 0
   hpBar: {fileID: 134214735}
+--- !u!114 &1804648056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804648052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cb89c233439fc469c4d6f89353bd25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go: {fileID: 5844651231226827424, guid: 63f54edfae2501243861aa3365eb7645, type: 3}
+  cooldown: 0.5
 --- !u!114 &1804648058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50098,8 +50140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: {fileID: 8204171656955215715, guid: 3186403d12ae8df4baefdfe9c313799a, type: 3}
   cooldown: 5
-  position: {x: 0, y: 0, z: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &1804648059
 MonoBehaviour:
   m_ObjectHideFlags: 0

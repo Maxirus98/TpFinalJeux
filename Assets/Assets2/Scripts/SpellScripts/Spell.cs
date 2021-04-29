@@ -6,10 +6,10 @@ using UnityEngine;
 //Parent class for all spells
 public class Spell : MonoBehaviour
 {
-    public GameObject go;
-    public float cooldown;
-    public Vector3 position;
-    public Vector3 offset;
+    [SerializeField] protected GameObject go;
+    [SerializeField] protected float cooldown;
+    protected Vector3 position;
+    protected Vector3 offset;
     
     public float TimeStamp { get; set; }
     public virtual void Spawn()
@@ -24,8 +24,7 @@ public class Spell : MonoBehaviour
 
     public virtual void DoSpell()
     {
-        //Instantiate
-        //Apply velocity
+        //Call other methods
         //Apply Cooldowns
     }
 }

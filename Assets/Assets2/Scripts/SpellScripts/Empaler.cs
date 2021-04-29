@@ -32,6 +32,6 @@ public class Empaler : Spell
 
     public override void Shoot()
     {
-        empalerClone.GetComponent<Rigidbody>().velocity = (transform.forward * (vitesseEmpaler * Time.deltaTime));;
+        empalerClone.GetComponent<Rigidbody>().velocity = (transform.forward.normalized * (vitesseEmpaler * Time.deltaTime));
     }
 }

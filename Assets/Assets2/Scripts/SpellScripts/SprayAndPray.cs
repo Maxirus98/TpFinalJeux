@@ -70,7 +70,7 @@ public class SprayAndPray : Spell
             bulletSpeed = 10;
             
             //Time.deltaTime and normalized ?
-            bulletRb.velocity = gunBarrel.transform.rotation * Vector3.forward * bulletSpeed;
+            bulletRb.velocity = gunBarrel.transform.rotation * Vector3.forward.normalized * bulletSpeed;
             TimeStampFireRate = Time.time + fireRate;
         }
     }
