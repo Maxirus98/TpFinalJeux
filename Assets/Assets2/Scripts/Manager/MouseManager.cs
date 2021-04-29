@@ -22,13 +22,7 @@ public class MouseManager : MonoBehaviour
 
     //2e étape, déclarer le handler
     public EventVector3 OnClickEnvironment;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
