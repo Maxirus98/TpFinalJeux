@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-44898168.00" t="ExcludeRecursive" />
-    <e p="C:\Users\dupui\Documents\TpFinalJeux" t="IncludeRecursive">
+    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-53696505.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mansa\Documents\OneDrive\Documents\techniqueInformatique\quatriemeSession\gaming\projects\TpFinalJeux" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -71,7 +71,6 @@
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
-        <e p="FoodManager.cs" t="Include" />
         <e p="RPG Food &amp; Drinks Pack" t="Include">
           <e p="Assets" t="Include">
             <e p="Scripts" t="Include">
@@ -82,6 +81,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="CameraController.cs" t="Include" />
+          <e p="FoodManager.cs" t="Include" />
           <e p="InventoryScripts" t="Include">
             <e p="InventoryManager.cs" t="Include" />
             <e p="InventorySlotUI.cs" t="Include" />
@@ -99,6 +99,7 @@
             <e p="NpcController.cs" t="Include" />
             <e p="WaveManager.cs" t="Include" />
           </e>
+          <e p="Timer.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
