@@ -5,10 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.UI;
 
 
-public class PlayerStats : MonoBehaviour
-{ 
-    public int maxHp = 100;
-    public int currentHp;
+public class PlayerStats : CharacterStats
+{
     public HpScript hpBar;
     
     // Start is called before the first frame update
@@ -25,11 +23,5 @@ public class PlayerStats : MonoBehaviour
         {
             TakeDamage(2);
         }
-    }
-
-    public void TakeDamage(int dmg)
-    {
-        currentHp -= dmg;
-        hpBar.SetHp(currentHp);
     }
 }

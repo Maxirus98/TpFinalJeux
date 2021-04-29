@@ -11,6 +11,7 @@ namespace Script
         private readonly NavMeshAgent _agent;
         private readonly float _lookRadius;
         private float _distance;
+        
 
         public DetectionCommand(
             Transform transform,

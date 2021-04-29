@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-53696505.00" t="ExcludeRecursive" />
-    <e p="C:\Users\mansa\Documents\OneDrive\Documents\techniqueInformatique\quatriemeSession\gaming\projects\TpFinalJeux" t="IncludeRecursive">
+    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-44898168.00" t="ExcludeRecursive" />
+    <e p="C:\Users\dupui\Documents\TpFinalJeux" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -36,6 +36,7 @@
             </e>
           </e>
           <e p="Scripts" t="Include">
+            <e p="CharacterCombat.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
             <e p="HpScript.cs" t="Include" />
             <e p="Manager" t="Include">
@@ -45,10 +46,14 @@
               <e p="MouseManager.cs" t="Include" />
               <e p="Singleton.cs" t="Include" />
             </e>
+            <e p="NPC" t="Include">
+              <e p="Enemy.cs" t="Include" />
+              <e p="EnemyController.cs" t="Include" />
+            </e>
             <e p="PlayerScripts" t="Include">
               <e p="PlayerAnimator.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
-              <e p="PlayerStats.cs" t="Include" />
+              <e p="PlayerManager.cs" t="Include" />
             </e>
             <e p="SpellScripts" t="Include">
               <e p="Attack.cs" t="Include" />
@@ -59,6 +64,11 @@
               <e p="SpellAoeHit.cs" t="Include" />
               <e p="SpellHit.cs" t="Include" />
               <e p="SprayAndPray.cs" t="Include" />
+            </e>
+            <e p="Stats" t="Include">
+              <e p="CharacterStats.cs" t="Include" />
+              <e p="PlayerStats.cs" t="Include" />
+              <e p="Stat.cs" t="Include" />
             </e>
             <e p="Targeter.cs" t="Include" />
           </e>
