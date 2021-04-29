@@ -14,12 +14,11 @@ public class CharacterCombat : MonoBehaviour
 
     public void Attack(CharacterStats targetStats)
     {
-        /*if (cd <= 0f)
+        if (stats.cooldown.Value <= 0f)
         {
-           
-        }*/
-        Debug.Log(stats.damage.GetValue());
-        targetStats.TakeDamage(stats.damage.GetValue());
-        //cd = 1f / atkSpeed;
+            Debug.Log(stats.damage.Value);
+            targetStats.TakeDamage(stats.damage.Value);
+            stats.cooldown.Value = 1f / stats.attackSpeed.Value;
+        }
     }
 }

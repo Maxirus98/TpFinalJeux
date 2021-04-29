@@ -7,17 +7,23 @@ using UnityEngine.Serialization;
 public class CharacterStats : MonoBehaviour
 {
     public Stat damage;
-    [SerializeField] private Stat attackSpeed;
-    [SerializeField] private Stat cooldown;
-    public int currentHp { get; protected set; }
-    public int maxHp;
+    [SerializeField] public Stat attackSpeed;
+    [SerializeField] public Stat cooldown;
+    public float currentHp { get; protected set; }
+    public float maxHp;
 
     private void Awake()
     {
         currentHp = maxHp;
     }
 
-    public void TakeDamage(int damage)
+    private void Start()
+    {
+        cooldown.Value = 0f;
+        attackSpeed.Value = 1f;
+    }
+
+    public void TakeDamage(float damage)
     {
         currentHp -= damage;
         Debug.Log(transform.name + "takes " + damage + " damage");

@@ -10,7 +10,7 @@ public class HpScript : MonoBehaviour
     public Slider slider;
     public Gradient gradientColor;
     public Image image;
-    public void SetMaxHp(int hp)
+    public void SetMaxHp(float hp)
     {
         slider.maxValue = hp;
         slider.value = hp;

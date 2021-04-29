@@ -4,11 +4,5 @@ using UnityEngine;
 [System.Serializable]
 public class Stat
 {
-    [SerializeField]
-    private int value;
-
-    public int GetValue()
-    {
-        return value;
-    }
+    public float Value { get; set; }
 }
