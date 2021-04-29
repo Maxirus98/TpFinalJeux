@@ -1,28 +1,42 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float time = 600;
-    private TextMeshPro _textMeshPro;
+    public float timeLeft = 600;
+    private TextMeshProUGUI _textMeshPro;
+
+    void Awake()
+    {
+        _textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
+        print(_textMeshPro.name);
+    }
+
     void Update()
     {
-        if (time > 0)
+        if (timeLeft > 0)
         {
-            time -= Time.deltaTime;
+            timeLeft -= Time.deltaTime;
         }
         else
         {
-            time = 0;
+            timeLeft = 0;
         }
+
+        DisplayTime(timeLeft);
     }
 
     void DisplayTime(float time)
     {
-        
+        if (time < 0)
+        {
+            time = 0;
+        }
+        float minutes = Mathf.FloorToInt(time / 60);
+        float seconds = Mathf.FloorToInt(time % 60);
+        if (minutes < 1)
+            _textMeshPro.color = Color.red;
+        _textMeshPro.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
