@@ -104,7 +104,7 @@ public class GameManager : Singleton<GameManager>
     {
         CurrentLevelName = levelName;
         
-        AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
+        AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
         if (loadSceneAsync == null)  // La scene existe dans le build setting
         {
             print("error loading scene : " + levelName);
