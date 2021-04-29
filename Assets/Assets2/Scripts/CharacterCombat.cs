@@ -12,13 +12,18 @@ public class CharacterCombat : MonoBehaviour
         stats = GetComponent<CharacterStats>();
     }
 
+    private void Update()
+    {
+        stats.cooldown.Value -= Time.deltaTime;
+    }
+
     public void Attack(CharacterStats targetStats)
     {
         if (stats.cooldown.Value <= 0f)
         {
             Debug.Log(stats.damage.Value);
             targetStats.TakeDamage(stats.damage.Value);
-            stats.cooldown.Value = 1f / stats.attackSpeed.Value;
         }
+        stats.cooldown.Value = 1f / stats.attackSpeed.Value;
     }
 }
