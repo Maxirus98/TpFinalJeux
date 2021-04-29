@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 
-public class UiManager : MonoBehaviour
+public class MainMenuManager : MonoBehaviour
 {
     //Refactor en anglais
     [SerializeField] private GameObject[] personnagesPrincipaux;
