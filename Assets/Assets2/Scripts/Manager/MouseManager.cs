@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -19,10 +20,16 @@ public class MouseManager : MonoBehaviour
 
     [SerializeField] private Interactable focus;
     [SerializeField] private PlayerAnimator _playerAnimator;
+    private CharacterCombat combat;
 
     //2e étape, déclarer le handler
     public EventVector3 OnClickEnvironment;
-    
+
+    private void Start()
+    {
+        combat = _playerAnimator.gameObject.GetComponent<CharacterCombat>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,13 +47,16 @@ public class MouseManager : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, _attackableLayer.value))
             {
-                //Check if we hit an interractable, set it as focus
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
-                if (interactable != null)
+                if (interactable)
                 {
                     SetFocus(interactable);
                     _playerAnimator.Attack();
-
+                    CharacterStats targetStats = interactable.gameObject.GetComponent<CharacterStats>();
+                    if (targetStats)
+                    {
+                        combat.Attack(targetStats);
+                    }
                 }
             }
         }

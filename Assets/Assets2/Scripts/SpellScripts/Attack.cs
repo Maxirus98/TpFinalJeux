@@ -6,6 +6,7 @@ using UnityEngine;
 public class Attack : Spell
 {
     private Animator animator;
+    
     // Update is called once per frame
     private void Start()
     {
@@ -31,6 +32,7 @@ public class Attack : Spell
     public override void DoSpell()
     {
         Spawn();
+        // Closest target
         TimeStamp = Time.time + cooldown;
     }
 }

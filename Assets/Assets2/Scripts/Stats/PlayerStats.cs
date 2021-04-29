@@ -4,24 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UI;
 
-
+//Useless for now
 public class PlayerStats : CharacterStats
 {
-    public HpScript hpBar;
-    
     // Start is called before the first frame update
     void Start()
     {
-        currentHp = maxHp;
-        hpBar.SetMaxHp(maxHp);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButton("Jump"))
-        {
-            TakeDamage(2);
-        }
+        attackSpeed.Value = 1f;
+        damage.Value = 10f;
     }
 }
