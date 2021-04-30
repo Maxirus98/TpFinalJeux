@@ -13,7 +13,10 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //transform.LookAt(_playerTransform);
-        transform.position = _playerTransform.position + offset;
+        Vector3 desiredPosition = _playerTransform.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position,desiredPosition,smoothSpeed * Time.deltaTime);
+        transform.position = smoothedPosition;
+        transform.LookAt(_playerTransform);
+
     }
 }
