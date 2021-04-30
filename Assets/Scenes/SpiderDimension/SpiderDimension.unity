@@ -28953,6 +28953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166a33756f04c334f9bd39b20e9afd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpBar: {fileID: 134214735}
   maxHp: 100
 --- !u!54 &1305053119
 Rigidbody:
@@ -48588,11 +48589,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804648052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eee90c11fb2a0e46bef1720c95661e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 166a33756f04c334f9bd39b20e9afd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
   hpBar: {fileID: 134214735}
+  maxHp: 100
 --- !u!114 &1804648056
 MonoBehaviour:
   m_ObjectHideFlags: 0

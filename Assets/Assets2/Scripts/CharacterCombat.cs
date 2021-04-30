@@ -21,9 +21,9 @@ public class CharacterCombat : MonoBehaviour
     {
         if (stats.cooldown.Value <= 0f)
         {
-            Debug.Log(stats.damage.Value);
             targetStats.TakeDamage(stats.damage.Value);
+            stats.cooldown.Value = 1f / stats.attackSpeed.Value;
         }
-        stats.cooldown.Value = 1f / stats.attackSpeed.Value;
+        
     }
 }

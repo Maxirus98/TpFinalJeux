@@ -18,7 +18,7 @@ public class HpScript : MonoBehaviour
         image.color = gradientColor.Evaluate(1f);
     }
 
-    public void SetHp(int hp)
+    public void SetHp(float hp)
     {
         slider.value = hp;
         image.color = gradientColor.Evaluate(slider.normalizedValue);
