@@ -80,6 +80,9 @@
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
+        <e p="Resources" t="Include">
+          <e p="LevelTracking.txt" t="Include" />
+        </e>
         <e p="RPG Food &amp; Drinks Pack" t="Include">
           <e p="Assets" t="Include">
             <e p="Scripts" t="Include">
@@ -89,6 +92,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Blurry.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="CursorManager.cs" t="Include" />
           <e p="FoodManager.cs" t="Include" />
@@ -108,6 +112,9 @@
             <e p="NavigationCommand.cs" t="Include" />
             <e p="NpcController.cs" t="Include" />
             <e p="WaveManager.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="LevelTrackerService.cs" t="Include" />
           </e>
           <e p="Timer.cs" t="Include" />
         </e>
