@@ -7,6 +7,7 @@ namespace DefaultNamespace
     {
         public static IEnumerator WaitFor(float waitTime)
         {
+            
             yield return new WaitForSeconds(waitTime);
         }
     }

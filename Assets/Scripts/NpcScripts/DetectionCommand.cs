@@ -11,7 +11,6 @@ namespace Script
         private readonly NavMeshAgent _agent;
         private readonly float _lookRadius;
         private float _distance;
-        
 
         public DetectionCommand(
             Transform transform,
@@ -30,7 +29,7 @@ namespace Script
         {
             _distance = Vector3.Distance(_target.position, _transform.position);
             //add a sound of war for npc
-            if (_distance <= _lookRadius)
+            if (_distance <= _lookRadius && _agent)
             {
                 _agent.isStopped = false;
                 _agent.SetDestination(_target.position);

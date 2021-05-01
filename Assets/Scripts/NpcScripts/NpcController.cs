@@ -15,7 +15,6 @@ public class NpcController : MonoBehaviour
     private NavMeshAgent _agent;
     private List<Transform> _checkpoints;
     private readonly List<Command> _commands = new List<Command>() ;
-
     void Start()
     {
         //Mettre .transform
@@ -31,7 +30,8 @@ public class NpcController : MonoBehaviour
 
     void Update()
     {
-       StartCoroutine(_commands[1].Execute());
+        if(_agent)
+            StartCoroutine(_commands[1].Execute());
     }
     private void OnDrawGizmosSelected()
     {

@@ -12,7 +12,9 @@ public class Empaler : Spell
         position = transform.position;
         if (Input.GetButton("Jump") && Time.time >= TimeStamp)
         {
+            isCasted = true;
             DoSpell();
+            print(isCasted);
         }
     }
 

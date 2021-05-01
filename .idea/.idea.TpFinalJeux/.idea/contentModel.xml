@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-53696505.00" t="ExcludeRecursive" />
-    <e p="C:\Users\mansa\Documents\OneDrive\Documents\techniqueInformatique\quatriemeSession\gaming\projects\TpFinalJeux" t="IncludeRecursive">
+    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-44898168.00" t="ExcludeRecursive" />
+    <e p="C:\Users\dupui\Documents\TpFinalJeux" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -36,6 +36,7 @@
             </e>
           </e>
           <e p="Scripts" t="Include">
+            <e p="CharacterAnimator.cs" t="Include" />
             <e p="CharacterCombat.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
             <e p="HpScript.cs" t="Include" />
@@ -77,9 +78,11 @@
             </e>
           </e>
         </e>
+        <e p="CooldownTimer.cs" t="Include" />
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
+        <e p="NpcHpScript.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="LevelTracking.txt" t="Include" />
         </e>

@@ -22,7 +22,7 @@ namespace Script
         //Passer le NpcState??
         public override IEnumerator Execute()
         {
-            while (true)
+            while (_agent)
             {
                 int position = (int)Random.Range(0f,_checkpoints.Count-1);
                 _agent.SetDestination(_checkpoints[position].position); 
