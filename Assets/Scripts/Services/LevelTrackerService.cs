@@ -34,7 +34,6 @@ namespace Services
 
                 if (name.Trim().Equals(dimensionName) && status.Equals("unlocked"))
                 {
-                    Debug.Log(dimensionName + " " + status);
                     return level;
                 }
             }
