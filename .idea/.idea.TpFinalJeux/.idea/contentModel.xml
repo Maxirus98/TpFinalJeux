@@ -38,6 +38,7 @@
           <e p="Scripts" t="Include">
             <e p="CharacterAnimator.cs" t="Include" />
             <e p="CharacterCombat.cs" t="Include" />
+            <e p="CooldownTimer.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
             <e p="HpScript.cs" t="Include" />
             <e p="Manager" t="Include">
@@ -51,6 +52,7 @@
               <e p="Enemy.cs" t="Include" />
               <e p="EnemyController.cs" t="Include" />
             </e>
+            <e p="NpcHpScript.cs" t="Include" />
             <e p="PlayerScripts" t="Include">
               <e p="PlayerAnimator.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
@@ -78,21 +80,12 @@
             </e>
           </e>
         </e>
-        <e p="CooldownTimer.cs" t="Include" />
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
-<<<<<<< HEAD
-        <e p="NpcHpScript.cs" t="Include" />
-=======
-<<<<<<< HEAD
->>>>>>> 94827461aafd89554d0cc86516e22000e0d9ea86
         <e p="Resources" t="Include">
           <e p="LevelTracking.txt" t="Include" />
         </e>
-=======
-        <e p="NpcHpScript.cs" t="Include" />
->>>>>>> 16c76a1994e05e29337f7b3030a772909e8578cf
         <e p="RPG Food &amp; Drinks Pack" t="Include">
           <e p="Assets" t="Include">
             <e p="Scripts" t="Include">
