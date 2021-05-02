@@ -21,7 +21,7 @@ public class Enemy : Interactable
         if (playerCombat != null)
         {
             Debug.Log("Attack");
-            playerCombat.Attack(enemyStats);
+            playerCombat.AttackTarget(enemyStats);
         }
     }
 }

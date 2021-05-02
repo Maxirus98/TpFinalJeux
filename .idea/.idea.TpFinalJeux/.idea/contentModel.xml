@@ -40,7 +40,9 @@
             </e>
           </e>
           <e p="Scripts" t="Include">
+            <e p="CharacterAnimator.cs" t="Include" />
             <e p="CharacterCombat.cs" t="Include" />
+            <e p="CooldownTimer.cs" t="Include" />
             <e p="DescriptionBD.cs" t="Include" />
             <e p="HpScript.cs" t="Include" />
             <e p="Manager" t="Include">
@@ -102,11 +104,14 @@
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
+<<<<<<< HEAD
         <e p="Low Poly Graveyard" t="Include">
           <e p="Materials" t="Include">
             <e p="vertexcolorsstandard.shader" t="Include" />
           </e>
         </e>
+=======
+>>>>>>> d4a18f87dcb6f2762784c9a32185368bfb5732bb
         <e p="Resources" t="Include">
           <e p="LevelTracking.txt" t="Include" />
         </e>

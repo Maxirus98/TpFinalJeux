@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float timeLeft = 600;
+    
     private TextMeshProUGUI _textMeshPro;
+    public float timeLeft = 600;
 
     void Awake()
     {
