@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NpcHpScript : MonoBehaviour
+public class  NpcHpScript : MonoBehaviour
 {
     void Update ()
     {

@@ -12,21 +12,26 @@ namespace Script
         private readonly List<Transform> _checkpoints;
         private readonly NavMeshAgent _agent;
 
-        public NavigationCommand(NavMeshAgent agent,List<Transform> checkpoints)
+        public NavigationCommand(NavMeshAgent agent, List<Transform> checkpoints)
         {
             _checkpoints = checkpoints;
             _agent = agent;
             _agent.isStopped = false;
         }
-        
+
         //Passer le NpcState??
         public override IEnumerator Execute()
         {
-            while (true)
+            while (_agent)
             {
-                int position = (int)Random.Range(0f,_checkpoints.Count-1);
-                _agent.SetDestination(_checkpoints[position].position); 
-                yield return new WaitForSeconds(8f);
+                int position = (int) Random.Range(0f, _checkpoints.Count - 1);
+                if (_agent.remainingDistance <= 3)
+                {
+                    Debug.Log("Has reached target");
+                    _agent.SetDestination(_checkpoints[position].position);
+                }
+
+                yield return new WaitForSeconds(1f);
             }
         }
     }

@@ -31,7 +31,8 @@ public class NpcController : MonoBehaviour
 
     void Update()
     {
-       StartCoroutine(_commands[1].Execute());
+         //TODO : if npc alive startCoroutine else foreach dans list<command> stopCoroutine
+        StartCoroutine(_commands[1].Execute());
     }
     private void OnDrawGizmosSelected()
     {
