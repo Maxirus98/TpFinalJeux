@@ -12,6 +12,7 @@ public class NpcController : MonoBehaviour
     private NpcState _npcState;
     private Transform _target;
     private float _distance;
+    private Animator _animator;
     private NavMeshAgent _agent;
     private List<Transform> _checkpoints;
     private readonly List<Command> _commands = new List<Command>() ;
@@ -22,9 +23,11 @@ public class NpcController : MonoBehaviour
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _agent = GetComponent<NavMeshAgent>();
         _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());
+        _animator = GetComponent<Animator>();
         
         _commands.Add(new NavigationCommand(_agent, _checkpoints));
         _commands.Add(new DetectionCommand(transform,_target, _agent, lookRadius));
+        _commands.Add(new AttackCommand(transform,_target,_agent,GetComponent<CharacterCombat>(),_animator));
         
         StartCoroutine(_commands[0].Execute());
     }
@@ -33,6 +36,7 @@ public class NpcController : MonoBehaviour
     {
          //TODO : if npc alive startCoroutine else foreach dans list<command> stopCoroutine
         StartCoroutine(_commands[1].Execute());
+        StartCoroutine(_commands[2].Execute());
     }
     private void OnDrawGizmosSelected()
     {

@@ -2368,8 +2368,8 @@ GameObject:
   - component: {fileID: 3960753275917757635}
   - component: {fileID: 3960753275917757636}
   - component: {fileID: 3960753275917757638}
-  - component: {fileID: 3960753275917757624}
   - component: {fileID: 3960753275917757625}
+  - component: {fileID: 1145746617865047295}
   m_Layer: 8
   m_Name: spider_myOldOne
   m_TagString: Enemy
@@ -2523,19 +2523,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBar: {fileID: 3960753277249834087}
   maxHp: 40
---- !u!114 &3960753275917757624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3960753275917790188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ec98741ea700f4a9154513a1dc16f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookRadius: 10
 --- !u!114 &3960753275917757625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2548,6 +2535,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fef014e96ce14845a5de6fa1d6d11eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1145746617865047295
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3960753275917790188}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32c4822cf02f44d4cbfdf0f67cf256a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3960753275998376041
 GameObject:
   m_ObjectHideFlags: 0

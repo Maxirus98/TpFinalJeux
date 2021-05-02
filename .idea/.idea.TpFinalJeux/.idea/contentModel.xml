@@ -52,7 +52,6 @@
             </e>
             <e p="NPC" t="Include">
               <e p="Enemy.cs" t="Include" />
-              <e p="EnemyController.cs" t="Include" />
             </e>
             <e p="NpcHpScript.cs" t="Include" />
             <e p="PlayerScripts" t="Include">
