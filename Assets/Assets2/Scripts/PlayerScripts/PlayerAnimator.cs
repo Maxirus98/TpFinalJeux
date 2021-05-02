@@ -17,7 +17,7 @@ public class PlayerAnimator : MonoBehaviour
     private float _attackNumber;
     private static readonly float coolDownPeriodAttacks = 1f;
     private float attackMaxRange;
-    private CharacterCombat combat;
+    public float TimeStampAttacks { get; set; }
     
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,6 @@ public class PlayerAnimator : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponentInChildren<Animator>();
         targeter = GetComponent<Targeter>();
-        combat = GetComponent<CharacterCombat>();
     }
     // Pour faire apparaitre les items en tournant dans le World
     //cloneRifle.transform.Rotate(Vector3.up, Space.World);
@@ -34,17 +33,15 @@ public class PlayerAnimator : MonoBehaviour
     void Update()
     {
         //agent current speed / agent maximum speed
-        
-            float speedPercent = _agent?_agent.velocity.magnitude / _agent.speed * 10:0f; 
-            //Will take 0.1 sec to change animation
-            _animator.SetFloat("speedPercent", speedPercent);
-        
+        float speedPercent = _agent.velocity.magnitude / _agent.speed * 10; 
+        //Will take 0.1 sec to change animation
+        _animator.SetFloat("speedPercent", speedPercent);
     }
 
     public void Attack()
     {
         attackMaxRange = 6f;
-        if (combat.stats.cooldown.Value <= 0f && Vector3.Distance(transform.position, targeter.currentTarget.position) <= attackMaxRange)
+        if (TimeStampAttacks <= Time.time && Vector3.Distance(transform.position, targeter.currentTarget.position) <= attackMaxRange)
         {
             _isAttacking = true;
             _animator.SetBool("isAttacking", _isAttacking);
@@ -55,10 +52,10 @@ public class PlayerAnimator : MonoBehaviour
     public IEnumerator CoroutineAttack()
     {
         //Change for Animation Time?
-        yield return new WaitForSeconds(combat.stats.cooldown.Value);
-        print(combat.stats.cooldown.Value);
+        yield return new WaitForSeconds(coolDownPeriodAttacks);
         _isAttacking = false;
         _animator.SetBool("isAttacking", _isAttacking);
+        TimeStampAttacks= Time.time + coolDownPeriodAttacks;
         SetAttackNumber();
     }
     void SetAttackNumber()

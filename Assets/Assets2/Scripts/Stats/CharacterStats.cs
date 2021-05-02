@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.Serialization;
-[RequireComponent(typeof(Animator))]
+
 public class CharacterStats : MonoBehaviour
 {
     [SerializeField] private HpScript hpBar;
@@ -17,8 +16,6 @@ public class CharacterStats : MonoBehaviour
     public float currentHp { get; private set; }
     public float maxHp;
 
-    private Animator _animator;
-
     private void Awake()
     {
         currentHp = maxHp;
@@ -29,8 +26,7 @@ public class CharacterStats : MonoBehaviour
     {
         cooldown.Value = 0f;
         attackSpeed.Value = 1f;
-        damage.Value = 40f;
-        _animator = GetComponent<Animator>();
+        damage.Value = 4f;
     }
 
     public void TakeDamage(float damage)
@@ -55,8 +51,7 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void Die()
     {
-        _animator.SetBool("isDead", true);
-        Destroy(GetComponent<NavMeshAgent>());
+        //Die meant to be over written
         Debug.Log(transform.name  + " died");
     }
 }

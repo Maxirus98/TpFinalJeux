@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 [System.Serializable]
 public class EventVector3 : UnityEvent<Vector3>
@@ -37,10 +36,9 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, _clickableLayer.value))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000000, _clickableLayer.value))
             {
-                if(_playerAnimator.GetComponent<NavMeshAgent>())
-                    OnClickEnvironment.Invoke(hit.point);
+                OnClickEnvironment.Invoke(hit.point);
             }
            
         }
@@ -53,11 +51,11 @@ public class MouseManager : MonoBehaviour
                 if (interactable)
                 {
                     SetFocus(interactable);
+                    _playerAnimator.Attack();
                     CharacterStats targetStats = interactable.gameObject.GetComponent<CharacterStats>();
                     if (targetStats)
                     {
-                        _playerAnimator.Attack();
-                        combat.AttackTarget(targetStats);
+                        combat.Attack(targetStats);
                     }
                 }
             }

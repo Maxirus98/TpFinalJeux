@@ -54,6 +54,7 @@
             </e>
             <e p="NPC" t="Include">
               <e p="Enemy.cs" t="Include" />
+              <e p="EnemyController.cs" t="Include" />
             </e>
             <e p="NpcHpScript.cs" t="Include" />
             <e p="PlayerScripts" t="Include">
@@ -104,14 +105,11 @@
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
-<<<<<<< HEAD
         <e p="Low Poly Graveyard" t="Include">
           <e p="Materials" t="Include">
             <e p="vertexcolorsstandard.shader" t="Include" />
           </e>
         </e>
-=======
->>>>>>> d4a18f87dcb6f2762784c9a32185368bfb5732bb
         <e p="Resources" t="Include">
           <e p="LevelTracking.txt" t="Include" />
         </e>

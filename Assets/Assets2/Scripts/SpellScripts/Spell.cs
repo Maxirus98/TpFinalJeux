@@ -7,8 +7,7 @@ using UnityEngine;
 public class Spell : MonoBehaviour
 {
     [SerializeField] protected GameObject go;
-    [SerializeField] public float cooldown;
-    public bool isCasted = false;
+    [SerializeField] protected float cooldown;
     protected Vector3 position;
     protected Vector3 offset;
     
