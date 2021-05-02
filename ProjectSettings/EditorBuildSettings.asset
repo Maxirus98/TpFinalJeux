@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SpiderDimension/SpiderDimension.unity
     guid: f7f047342ee24604b80b43183fdcc914
   - enabled: 1
-    path: Assets/Scenes/GolemDimension.unity
+    path: Assets/Scenes/GolemDimension/GolemDimension.unity
     guid: 489d0872c67ba4d45b32d237abc5ba49
   - enabled: 1
     path: Assets/Scenes/OrcDimension.unity
