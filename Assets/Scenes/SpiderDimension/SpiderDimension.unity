@@ -17259,7 +17259,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 32c4822cf02f44d4cbfdf0f67cf256a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -46663,6 +46663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658137987919254714, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5046267644814705815, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}

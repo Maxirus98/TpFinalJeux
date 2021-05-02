@@ -375,7 +375,12 @@ ModelImporter:
   - first:
       137: 13700000
     second: mesh
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spider_mat
+    second: {fileID: 2100000, guid: 748ae68fe38e0f94886b07c1ef81dd17, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1
@@ -850,7 +855,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -982,7 +987,7 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 121
     - serializedVersion: 16
       name: die
       takeName: die
