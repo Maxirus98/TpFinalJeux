@@ -82,6 +82,23 @@
             </e>
           </e>
         </e>
+        <e p="BrokenVector" t="Include">
+          <e p="UltimateDungeonPack" t="Include">
+            <e p="Scenes" t="Include">
+              <e p="Demo" t="Include">
+                <e p="FPControls" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="CharacterController.cs" t="Include" />
+                    <e p="MouseCamLook.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="LightImprove.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="CameraControllerScene2.cs" t="Include" />
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
@@ -118,6 +135,7 @@
             <e p="ItemController.cs" t="Include" />
           </e>
           <e p="NpcScripts" t="Include">
+            <e p="AttackCommand.cs" t="Include" />
             <e p="Command.cs" t="Include" />
             <e p="DetectionCommand.cs" t="Include" />
             <e p="NavigationCommand.cs" t="Include" />
