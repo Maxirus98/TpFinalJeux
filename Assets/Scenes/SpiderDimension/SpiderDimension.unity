@@ -17255,7 +17255,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212288654}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: f5a9bd478ca094495a4520e37f57420d, type: 3}
   m_Controller: {fileID: 9100000, guid: 32c4822cf02f44d4cbfdf0f67cf256a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -50890,6 +50890,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2739874041141956215, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2739874043139665133, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
       propertyPath: m_Speed
@@ -75154,7 +75159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38dbd6c314edce4795aca96dc70154b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 50
+  lookRadius: 10
 --- !u!114 &1377318574
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -35,19 +35,20 @@ namespace Script
             if (distance <= _agent.stoppingDistance)
             {
                 CharacterStats targetStats = _target.GetComponent<CharacterStats>();
-                if (targetStats)
+                if (distance <= _agent.stoppingDistance && !_animator.GetBool("isAttacking"))
                 {
-                    Debug.Log("startAttack");
-                    _animator.SetBool("attacking", true);
+                    _animator.SetBool("isAttacking", true);
+                    Debug.Log("startAttack" + _animator.GetBool("isAttacking"));
                     _combat.Attack(targetStats);
                 }
             }
-            else
+            if(distance > _agent.stoppingDistance && _animator.GetBool("isAttacking"))
             {
-                Debug.Log("stopAttack");
-                _animator.SetBool("attacking", false);
-                yield break;
+                _animator.SetBool("isAttacking", false);
+                Debug.Log("stopAttack" + _animator.GetBool("isAttacking"));
             }
+
+            yield return new WaitForSeconds(10f);
         }
     }
 }
