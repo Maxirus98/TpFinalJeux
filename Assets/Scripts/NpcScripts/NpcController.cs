@@ -23,13 +23,14 @@ public class NpcController : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());
         _animator = GetComponent<Animator>();
+        
         SetCommands();
+        
         StartCoroutine(_commands[0].Execute());
     }
 
     void FixedUpdate()
     {
-         //TODO : if npc alive startCoroutine else foreach dans list<command> stopCoroutine
         StartCoroutine(_commands[1].Execute());
         StartCoroutine(_commands[2].Execute());
     }

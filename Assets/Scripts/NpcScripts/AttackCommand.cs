@@ -36,7 +36,7 @@ namespace Script
             {
                 CharacterStats targetStats = _target.GetComponent<CharacterStats>();
 
-                if (distance <= _agent.stoppingDistance)
+                if (distance <= _agent.stoppingDistance )
                 {
                     _animator.SetBool("isAttacking", true);
                     Debug.Log("startAttack" + _animator.GetBool("isAttacking"));

@@ -15,6 +15,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager _instance;
     private void Awake()
     {
+        DontDestroyOnLoad(this);
         if (_instance != null)
         {
             print("More than one instance found");

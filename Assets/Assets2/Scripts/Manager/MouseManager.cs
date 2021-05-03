@@ -30,7 +30,6 @@ public class MouseManager : MonoBehaviour
         combat = _playerAnimator.gameObject.GetComponent<CharacterCombat>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
