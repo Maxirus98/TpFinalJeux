@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2994920066219395404}
   - component: {fileID: -2431638003521138979}
   - component: {fileID: 4771029720588318658}
+  - component: {fileID: 1352585973956150031}
   m_Layer: 0
   m_Name: Small_Bullet
   m_TagString: Bullet
@@ -90,9 +91,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325836922669442}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43e11231e1541245b9f1a94dc230b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1352585973956150031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325836922669442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f6bf6629a62dc40b1341073c0836cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 10

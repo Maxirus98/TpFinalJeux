@@ -2,11 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+
 
 public class PlayerManager : Singleton<PlayerManager>
 {
-    public GameObject player;
+    [System.Serializable]
+    public class PlayerStateEvent : UnityEvent<PlayerState>
+    {
+    }
+    
+    private GameObject player;
 
     public enum PlayerState
     {
@@ -14,13 +21,5 @@ public class PlayerManager : Singleton<PlayerManager>
         Dead
     }
 
-    private void Start()
-    {
-        player = gameObject;
-    }
-
-    public void KillPlayer()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    private PlayerStateEvent playerStateEventHandler;
 }

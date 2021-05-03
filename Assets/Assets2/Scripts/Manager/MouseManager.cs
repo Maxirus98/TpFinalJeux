@@ -51,11 +51,11 @@ public class MouseManager : MonoBehaviour
                 {
                     SetFocus(interactable);
                     _playerAnimator.Attack();
-                    CharacterStats targetStats = interactable.gameObject.GetComponent<CharacterStats>();
-                    if (targetStats)
-                    {
-                        combat.Attack(targetStats);
-                    }
+                    // CharacterStats targetStats = interactable.gameObject.GetComponent<CharacterStats>();
+                    // if (targetStats)
+                    // {
+                    //     combat.Attack(targetStats);
+                    // }
                 }
             }
         }

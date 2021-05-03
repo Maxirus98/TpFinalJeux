@@ -2,25 +2,38 @@
 [RequireComponent(typeof(CharacterStats))]
 public class CharacterCombat : MonoBehaviour
 {
-    private CharacterStats stats;
+    public CharacterStats Stats { set; get; }
     
     private void Start()
     {
-        stats = GetComponent<CharacterStats>();
+        Stats = GetComponent<CharacterStats>();
     }
 
     private void Update()
     {
-        stats.cooldown.Value -= Time.deltaTime;
+        Stats.cooldown.Value -= Time.deltaTime;
     }
-
+    
     public void Attack(CharacterStats targetStats)
     {
-        if (stats.cooldown.Value <= 0f)
+        if (Stats.cooldown.Value <= 0f)
         {
-            targetStats.TakeDamage(stats.damage.Value);
-            stats.cooldown.Value = 1f / stats.attackSpeed.Value;
+            targetStats.TakeDamage(Stats.damage.Value);
+            Stats.cooldown.Value = 1f / Stats.attackSpeed.Value;
         }
-        
+    }
+    
+    public void AoEAttack(CharacterStats targetStats, float damage)
+    {
+        targetStats.TakeDamage(damage);
+    }
+    
+    public void PlayerSingleAttack(CharacterStats targetStats, float damage)
+    {
+        if (Stats.cooldown.Value <= 0f)
+        {
+            targetStats.TakeDamage(damage);
+            Stats.cooldown.Value = 1f / Stats.attackSpeed.Value;
+        }
     }
 }

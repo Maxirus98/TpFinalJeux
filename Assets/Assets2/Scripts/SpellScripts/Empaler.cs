@@ -14,12 +14,14 @@ public class Empaler : Spell
         {
             DoSpell();
         }
+        
     }
 
     public override void DoSpell()
     {
         Spawn();
         Shoot();
+        cooldown = 2;
         StartCoroutine(Cooldown.WaitFor(cooldown));
         TimeStamp = Time.time + cooldown;
     }
@@ -32,6 +34,6 @@ public class Empaler : Spell
 
     public override void Shoot()
     {
-        empalerClone.GetComponent<Rigidbody>().velocity = (transform.forward.normalized * (vitesseEmpaler * Time.deltaTime));
+        empalerClone.GetComponent<Rigidbody>().velocity = (transform.forward * (vitesseEmpaler * Time.deltaTime));
     }
 }
