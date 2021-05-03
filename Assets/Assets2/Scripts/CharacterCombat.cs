@@ -13,16 +13,26 @@ public class CharacterCombat : MonoBehaviour
     {
         Stats.cooldown.Value -= Time.deltaTime;
     }
-
-    public void AoEAttack(CharacterStats targetStats, float damage)
-    {
-        targetStats.TakeDamage(damage);
-    }
+    
     public void Attack(CharacterStats targetStats)
     {
         if (Stats.cooldown.Value <= 0f)
         {
             targetStats.TakeDamage(Stats.damage.Value);
+            Stats.cooldown.Value = 1f / Stats.attackSpeed.Value;
+        }
+    }
+    
+    public void AoEAttack(CharacterStats targetStats, float damage)
+    {
+        targetStats.TakeDamage(damage);
+    }
+    
+    public void PlayerSingleAttack(CharacterStats targetStats, float damage)
+    {
+        if (Stats.cooldown.Value <= 0f)
+        {
+            targetStats.TakeDamage(damage);
             Stats.cooldown.Value = 1f / Stats.attackSpeed.Value;
         }
     }

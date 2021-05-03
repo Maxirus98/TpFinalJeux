@@ -79,6 +79,7 @@
             <e p="Puddle" t="Include">
               <e p="WaterShaded.shader" t="Include" />
             </e>
+            <e p="SpellStat.cs" t="Include" />
           </e>
         </e>
         <e p="BrokenVector" t="Include">

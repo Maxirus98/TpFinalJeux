@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpellStat))]
 public class SpellAoeHit : MonoBehaviour
 {
     [SerializeField] private CharacterCombat playerCombat;
+    private SpellStat damage;
 
     private void Start()
     {
+        damage = GetComponent<SpellStat>();
         playerCombat = GameObject.FindWithTag("Player").GetComponent<CharacterCombat>();
     }
     
@@ -18,7 +21,7 @@ public class SpellAoeHit : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             print("spell hit");
-            playerCombat.AoEAttack(other.GetComponent<CharacterCombat>().Stats, playerCombat.Stats.spellDamage.Value);
+            playerCombat.AoEAttack(other.GetComponent<CharacterCombat>().Stats, damage.getValue());
             
         }
     }

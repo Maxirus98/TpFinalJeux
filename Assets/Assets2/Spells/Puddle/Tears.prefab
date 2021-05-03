@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5166496006028646864}
   - component: {fileID: 5166496006028646867}
   - component: {fileID: 5166496006028646866}
-  - component: {fileID: -6444183276411209369}
+  - component: {fileID: -7710158390768798938}
+  - component: {fileID: -6254761797324839887}
   m_Layer: 0
   m_Name: Tears
   m_TagString: Untagged
@@ -94,7 +95,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-6444183276411209369
+--- !u!114 &-7710158390768798938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,6 +104,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5166496006028646869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d43e11231e1541245b9f1a94dc230b7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 869570534b1446c4f9bb9b2418bf8d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCombat: {fileID: 0}
+--- !u!114 &-6254761797324839887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5166496006028646869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f6bf6629a62dc40b1341073c0836cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 5
