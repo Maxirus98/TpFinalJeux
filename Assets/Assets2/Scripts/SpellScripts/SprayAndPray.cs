@@ -34,7 +34,7 @@ public class SprayAndPray : Spell
             //Suivre le joueur;
             cloneRifle.transform.position = position;
         
-            CheckForClosestTarget();
+            targeter.CheckForClosestTarget();
             //Rotate en fonction des ennemis
             Vector3 direction = targeter.currentTarget.position - cloneRifle.transform.position;
             Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(90, 0, 0);
@@ -80,21 +80,5 @@ public class SprayAndPray : Spell
         Spawn();
         StartCoroutine(Cooldown.WaitFor(cooldown));
         TimeStamp = Time.time + cooldown;
-    }
-
-    public void CheckForClosestTarget()
-    {
-        foreach(Transform target in targeter.targets)
-        {
-            if (target)
-            {
-                if (Vector3.Distance(transform.position, target.position) <
-                    Vector3.Distance(transform.position, targeter.currentTarget.position))
-                {
-                    targeter.currentTarget = target;
-                }
-            }
-                
-        }
     }
 }

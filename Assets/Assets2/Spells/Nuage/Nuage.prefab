@@ -6162,3 +6162,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869570534b1446c4f9bb9b2418bf8d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCombat: {fileID: 0}

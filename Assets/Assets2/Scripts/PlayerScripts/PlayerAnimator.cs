@@ -15,7 +15,7 @@ public class PlayerAnimator : MonoBehaviour
 
     public bool _isAttacking = false;
     private float _attackNumber;
-    private static readonly float coolDownPeriodAttacks = 1f;
+    private static readonly float coolDownPeriodAttacks = 0.5f;
     private float attackMaxRange;
     public float TimeStampAttacks { get; set; }
     
@@ -32,6 +32,7 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        targeter.CheckForClosestTarget();
         //agent current speed / agent maximum speed
         float speedPercent = _agent.velocity.magnitude / _agent.speed * 10; 
         //Will take 0.1 sec to change animation
@@ -55,7 +56,7 @@ public class PlayerAnimator : MonoBehaviour
         yield return new WaitForSeconds(coolDownPeriodAttacks);
         _isAttacking = false;
         _animator.SetBool("isAttacking", _isAttacking);
-        TimeStampAttacks= Time.time + coolDownPeriodAttacks;
+        TimeStampAttacks = Time.time + coolDownPeriodAttacks;
         SetAttackNumber();
     }
     void SetAttackNumber()

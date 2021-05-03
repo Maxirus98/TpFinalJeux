@@ -7,7 +7,7 @@ public class Targeter : MonoBehaviour
 {
     public List<Transform> targets;
     public Transform currentTarget;
-
+    
     private void Start()
     {
         LookForTargets();
@@ -22,5 +22,21 @@ public class Targeter : MonoBehaviour
         }
 
         currentTarget = targets[0];
+    }
+    
+    public void CheckForClosestTarget()
+    {
+        foreach(Transform target in targets)
+        {
+            if (target)
+            {
+                if (Vector3.Distance(transform.position, target.position) <
+                    Vector3.Distance(transform.position, currentTarget.position))
+                {
+                    currentTarget = target;
+                }
+            }
+                
+        }
     }
 }

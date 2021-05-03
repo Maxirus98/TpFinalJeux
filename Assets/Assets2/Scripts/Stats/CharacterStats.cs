@@ -9,7 +9,8 @@ public class CharacterStats : MonoBehaviour
 {
     [SerializeField] private HpScript hpBar;
     
-    public Stat damage;
+    [SerializeField] public Stat damage;
+    [SerializeField] public Stat spellDamage;
     [SerializeField] public Stat attackSpeed;
     [SerializeField] public Stat cooldown;
     
@@ -24,6 +25,7 @@ public class CharacterStats : MonoBehaviour
 
     private void Start()
     {
+        spellDamage.Value = 50f;
         cooldown.Value = 0f;
         attackSpeed.Value = 1f;
         damage.Value = 4f;

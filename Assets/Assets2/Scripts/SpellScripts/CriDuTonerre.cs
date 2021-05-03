@@ -6,6 +6,13 @@ using UnityEngine;
 
 public class CriDuTonerre : Spell
 {
+    private CharacterCombat combat;
+
+    private void Start()
+    {
+        combat = GetComponent<CharacterCombat>();
+    }
+
     private void Update()
     {
         position = transform.position;
