@@ -71,6 +71,7 @@
             </e>
             <e p="Stats" t="Include">
               <e p="CharacterStats.cs" t="Include" />
+              <e p="SpellStat.cs" t="Include" />
               <e p="Stat.cs" t="Include" />
             </e>
             <e p="Targeter.cs" t="Include" />
@@ -79,7 +80,6 @@
             <e p="Puddle" t="Include">
               <e p="WaterShaded.shader" t="Include" />
             </e>
-            <e p="SpellStat.cs" t="Include" />
           </e>
         </e>
         <e p="BrokenVector" t="Include">
@@ -147,6 +147,7 @@
           </e>
           <e p="Timer.cs" t="Include" />
         </e>
+        <e p="SpellImageSelector.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
             <e p="Fonts" t="Include">
