@@ -13,6 +13,7 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] public Stat spellDamage;
     [SerializeField] public Stat attackSpeed;
     [SerializeField] public Stat cooldown;
+    public HealEffect healEffect; 
     
     public float currentHp { get; private set; }
     public float maxHp;
@@ -46,6 +47,7 @@ public class CharacterStats : MonoBehaviour
     {
         if (currentHp + bonusLife < maxHp)
         {
+            StartCoroutine(healEffect.Effect());
             currentHp += bonusLife;
             hpBar.SetHp(currentHp);
         }

@@ -41,12 +41,12 @@ namespace InventoryScripts
         public void OnClickConsume()
         {
             CharacterStats characterStats = _player.GetComponent<CharacterStats>();
-            HealEffect healEffect = _player.GetComponentInChildren<HealEffect>();
+           // HealEffect healEffect = _player.GetComponentInChildren<HealEffect>();
             
             characterStats.Heal(_item.bonusLife);
             InventoryManager.Instance.RemoveItem(_item);
             
-            StartCoroutine(healEffect.Effect());
+            //StartCoroutine(healEffect.Effect());
         }
     }
 }
