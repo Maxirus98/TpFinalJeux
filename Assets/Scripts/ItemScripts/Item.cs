@@ -10,8 +10,4 @@ public class Item : ScriptableObject
      public bool isDefaultItem = false;
      public float bonusLife = 0f;
 
-     public virtual void Use()
-     {
-          Debug.Log("Using" + name);
-     }
 }

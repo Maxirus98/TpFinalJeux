@@ -103,6 +103,7 @@
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
+        <e p="HealEffect.cs" t="Include" />
         <e p="Low Poly Graveyard" t="Include">
           <e p="Materials" t="Include">
             <e p="vertexcolorsstandard.shader" t="Include" />

@@ -30,10 +30,9 @@ namespace InventoryScripts
 
         #endregion
 
-        public delegate void OnItemChanged();
-
-        public OnItemChanged OnItemChangedCallBack;
         public List<Item> items = new List<Item>();
+        public delegate void OnItemChanged();
+        public OnItemChanged OnItemChangedCallBack;
         private int _space = 15;
 
         public bool AddItem(Item item)

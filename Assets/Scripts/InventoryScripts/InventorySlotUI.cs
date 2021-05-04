@@ -8,10 +8,12 @@ namespace InventoryScripts
         private Item _item;
         public Image _icon;
         private Button _removeButton;
-
-        void Awake()
+        private GameObject _player;
+        
+        void Start()
         {
             _removeButton = GetComponentsInChildren<Button>()[1];
+            _player = GameObject.FindGameObjectWithTag("Player");
         }
 
         public void PutItemInSlot(Item item)
@@ -38,17 +40,13 @@ namespace InventoryScripts
 
         public void OnClickConsume()
         {
-            CharacterStats characterStats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
+            CharacterStats characterStats = _player.GetComponent<CharacterStats>();
+            HealEffect healEffect = _player.GetComponentInChildren<HealEffect>();
+            
             characterStats.Heal(_item.bonusLife);
             InventoryManager.Instance.RemoveItem(_item);
-        }
-
-        public void UseItem()
-        {
-            if (_item != null)
-            {
-                _item.Use();
-            }
+            
+            StartCoroutine(healEffect.Heal());
         }
     }
 }
