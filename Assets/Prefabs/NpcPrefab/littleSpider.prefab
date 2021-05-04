@@ -2371,7 +2371,7 @@ GameObject:
   - component: {fileID: 3960753275917757625}
   - component: {fileID: 1145746617865047295}
   m_Layer: 8
-  m_Name: spider_myOldOne
+  m_Name: littleSpider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2522,6 +2522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 3960753277249834087}
+  healEffect: {fileID: 0}
   maxHp: 40
 --- !u!114 &3960753275917757625
 MonoBehaviour:

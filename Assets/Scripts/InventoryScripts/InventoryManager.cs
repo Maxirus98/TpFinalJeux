@@ -37,8 +37,7 @@ namespace InventoryScripts
 
         public bool AddItem(Item item)
         {
-            print("adasd");
-            if (!item.isDefaultItem && items.Count < _space)
+            if (items.Count < _space)
             {
                 items.Add(item);
                 if (CheckIfCallBackIsNull())

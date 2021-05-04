@@ -9,23 +9,23 @@ public class NpcController : MonoBehaviour
 {
     //Repasser pour voir ce qui n'ont pas besoin d'être private
     public float lookRadius = 50f;
-    private NpcState _npcState;
     private Transform _target;
-    private float _distance;
     private Animator _animator;
     private NavMeshAgent _agent;
+    private CharacterStats _characterStats;
     private List<Transform> _checkpoints;
-    private readonly List<Command> _commands = new List<Command>() ;
+    private readonly List<Command> _commands = new List<Command>();
 
     void Start()
     {
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        _agent = GetComponent<NavMeshAgent>();
-        _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());
         _animator = GetComponent<Animator>();
-        
+        _agent = GetComponent<NavMeshAgent>();
+        _characterStats = GetComponent<CharacterStats>();
+        _checkpoints = new List<Transform>(GameObject.Find("CheckPoints").GetComponentsInChildren<Transform>());
+
         SetCommands();
-        
+
         StartCoroutine(_commands[0].Execute());
     }
 
@@ -33,24 +33,25 @@ public class NpcController : MonoBehaviour
     {
         StartCoroutine(_commands[1].Execute());
         StartCoroutine(_commands[2].Execute());
+
+        if (_characterStats.currentHp <= 0)
+        {
+            //animation or effect
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
     }
 
     private void SetCommands()
     {
         _commands.Add(new NavigationCommand(_agent, _checkpoints));
-        _commands.Add(new DetectionCommand(transform,_target, _agent, lookRadius));
-        _commands.Add(new AttackCommand(transform,_target,_agent,GetComponent<CharacterCombat>(),_animator));
+        _commands.Add(new DetectionCommand(transform, _target, _agent, lookRadius));
+        _commands.Add(new AttackCommand(transform, _target, _agent, GetComponent<CharacterCombat>(), _animator));
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position,lookRadius);
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
-    
-}
-
-public enum NpcState
-{
-    Detecting,
-    Navigating
 }

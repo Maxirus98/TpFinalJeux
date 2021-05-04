@@ -15,14 +15,9 @@ public class HealEffect : MonoBehaviour
         _particleSystem = GetComponent<ParticleSystem>();
         _particleSystem.Stop();
     }
-
-    void Update()
-    {
-        transform.position = _playerTransform.position;
-    }
-
     public IEnumerator Effect()
     {
+        transform.position = _playerTransform.position;
         _particleSystem.Play();
         yield return new WaitForSeconds(5f);
         _particleSystem.Stop();

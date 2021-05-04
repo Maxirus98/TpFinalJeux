@@ -8,13 +8,13 @@ using UnityEngine.Serialization;
 public class CharacterStats : MonoBehaviour
 {
     [SerializeField] private HpScript hpBar;
-    
-    [SerializeField] public Stat damage;
-    [SerializeField] public Stat spellDamage;
-    [SerializeField] public Stat attackSpeed;
-    [SerializeField] public Stat cooldown;
-    public HealEffect healEffect; 
-    
+
+    public Stat damage;
+    public Stat spellDamage;
+    public Stat attackSpeed;
+    public Stat cooldown;
+    public HealEffect healEffect;
+
     public float currentHp { get; private set; }
     public float maxHp;
 
@@ -45,17 +45,22 @@ public class CharacterStats : MonoBehaviour
 
     public void Heal(float bonusLife)
     {
-        if (currentHp + bonusLife < maxHp)
+        if (currentHp + bonusLife > maxHp)
         {
-            StartCoroutine(healEffect.Effect());
-            currentHp += bonusLife;
-            hpBar.SetHp(currentHp);
+            currentHp = maxHp;
         }
+        else
+        {
+            currentHp += bonusLife;
+        }
+
+        StartCoroutine(healEffect.Effect());
+        hpBar.SetHp(currentHp);
     }
 
     public virtual void Die()
     {
         //Die meant to be over written
-        Debug.Log(transform.name  + " died");
+        Debug.Log(transform.name + " died");
     }
 }
