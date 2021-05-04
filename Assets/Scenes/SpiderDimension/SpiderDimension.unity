@@ -47158,6 +47158,11 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1804648064}
+    - target: {fileID: 7899089983953114667, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
+      propertyPath: damage.baseValue
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7899089983953114709, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: m_Enabled
@@ -75786,7 +75791,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 1629494306}
-  maxHp: 100
+  damage:
+    baseValue: 20
+  spellDamage:
+    baseValue: 0
+  attackSpeed:
+    baseValue: 1
+  cooldown:
+    baseValue: 0
+  maxHp: 500
 --- !u!114 &1377318575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102831,6 +102844,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 134214735}
+  damage:
+    baseValue: 0
+  spellDamage:
+    baseValue: 50
+  attackSpeed:
+    baseValue: 1
+  cooldown:
+    baseValue: 0.5
   maxHp: 100
 --- !u!114 &1804648056
 MonoBehaviour:

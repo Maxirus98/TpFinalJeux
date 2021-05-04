@@ -13,7 +13,6 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] public Stat spellDamage;
     [SerializeField] public Stat attackSpeed;
     [SerializeField] public Stat cooldown;
-    
     public float currentHp { get; private set; }
     public float maxHp;
 
@@ -25,10 +24,9 @@ public class CharacterStats : MonoBehaviour
 
     private void Start()
     {
-        spellDamage.Value = 50f;
-        cooldown.Value = 0f;
-        attackSpeed.Value = 1f;
-        damage.Value = 4f;
+        spellDamage.setValue(50f);
+        cooldown.setValue(0f);
+        attackSpeed.setValue(1f);
     }
 
     public void TakeDamage(float damage)

@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-
 
 public class PlayerManager : Singleton<PlayerManager>
 {
     [System.Serializable]
-    public class PlayerStateEvent : UnityEvent<PlayerState>
+    public class PlayerStateEvent : UnityEvent<PlayerState, PlayerState>
     {
     }
     
@@ -21,5 +16,26 @@ public class PlayerManager : Singleton<PlayerManager>
         Dead
     }
 
+
+    void UpdateGameState(PlayerState playerState)
+    {
+        var previousGameState = CurrentPlayerState;
+        CurrentPlayerState = playerState;
+        switch (CurrentPlayerState)
+        {
+            case PlayerState.Alive:
+                break;
+            case PlayerState.Dead:
+                break;
+            default:
+                break;
+        }
+
+        playerStateEventHandler.Invoke(CurrentPlayerState, previousGameState);
+    }
+
+
     private PlayerStateEvent playerStateEventHandler;
+    
+    public PlayerState CurrentPlayerState { set; get; }
 }
