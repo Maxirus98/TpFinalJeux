@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 422c967bb37a7c744b0123168dd0f923, type: 3}
-  m_Name: Beer
+  m_Script: {fileID: 11500000, guid: 7e4fbf161b34c9644a85e9fa421304c5, type: 3}
+  m_Name: Steak
   m_EditorClassIdentifier: 
-  name: Beer
-  icon: {fileID: 21300000, guid: 3bfdf89bce9878442886e06e43ec5fda, type: 3}
-  gameObject: {fileID: 1310611259822616, guid: adc1f0e5c2a025b488cad3fb21d4f3b6, type: 3}
+  name: steak
+  icon: {fileID: 21300000, guid: 6badbb7f06df05c409a4929a623f1d06, type: 3}
+  gameObject: {fileID: 0}
   isDefaultItem: 0
-  bonusLife: 5
+  bonusLife: 10

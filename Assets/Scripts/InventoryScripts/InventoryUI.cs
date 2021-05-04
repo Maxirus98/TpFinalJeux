@@ -1,50 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO.IsolatedStorage;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class InventoryUI : MonoBehaviour
+namespace InventoryScripts
 {
-    // Start is called before the first frame update
-    public GameObject panel;
-    public GameObject title;
-    private InventoryManager _inventoryManager;
-    private List<InventorySlotUI> _inventorySlotUIs;
-    private GameObject _inventoryUI;
+    public class InventoryUI : MonoBehaviour
+    {
+        public GameObject panel;
+        public GameObject title;
+        private InventoryManager _inventoryManager;
+        private List<InventorySlotUI> _inventorySlotUIs;
 
-    private void Awake()
-    {
-        _inventoryUI = gameObject;
-        _inventoryManager = InventoryManager._instance;
-        _inventoryManager.OnItemChangedCallBack += UpdateUI;
-        _inventorySlotUIs =
-            new List<InventorySlotUI>(GetComponentInChildren<Transform>().GetComponentsInChildren<InventorySlotUI>());
-    }
-    void Update()
-    {
-        if (Input.GetButtonDown("Inventory"))
+        private void Awake()
         {
-            panel.SetActive(!panel.activeSelf);
-            title.SetActive(!title.activeSelf);
-           // _inventoryUI.SetActive(!_inventoryUI.activeSelf);
-            
+            //_inventoryManager = InventoryManager.Instance;
+            //_inventoryManager.OnItemChangedCallBack += UpdateUI;
+           // _inventorySlotUIs =
+            //    new List<InventorySlotUI>(
+               //     GetComponentInChildren<Transform>().GetComponentsInChildren<InventorySlotUI>());
         }
-    }
 
-    public void UpdateUI()
-    {
-        print("updatingUI");
-         
-        for (int i = 0; i < _inventorySlotUIs.Count; i++)
+        private void Start()
         {
-            if (i < _inventoryManager.items.Count)
+            _inventoryManager = InventoryManager.Instance;
+            _inventoryManager.OnItemChangedCallBack += UpdateUI;
+            _inventorySlotUIs =
+                new List<InventorySlotUI>(
+                    GetComponentInChildren<Transform>().GetComponentsInChildren<InventorySlotUI>());
+        }
+
+        void Update()
+        {
+            if (Input.GetButtonDown("Inventory"))
             {
-                _inventorySlotUIs[i].PutItemInSlot(_inventoryManager.items[i]);
+                panel.SetActive(!panel.activeSelf);
+                title.SetActive(!title.activeSelf);
             }
-            else
+        }
+
+        public void UpdateUI()
+        {
+            print("updatingUI");
+
+            for (int i = 0; i < _inventorySlotUIs.Count; i++)
             {
-                _inventorySlotUIs[i].ClearItemFromSlot();
+                if (i < _inventoryManager.items.Count)
+                {
+                    _inventorySlotUIs[i].PutItemInSlot(_inventoryManager.items[i]);
+                }
+                else
+                {
+                    _inventorySlotUIs[i].ClearItemFromSlot();
+                }
             }
         }
     }

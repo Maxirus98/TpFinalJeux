@@ -8,6 +8,7 @@ public class Item : ScriptableObject
      public Sprite icon = null;
      public GameObject gameObject = null;
      public bool isDefaultItem = false;
+     public float bonusLife = 0f;
 
      public virtual void Use()
      {

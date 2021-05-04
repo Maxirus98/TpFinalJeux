@@ -1,45 +1,54 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.Assertions.Must;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class InventorySlotUI : MonoBehaviour
+namespace InventoryScripts
 {
-    private Item _item;
-    public Image _icon;
-    private Button _removeButton;
-
-     void Awake()
-     {
-         _removeButton = GetComponentsInChildren<Button>()[1];
-     }
-
-    public void PutItemInSlot(Item item)
+    public class InventorySlotUI : MonoBehaviour
     {
-        _item = item;
-        _icon.sprite = item.icon;
-        _icon.enabled = true;
-        _removeButton.interactable = true;
-        print("put in slot");
-    }
+        private Item _item;
+        public Image _icon;
+        private Button _removeButton;
 
-    public void ClearItemFromSlot()
-    {
-        _item = null;
-        _icon.sprite = null;
-        _icon.enabled = false;
-        _removeButton.interactable = false;
-    }
-
-    public void OnClickRemoveButton()
-    {
-        InventoryManager._instance.RemoveItem(_item);
-    }
-    public void UseItem()
-    {
-        if (_item != null)
+        void Awake()
         {
-            _item.Use();
+            _removeButton = GetComponentsInChildren<Button>()[1];
+        }
+
+        public void PutItemInSlot(Item item)
+        {
+            _item = item;
+            _icon.sprite = item.icon;
+            _icon.enabled = true;
+            _removeButton.interactable = true;
+            print("put in slot");
+        }
+
+        public void ClearItemFromSlot()
+        {
+            _item = null;
+            _icon.sprite = null;
+            _icon.enabled = false;
+            _removeButton.interactable = false;
+        }
+
+        public void OnClickRemoveButton()
+        {
+            InventoryManager.Instance.RemoveItem(_item);
+        }
+
+        public void OnClickConsume()
+        {
+            CharacterStats characterStats = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
+            characterStats.Heal(_item.bonusLife);
+            InventoryManager.Instance.RemoveItem(_item);
+        }
+
+        public void UseItem()
+        {
+            if (_item != null)
+            {
+                _item.Use();
+            }
         }
     }
 }

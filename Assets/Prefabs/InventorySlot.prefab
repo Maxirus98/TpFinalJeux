@@ -194,7 +194,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 881090731391490434}
-        m_MethodName: UseItem
+        m_MethodName: OnClickConsume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -203,7 +203,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!1 &4970748506615434380
 GameObject:
   m_ObjectHideFlags: 0

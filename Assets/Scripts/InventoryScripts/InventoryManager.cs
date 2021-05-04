@@ -1,60 +1,75 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+namespace InventoryScripts
 {
-    /*
-    * 1) Define a delegate -> contract between the publisher and the subscriber,
-    *   determines the signature of the method that will be called when the publisher publish
-    * 2)Define an event based on that delegate
-    * 3)Raise the event
-    *                     
-    */
-    #region Singleton
-    public static InventoryManager _instance;
-    private void Awake()
+    public class InventoryManager : MonoBehaviour
     {
-        DontDestroyOnLoad(this);
-        if (_instance != null)
-        {
-            print("More than one instance found");
-        }
-        _instance = this;
-    }
-    #endregion
-    public delegate void OnItemChanged();
-    public OnItemChanged OnItemChangedCallBack;
-    public List<Item> items = new List<Item>();
-    private int _space = 15;
-    public bool AddItem(Item item)
-    {
-        if (!item.isDefaultItem && items.Count < _space)
-        {
-            items.Add(item);
-            if (CheckIfCallBackIsNull())
-            {
-                print("Invoke");
-                _instance.OnItemChangedCallBack.Invoke();
-            }
-            return true;
-        }
-        return false;
-    }
-    public bool RemoveItem(Item item)
-    {
-        if (items.Count > 0)
-        {
-            items.Remove(item);
+        /*
+        * 1) Define a delegate -> contract between the publisher and the subscriber,
+        *   determines the signature of the method that will be called when the publisher publish
+        * 2)Define an event based on that delegate
+        * 3)Raise the event
+        *                     
+        */
 
-            if(CheckIfCallBackIsNull())
-                _instance.OnItemChangedCallBack.Invoke();
-            return true;
+        #region Singleton
+
+        public static InventoryManager Instance;
+
+        private void Awake()
+        {
+            DontDestroyOnLoad(this);
+            if (Instance != null)
+            {
+                print("More than one instance found");
+            }
+
+            Instance = this;
         }
-        return false;
-    }
-    private bool CheckIfCallBackIsNull()
-    {
-        return _instance.OnItemChangedCallBack != null;
+
+        #endregion
+
+        public delegate void OnItemChanged();
+
+        public OnItemChanged OnItemChangedCallBack;
+        public List<Item> items = new List<Item>();
+        private int _space = 15;
+
+        public bool AddItem(Item item)
+        {
+            print("adasd");
+            if (!item.isDefaultItem && items.Count < _space)
+            {
+                items.Add(item);
+                if (CheckIfCallBackIsNull())
+                {
+                    Instance.OnItemChangedCallBack.Invoke();
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool RemoveItem(Item item)
+        {
+            if (items.Count > 0)
+            {
+                items.Remove(item);
+
+                if (CheckIfCallBackIsNull())
+                    Instance.OnItemChangedCallBack.Invoke();
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool CheckIfCallBackIsNull()
+        {
+            return Instance.OnItemChangedCallBack != null;
+        }
     }
 }

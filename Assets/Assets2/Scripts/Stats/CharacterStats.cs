@@ -42,11 +42,11 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public void Heal(FoodItem foodItem)
+    public void Heal(float bonusLife)
     {
-        if (currentHp + foodItem.bonusLife < maxHp)
+        if (currentHp + bonusLife < maxHp)
         {
-            currentHp += foodItem.bonusLife;
+            currentHp += bonusLife;
             hpBar.SetHp(currentHp);
         }
     }
