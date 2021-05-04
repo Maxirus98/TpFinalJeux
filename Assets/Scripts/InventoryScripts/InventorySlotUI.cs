@@ -46,7 +46,7 @@ namespace InventoryScripts
             characterStats.Heal(_item.bonusLife);
             InventoryManager.Instance.RemoveItem(_item);
             
-            StartCoroutine(healEffect.Heal());
+            StartCoroutine(healEffect.Effect());
         }
     }
 }
