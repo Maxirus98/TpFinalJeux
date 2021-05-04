@@ -17,7 +17,7 @@ namespace InventoryScripts
             _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         }
 
-        void FixedUpdate()
+        void Update()
         {
             float distance = Vector3.Distance(_playerTransform.position, transform.position);
             if (distance <= radius)

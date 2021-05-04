@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fish
   icon: {fileID: 21300000, guid: 1d89444a1af04144da319b281b40a4e1, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1151177373984322, guid: 1cc7cbbec1f220841a9ed6c3046dddfb, type: 3}
   isDefaultItem: 0
   bonusLife: 10

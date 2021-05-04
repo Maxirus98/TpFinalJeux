@@ -2371,7 +2371,7 @@ GameObject:
   - component: {fileID: 3960753275917757625}
   - component: {fileID: 1145746617865047295}
   m_Layer: 8
-  m_Name: spider_myOldOne
+  m_Name: littleSpider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2473,7 +2473,7 @@ NavMeshAgent:
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2522,6 +2522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 3960753277249834087}
+<<<<<<< HEAD:Assets/Prefabs/NpcPrefab/spider_myOldOne.prefab
   damage:
     baseValue: 4
   spellDamage:
@@ -2530,6 +2531,9 @@ MonoBehaviour:
     baseValue: 1
   cooldown:
     baseValue: 0.5
+=======
+  healEffect: {fileID: 0}
+>>>>>>> b6cf4f8333ada9fa1611bace1f8eb0546762524c:Assets/Prefabs/NpcPrefab/littleSpider.prefab
   maxHp: 40
 --- !u!114 &3960753275917757625
 MonoBehaviour:
@@ -2556,7 +2560,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 32c4822cf02f44d4cbfdf0f67cf256a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

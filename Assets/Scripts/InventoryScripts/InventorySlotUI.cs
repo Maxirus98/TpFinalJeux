@@ -9,7 +9,7 @@ namespace InventoryScripts
         public Image _icon;
         private Button _removeButton;
         private GameObject _player;
-        
+
         void Start()
         {
             _removeButton = GetComponentsInChildren<Button>()[1];
@@ -33,20 +33,18 @@ namespace InventoryScripts
             _removeButton.interactable = false;
         }
 
-        public void OnClickRemoveButton()
+        public void OnClickRemoveItem()
         {
+            print("removing");
+            Instantiate(_item.gameObject,transform.position, Quaternion.identity);
             InventoryManager.Instance.RemoveItem(_item);
         }
 
         public void OnClickConsume()
         {
             CharacterStats characterStats = _player.GetComponent<CharacterStats>();
-            HealEffect healEffect = _player.GetComponentInChildren<HealEffect>();
-            
             characterStats.Heal(_item.bonusLife);
             InventoryManager.Instance.RemoveItem(_item);
-            
-            StartCoroutine(healEffect.Heal());
         }
     }
 }

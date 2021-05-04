@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bread
   icon: {fileID: 21300000, guid: 554905c43d91b0543b32a962c238bdb2, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1228994051241028, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 3}
   isDefaultItem: 0
   bonusLife: 5

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Melon
   icon: {fileID: 21300000, guid: 10a988e273a0ddc4695837e119bb4c46, type: 3}
-  gameObject: {fileID: 0}
+  gameObject: {fileID: 1228912776443452, guid: 67d272003e829744b87737100e2371ca, type: 3}
   isDefaultItem: 0
   bonusLife: 5

@@ -13,21 +13,14 @@ public class HealEffect : MonoBehaviour
     {
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _particleSystem = GetComponent<ParticleSystem>();
+        _particleSystem.Stop();
     }
-
-    // Update is called once per frame
-    void Update()
+    public IEnumerator Effect()
     {
-    }
-
-    public IEnumerator Heal()
-    {
-        gameObject.SetActive(true);
         transform.position = _playerTransform.position;
+        _particleSystem.Play();
         yield return new WaitForSeconds(5f);
-        gameObject.SetActive(false);
-        StopCoroutine(Heal());
-
+        _particleSystem.Stop();
+        StopCoroutine(Effect());
     }
-
 }
