@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Targeter : MonoBehaviour
 {
     public List<Transform> targets;
     public Transform currentTarget;
-    
-    private void Start()
+
+    private void Update()
     {
         LookForTargets();
     }
@@ -18,25 +19,32 @@ public class Targeter : MonoBehaviour
         var others = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (var go in others)
         {
-            targets.Add(go.transform);
+            if(go.activeInHierarchy && !targets.Contains(go.transform))
+                targets.Add(go.transform);
         }
-
-        currentTarget = targets[0];
+        
+        currentTarget = targets.Count>0?targets[0]:null;
+        
+        
+        
     }
     
     public void CheckForClosestTarget()
     {
-        foreach(Transform target in targets)
+        if (targets.Count > 0)
         {
-            if (target)
+            foreach(Transform target in targets)
             {
-                if (Vector3.Distance(transform.position, target.position) <
-                    Vector3.Distance(transform.position, currentTarget.position))
+                if (target)
                 {
-                    currentTarget = target;
+                    if (Vector3.Distance(transform.position, target.position) <
+                        Vector3.Distance(transform.position, currentTarget.position))
+                    {
+                        currentTarget = target;
+                    }
                 }
-            }
                 
+            }
         }
     }
 }
