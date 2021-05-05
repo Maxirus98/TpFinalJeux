@@ -46930,7 +46930,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prefabsNPC.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1394592582}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: prefabsNPC.Array.data[1]
@@ -74773,6 +74773,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 401632, guid: 8b8cbf2e72d84274686fc2f81fb49964,
     type: 3}
   m_PrefabInstance: {fileID: 554449563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1394592582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3960753275917790188, guid: 16544bd4b7e9979489d6e3dc4e5b8cf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 946659921}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1396334682 stripped
 Transform:
