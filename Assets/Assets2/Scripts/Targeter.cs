@@ -9,7 +9,7 @@ public class Targeter : MonoBehaviour
     public List<Transform> targets;
     public Transform currentTarget;
 
-    private void Update()
+    private void Start()
     {
         LookForTargets();
     }
@@ -22,11 +22,7 @@ public class Targeter : MonoBehaviour
             if(go.activeInHierarchy && !targets.Contains(go.transform))
                 targets.Add(go.transform);
         }
-        
         currentTarget = targets.Count>0?targets[0]:null;
-        
-        
-        
     }
     
     public void CheckForClosestTarget()
@@ -43,7 +39,6 @@ public class Targeter : MonoBehaviour
                         currentTarget = target;
                     }
                 }
-                
             }
         }
     }

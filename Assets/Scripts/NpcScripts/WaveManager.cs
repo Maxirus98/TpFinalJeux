@@ -9,6 +9,10 @@ public class WaveManager : MonoBehaviour
     public List<GameObject> prefabsNPC;
     public float time = 10f;
     public int _nbrNpcs = 0;
+    
+    /*
+     *  TODO: AJOUTER À LA LISTE DES TARGETS LORSQUE UN NPC SPAWN
+     */
 
     void Start()
     {
@@ -25,7 +29,7 @@ public class WaveManager : MonoBehaviour
             InstantiateAsChild(prefabsNPC[position]);
         }
     }
-
+    
     private void InstantiateAsChild(GameObject prefab)
     {
         GameObject npc = Instantiate(prefab,

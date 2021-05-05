@@ -2361,7 +2361,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3960753275917891532}
-  - component: {fileID: 3960753275927770016}
   - component: {fileID: 3960753275917757639}
   - component: {fileID: 3960753275917757626}
   - component: {fileID: 3960753275917757634}
@@ -2402,34 +2401,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &3960753275927770016
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3960753275917790188}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400002, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400002, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400004, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400006, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400008, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400010, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400014, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400012, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400016, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400018, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400020, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400022, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  - {fileID: 7400024, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
 --- !u!54 &3960753275917757639
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2522,18 +2493,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 3960753277249834087}
-<<<<<<< HEAD:Assets/Prefabs/NpcPrefab/spider_myOldOne.prefab
   damage:
-    baseValue: 4
+    baseValue: 0
   spellDamage:
     baseValue: 0
   attackSpeed:
-    baseValue: 1
+    baseValue: 0
   cooldown:
-    baseValue: 0.5
-=======
+    baseValue: 0
   healEffect: {fileID: 0}
->>>>>>> b6cf4f8333ada9fa1611bace1f8eb0546762524c:Assets/Prefabs/NpcPrefab/littleSpider.prefab
   maxHp: 40
 --- !u!114 &3960753275917757625
 MonoBehaviour:
