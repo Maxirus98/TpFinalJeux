@@ -1,28 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraControllerScene2 : MonoBehaviour
 {
     // Start is called before the first frame update
+    
+    public Transform playerTransform;
+    public Vector3 cameraOffset;
+    public float smoothFactor = 0.5f;
 
-    public float speed = 2.0f;
-    public float speedV = 2.0f;
-
-    public float yaw = 0;
-    public float pitch = 0;
-    void Start()
-    {
-        
-    }
+     void Start()
+     {
+         cameraOffset = transform.position - playerTransform.position; 
+     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        yaw += speed * Input.GetAxis("Mouse X");
-        pitch -= speedV * Input.GetAxis("Mouse Y");
-
-        transform.eulerAngles = new Vector3(pitch, yaw, 0f);
-
+        Vector3 newPosition = playerTransform.position + cameraOffset;
+        transform.position = Vector3.Slerp(transform.position,newPosition,smoothFactor);
     }
 }
