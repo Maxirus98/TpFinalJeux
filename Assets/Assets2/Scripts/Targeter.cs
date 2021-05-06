@@ -31,7 +31,7 @@ public class Targeter : MonoBehaviour
         {
             foreach(Transform target in targets)
             {
-                if (target)
+                if (target.gameObject.activeInHierarchy)
                 {
                     if (Vector3.Distance(transform.position, target.position) <
                         Vector3.Distance(transform.position, currentTarget.position))

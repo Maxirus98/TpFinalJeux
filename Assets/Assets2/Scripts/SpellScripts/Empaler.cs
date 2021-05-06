@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Empaler : Spell
 {
-    private float vitesseEmpaler = 1000f;
+    private float vitesseEmpaler = 10f;
     private GameObject empalerClone;
     void Update()
     {
@@ -34,6 +34,6 @@ public class Empaler : Spell
 
     public override void Shoot()
     {
-        empalerClone.GetComponent<Rigidbody>().velocity = (transform.forward * (vitesseEmpaler * Time.deltaTime));
+        empalerClone.GetComponent<Rigidbody>().velocity = (transform.rotation * Vector3.forward.normalized * vitesseEmpaler);
     }
 }

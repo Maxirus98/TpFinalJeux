@@ -59,19 +59,22 @@ public class SprayAndPray : Spell
     {
         maxRange = 10f;
         fireRate = 0.5f;
-        
-        if (Vector3.Distance(cloneRifle.transform.position, targeter.currentTarget.position) <= maxRange &&
-            TimeStampFireRate <= Time.time)
+
+        if (targeter.currentTarget.gameObject.activeInHierarchy)
         {
-            var gunBarrel = cloneRifle.transform.GetChild(3);
-            gunBarrel.LookAt(targeter.currentTarget.transform);
-            var cloneBullet = Instantiate(bullet, gunBarrel.position, Quaternion.Euler(0, 90, 0));
-            var bulletRb = cloneBullet.GetComponent<Rigidbody>();
-            bulletSpeed = 10;
+            if (Vector3.Distance(cloneRifle.transform.position, targeter.currentTarget.position) <= maxRange &&
+                TimeStampFireRate <= Time.time)
+            {
+                var gunBarrel = cloneRifle.transform.GetChild(3);
+                gunBarrel.LookAt(targeter.currentTarget.transform);
+                var cloneBullet = Instantiate(bullet, gunBarrel.position, Quaternion.Euler(0, 90, 0));
+                var bulletRb = cloneBullet.GetComponent<Rigidbody>();
+                bulletSpeed = 10;
             
-            //Time.deltaTime and normalized ?
-            bulletRb.velocity = gunBarrel.transform.rotation * Vector3.forward.normalized * bulletSpeed;
-            TimeStampFireRate = Time.time + fireRate;
+                //Time.deltaTime and normalized ?
+                bulletRb.velocity = gunBarrel.transform.rotation * Vector3.forward.normalized * bulletSpeed;
+                TimeStampFireRate = Time.time + fireRate;
+            }
         }
     }
 
