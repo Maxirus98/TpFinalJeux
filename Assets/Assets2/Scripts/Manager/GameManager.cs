@@ -37,14 +37,10 @@ public class GameManager : Singleton<GameManager>
             instanceSystemPrefabsKept.Add(Instantiate(go));
         }
     }
-
-    void InstanciateCharacter()
-    {
-        
-    }
+    
     void Update()
     {
-        if (_currentGameState != GameState.MainMenu && Input.GetKeyDown(KeyCode.Escape))
+        if (/*_currentGameState != GameState.MainMenu &&*/ Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
         }
@@ -52,7 +48,7 @@ public class GameManager : Singleton<GameManager>
     
     public void TogglePause()
     {
-        UpdateGameState(CurrentGameState == GameState.Running ? GameState.Pause : CurrentGameState);
+        UpdateGameState(CurrentGameState == GameState.MainMenu ? GameState.EncounterTutorial : GameState.MainMenu);
     }
 
     void UpdateGameState(GameState newGameState)
@@ -67,13 +63,7 @@ public class GameManager : Singleton<GameManager>
             case GameState.Running:
                 Time.timeScale = 1;
                 break;
-            case GameState.Death:
-                Time.timeScale = 0.5f;
-                break;
             case GameState.EncounterTutorial:
-                Time.timeScale = 0;
-                break;
-            case GameState.Pause:
                 Time.timeScale = 0;
                 break;
             default:

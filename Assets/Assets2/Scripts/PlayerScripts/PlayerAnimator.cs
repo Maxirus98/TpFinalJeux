@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
-[RequireComponent(typeof(Targeter))]
+[RequireComponent(typeof(Targeter), typeof(CharacterStats))]
 public class PlayerAnimator : MonoBehaviour
 {
     private Targeter targeter;
@@ -17,17 +17,16 @@ public class PlayerAnimator : MonoBehaviour
     private float _attackNumber;
     private static readonly float coolDownPeriodAttacks = 0.5f;
     private float attackMaxRange;
+    private CharacterStats stats;
     public float TimeStampAttacks { get; set; }
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
+        stats = GetComponent<CharacterStats>();
         _animator = GetComponentInChildren<Animator>();
         targeter = GetComponent<Targeter>();
     }
-    // Pour faire apparaitre les items en tournant dans le World
-    //cloneRifle.transform.Rotate(Vector3.up, Space.World);
 
     // Update is called once per frame
     void Update()
@@ -37,6 +36,13 @@ public class PlayerAnimator : MonoBehaviour
         float speedPercent = _agent.velocity.magnitude / _agent.speed * 10; 
         //Will take 0.1 sec to change animation
         _animator.SetFloat("speedPercent", speedPercent);
+        if (stats.currentHp <= 0)
+        {
+            _animator.SetBool("isDead", true);
+            // CHANGE GAME STATE HERE SO THAT IT PROMPTS THE PAUSE MENU
+            //PROMPTS MENU CHOIX # 1--> RESTART = RELOAD LEVEL
+            //PROMPTS MENU CHOIX # 2 --> TO MAIN MENU
+        }
     }
 
     public void Attack()

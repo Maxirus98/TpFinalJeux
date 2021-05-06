@@ -46781,6 +46781,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2071495704313836274, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2503173729045969588, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -46794,7 +46799,7 @@ PrefabInstance:
     - target: {fileID: 2503173729549212828, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3789612544445945771, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
@@ -46844,6 +46849,11 @@ PrefabInstance:
     - target: {fileID: 5046267645318095551, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245148274298441248, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536391, guid: 5c22b7603653d354aab6e32499823c3a,
@@ -46964,7 +46974,7 @@ PrefabInstance:
     - target: {fileID: 7781107478747403329, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7781107479317770857, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
@@ -52597,7 +52607,7 @@ PrefabInstance:
     - target: {fileID: 3960753275917891532, guid: 16544bd4b7e9979489d6e3dc4e5b8cf5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3960753275917891532, guid: 16544bd4b7e9979489d6e3dc4e5b8cf5,
         type: 3}
@@ -74519,6 +74529,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 1629494306}
+  damage:
+    baseValue: 20
+  spellDamage:
+    baseValue: 0
+  attackSpeed:
+    baseValue: 1
+  cooldown:
+    baseValue: 0
   healEffect: {fileID: 0}
   maxHp: 500
 --- !u!114 &1377318575
@@ -112976,6 +112994,11 @@ PrefabInstance:
       propertyPath: OnClickEnvironment.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 116219121}
+    - target: {fileID: 1835769365374007420, guid: 8f49bd7ae4cef27499c62d787e1e60fe,
+        type: 3}
+      propertyPath: OnClickEnvironment.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_destination
+      objectReference: {fileID: 0}
     - target: {fileID: 1835769365374007421, guid: 8f49bd7ae4cef27499c62d787e1e60fe,
         type: 3}
       propertyPath: m_RootOrder
@@ -113795,6 +113818,14 @@ PrefabInstance:
       propertyPath: healEffect
       value: 
       objectReference: {fileID: 1916550635}
+    - target: {fileID: 1804648055, guid: a601912e7356a7342809512a26091970, type: 3}
+      propertyPath: attackSpeed.baseValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804648055, guid: a601912e7356a7342809512a26091970, type: 3}
+      propertyPath: spellDamage.baseValue
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1804648058, guid: a601912e7356a7342809512a26091970, type: 3}
       propertyPath: m_Enabled
       value: 0

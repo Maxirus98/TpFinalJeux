@@ -1502,6 +1502,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2442105338727246488, guid: bebec6cadda3d754fa23c16aad2a1822,
+        type: 3}
+      propertyPath: systemPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442105338727246488, guid: bebec6cadda3d754fa23c16aad2a1822,
+        type: 3}
+      propertyPath: systemPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1253086935255656, guid: 60e8218091f83244c9bf9c8c2569a009,
+        type: 3}
+    - target: {fileID: 2442105338727246488, guid: bebec6cadda3d754fa23c16aad2a1822,
+        type: 3}
+      propertyPath: systemPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 835242307}
+    - target: {fileID: 2442105338727246488, guid: bebec6cadda3d754fa23c16aad2a1822,
+        type: 3}
+      propertyPath: systemPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1131775697853092, guid: de2a7efe044817e43b49fa819dea7499,
+        type: 3}
+    - target: {fileID: 2442105338727246488, guid: bebec6cadda3d754fa23c16aad2a1822,
+        type: 3}
+      propertyPath: systemPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1896801731341158, guid: a367f32b0351f2648a0e15f3444c6f86,
+        type: 3}
     - target: {fileID: 2442105338727246489, guid: bebec6cadda3d754fa23c16aad2a1822,
         type: 3}
       propertyPath: m_RootOrder

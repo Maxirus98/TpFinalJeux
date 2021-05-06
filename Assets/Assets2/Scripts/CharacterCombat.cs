@@ -11,15 +11,15 @@ public class CharacterCombat : MonoBehaviour
 
     private void Update()
     {
-        Stats.cooldown.Value -= Time.deltaTime;
+        Stats.cooldown.decrementValue(Time.deltaTime);
     }
     
     public void Attack(CharacterStats targetStats)
     {
-        if (Stats.cooldown.Value <= 0f)
+        if (Stats.cooldown.getValue() <= 0f)
         {
-            targetStats.TakeDamage(Stats.damage.Value);
-            Stats.cooldown.Value = 1f / Stats.attackSpeed.Value;
+            targetStats.TakeDamage(Stats.damage.getValue());
+            Stats.cooldown.setValue(1f / Stats.attackSpeed.getValue());
         }
     }
     
@@ -30,10 +30,10 @@ public class CharacterCombat : MonoBehaviour
     
     public void PlayerSingleAttack(CharacterStats targetStats, float damage)
     {
-        if (Stats.cooldown.Value <= 0f)
+        if (Stats.cooldown.getValue() <= 0f)
         {
             targetStats.TakeDamage(damage);
-            Stats.cooldown.Value = 1f / Stats.attackSpeed.Value;
+            Stats.cooldown.setValue(1f / Stats.attackSpeed.getValue());
         }
     }
 }

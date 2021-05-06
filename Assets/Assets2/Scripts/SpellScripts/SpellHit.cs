@@ -21,7 +21,7 @@ public class SpellHit : MonoBehaviour
         {
             print("spell hit");
             playerCombat.PlayerSingleAttack(other.GetComponent<CharacterCombat>().Stats, damage.getValue());
-            
+            Destroy(gameObject);
         }
     }
 }
