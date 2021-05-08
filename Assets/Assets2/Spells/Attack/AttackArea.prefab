@@ -2510,7 +2510,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1c7223b4cc156ed44b7ba457425fc009, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2565,7 +2565,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869570534b1446c4f9bb9b2418bf8d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCombat: {fileID: 0}
+  combat: {fileID: 0}
+  tag: Player
+  targetTag: Enemy
 --- !u!114 &-7716339042003617560
 MonoBehaviour:
   m_ObjectHideFlags: 0

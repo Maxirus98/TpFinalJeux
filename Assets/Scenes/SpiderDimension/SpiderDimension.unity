@@ -11209,7 +11209,7 @@ GameObject:
   - component: {fileID: 134416058}
   - component: {fileID: 134416057}
   m_Layer: 0
-  m_Name: Fire6
+  m_Name: GreenFire2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12577,9 +12577,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9056604, g: 0.7474517, b: 0.08116765, a: 0}
-        key1: {r: 0.92941177, g: 0.3897622, b: 0.099368125, a: 1}
-        key2: {r: 0.2830189, g: 0.022694914, b: 0.022694914, a: 0}
+        key0: {r: 0.06674972, g: 0.9433962, b: 0.06756632, a: 0}
+        key1: {r: 0.06666667, g: 0.9450981, b: 0.06666667, a: 1}
+        key2: {r: 0.16856523, g: 0.3773585, b: 0.1548594, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -15038,7 +15038,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 880134549}
+    light: {fileID: 1494434821}
     randomDistribution: 1
     color: 1
     range: 1
@@ -25687,7 +25687,7 @@ GameObject:
   - component: {fileID: 460391417}
   - component: {fileID: 460391418}
   m_Layer: 0
-  m_Name: Fire5
+  m_Name: GreenFire1
   m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27055,9 +27055,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9056604, g: 0.7474517, b: 0.08116765, a: 0}
-        key1: {r: 0.92941177, g: 0.3897622, b: 0.099368125, a: 1}
-        key2: {r: 0.2830189, g: 0.022694914, b: 0.022694914, a: 0}
+        key0: {r: 0.06674972, g: 0.9433962, b: 0.06756632, a: 0}
+        key1: {r: 0.06666667, g: 0.9450981, b: 0.06666667, a: 1}
+        key2: {r: 0.16856523, g: 0.3773585, b: 0.1548594, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -40775,7 +40775,7 @@ GameObject:
   - component: {fileID: 536401422}
   - component: {fileID: 536401421}
   m_Layer: 0
-  m_Name: Fire4
+  m_Name: RedFire2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42143,8 +42143,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9056604, g: 0.7474517, b: 0.08116765, a: 0}
-        key1: {r: 0.92941177, g: 0.3897622, b: 0.099368125, a: 1}
+        key0: {r: 1, g: 0, b: 0.07585335, a: 0}
+        key1: {r: 1, g: 0, b: 0.07450981, a: 1}
         key2: {r: 0.2830189, g: 0.022694914, b: 0.022694914, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -44604,7 +44604,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 847258934}
+    light: {fileID: 959106902}
     randomDistribution: 1
     color: 1
     range: 1
@@ -46970,6 +46970,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781107478747008843, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
+      propertyPath: damage.baseValue
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781107478747008843, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
+      propertyPath: attackSpeed.baseValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7781107478747403329, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
@@ -53593,7 +53603,7 @@ GameObject:
   - component: {fileID: 989887610}
   - component: {fileID: 989887609}
   m_Layer: 0
-  m_Name: Fire1
+  m_Name: BlueFire1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54933,9 +54943,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9056604, g: 0.7474517, b: 0.08116765, a: 0}
-        key1: {r: 0.92941177, g: 0.3897622, b: 0.099368125, a: 1}
-        key2: {r: 0.2830189, g: 0.022694914, b: 0.022694914, a: 0}
+        key0: {r: 0.08996442, g: 0.082352914, b: 0.90588236, a: 0}
+        key1: {r: 0.09019608, g: 0.08235294, b: 0.9058824, a: 1}
+        key2: {r: 0.061801393, g: 0.05731578, b: 0.5283019, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -62641,7 +62651,7 @@ GameObject:
   - component: {fileID: 1211139365}
   - component: {fileID: 1211139364}
   m_Layer: 0
-  m_Name: Fire2
+  m_Name: BlueFire2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64009,9 +64019,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9056604, g: 0.7474517, b: 0.08116765, a: 0}
-        key1: {r: 0.92941177, g: 0.3897622, b: 0.099368125, a: 1}
-        key2: {r: 0.2830189, g: 0.022694914, b: 0.022694914, a: 0}
+        key0: {r: 0.08996442, g: 0.082352914, b: 0.90588236, a: 0}
+        key1: {r: 0.09019608, g: 0.08235294, b: 0.9058824, a: 1}
+        key2: {r: 0.061801393, g: 0.05731578, b: 0.5283019, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -66470,7 +66480,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 526780930}
+    light: {fileID: 1297171428}
     randomDistribution: 1
     color: 1
     range: 1
@@ -107632,7 +107642,7 @@ GameObject:
   - component: {fileID: 2112977866}
   - component: {fileID: 2112977865}
   m_Layer: 0
-  m_Name: Fire3
+  m_Name: RedFire1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109000,8 +109010,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9056604, g: 0.7474517, b: 0.08116765, a: 0}
-        key1: {r: 0.92941177, g: 0.3897622, b: 0.099368125, a: 1}
+        key0: {r: 1, g: 0, b: 0.07585335, a: 0}
+        key1: {r: 1, g: 0, b: 0.07450981, a: 1}
         key2: {r: 0.2830189, g: 0.022694914, b: 0.022694914, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -114008,6 +114018,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211890918674945088, guid: 0ac817817e069da439a6b8db5c0bcc2a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -525
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211890918674945088, guid: 0ac817817e069da439a6b8db5c0bcc2a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -134
       objectReference: {fileID: 0}
     - target: {fileID: 8211890918798014248, guid: 0ac817817e069da439a6b8db5c0bcc2a,
         type: 3}
