@@ -31,7 +31,7 @@ public class CharacterCombat : MonoBehaviour
         targetStats.TakeDamage(damage);
     }
     
-    public void PlayerSingleAttack(CharacterStats targetStats, float damage)
+    public void SingleAttack(CharacterStats targetStats, float damage)
     {
         if (Stats.cooldown.getValue() <= 0f)
         {

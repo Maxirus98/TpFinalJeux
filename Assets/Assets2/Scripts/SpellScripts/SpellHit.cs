@@ -20,7 +20,7 @@ public class SpellHit : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             print("spell hit");
-            playerCombat.PlayerSingleAttack(other.GetComponent<CharacterCombat>().Stats, damage.getValue());
+            playerCombat.SingleAttack(other.GetComponent<CharacterCombat>().Stats, damage.GetValue());
             Destroy(gameObject);
         }
     }

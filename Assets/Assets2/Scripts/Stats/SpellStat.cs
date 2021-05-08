@@ -6,8 +6,13 @@ public class SpellStat : MonoBehaviour
 {
     [SerializeField] private float value;
 
-    public float getValue()
+    public float GetValue()
     {
         return value;
+    }
+    
+    public void SetValue(float newValue)
+    {
+        value = newValue;
     }
 }

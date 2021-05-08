@@ -25,7 +25,7 @@ public class SpellAoeHit : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             print("spell hit");
-            combat.AoEAttack(other.GetComponent<CharacterCombat>().Stats, damage.getValue());
+            combat.AoEAttack(other.GetComponent<CharacterCombat>().Stats, damage.GetValue());
         }
     }
 
@@ -34,7 +34,7 @@ public class SpellAoeHit : MonoBehaviour
         if (other.gameObject.CompareTag(targetTag))
         {
             print("spell hit");
-            combat.AoEAttack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage.getValue());
+            combat.AoEAttack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage.GetValue());
         }
     }
 

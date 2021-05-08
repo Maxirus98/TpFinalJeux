@@ -9,6 +9,9 @@ TagManager:
   - Spell
   - Fire
   - Terrain
+  - BlueFire
+  - RedFire
+  - GreenFire
   layers:
   - Default
   - TransparentFX
