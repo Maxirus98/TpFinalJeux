@@ -6,23 +6,35 @@ using UnityEngine;
 [RequireComponent(typeof(SpellStat))]
 public class SpellAoeHit : MonoBehaviour
 {
-    [SerializeField] private CharacterCombat playerCombat;
+    [SerializeField]private CharacterCombat combat;
     private SpellStat damage;
+    public string tag;
+    public string targetTag;
 
     private void Start()
     {
+        if (targetTag == null) targetTag = "Enemy";
+        if (tag == null) targetTag = "Player";
         damage = GetComponent<SpellStat>();
-        playerCombat = GameObject.FindWithTag("Player").GetComponent<CharacterCombat>();
+        combat = GameObject.FindWithTag(tag).GetComponent<CharacterCombat>();
     }
     
     //Will not destroy on hit
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag(targetTag))
         {
             print("spell hit");
-            playerCombat.AoEAttack(other.GetComponent<CharacterCombat>().Stats, damage.getValue());
-            
+            combat.AoEAttack(other.GetComponent<CharacterCombat>().Stats, damage.getValue());
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag(targetTag))
+        {
+            print("spell hit");
+            combat.AoEAttack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage.getValue());
         }
     }
 

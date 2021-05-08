@@ -11,7 +11,10 @@ public class CharacterCombat : MonoBehaviour
 
     private void Update()
     {
-        Stats.cooldown.decrementValue(Time.deltaTime);
+        if (Stats.cooldown.getValue() != 0)
+        {
+            Stats.cooldown.decrementValue(Time.deltaTime);
+        }
     }
     
     public void Attack(CharacterStats targetStats)

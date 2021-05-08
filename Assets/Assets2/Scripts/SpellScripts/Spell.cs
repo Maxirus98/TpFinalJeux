@@ -7,9 +7,9 @@ using UnityEngine.UI;
 //Parent class for all spells
 public class Spell : MonoBehaviour
 {
-    [SerializeField] protected GameObject go;
+    [SerializeField] public GameObject go;
     [SerializeField] public Sprite sprite;
-    [SerializeField] protected float cooldown;
+    [SerializeField] public float cooldown;
     protected Vector3 position;
     protected Vector3 offset;
     
