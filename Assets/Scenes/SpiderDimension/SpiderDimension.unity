@@ -113984,9 +113984,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1804648054, guid: a601912e7356a7342809512a26091970, type: 3}
+    - target: {fileID: 1804648053, guid: a601912e7356a7342809512a26091970, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1804648054, guid: a601912e7356a7342809512a26091970, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1804648055, guid: a601912e7356a7342809512a26091970, type: 3}
       propertyPath: hpBar
@@ -114006,7 +114010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1804648055, guid: a601912e7356a7342809512a26091970, type: 3}
       propertyPath: spellDamage.baseValue
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1804648058, guid: a601912e7356a7342809512a26091970, type: 3}
       propertyPath: m_Enabled

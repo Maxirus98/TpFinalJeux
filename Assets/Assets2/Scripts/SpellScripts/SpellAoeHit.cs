@@ -24,6 +24,7 @@ public class SpellAoeHit : MonoBehaviour
         if (tag == null) targetTag = "Player";
         combat = GameObject.FindWithTag(tag).GetComponent<CharacterCombat>();
         damage = damage == 0 ? 10f : damage;
+        print(damage);
     }
     
     //Will not destroy on hit
@@ -31,8 +32,8 @@ public class SpellAoeHit : MonoBehaviour
     {
         if (other.CompareTag(targetTag))
         {
-            print("spell hit");
-            combat.AoEAttack(other.GetComponent<CharacterCombat>().Stats, damage);
+            print("spell hit for " + damage);
+            combat.Attack(other.GetComponent<CharacterCombat>().Stats, damage);
         }
     }
 
@@ -42,7 +43,7 @@ public class SpellAoeHit : MonoBehaviour
         if (other.gameObject.CompareTag(targetTag))
         {
             print("spell hit");
-            combat.AoEAttack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage);
+            combat.Attack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage);
         }
     }
 
