@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CameraControllerScene2 : MonoBehaviour
 {
@@ -9,17 +10,32 @@ public class CameraControllerScene2 : MonoBehaviour
     
     public Transform playerTransform;
     public Vector3 cameraOffset;
-    public float smoothFactor = 0.5f;
+    public float speed = 0.5f;
 
-     void Start()
-     {
-         cameraOffset = transform.position - playerTransform.position; 
-     }
-
-    // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 newPosition = playerTransform.position + cameraOffset;
-        transform.position = Vector3.Slerp(transform.position,newPosition,smoothFactor);
+        Vector3 desiredPosition = playerTransform.position + cameraOffset;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position,desiredPosition,speed * Time.deltaTime);
+        transform.position = smoothedPosition;
+        var horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        transform.Rotate(horizontal * Vector3.up,Space.World);
     }
+
+
+    /*
+     * public Transform capsule;
+public int speed = 10;
+// Update is called once per frame
+void Update()
+{    var horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+    transform.Translate(Vector3.right * horizontal);
+    var vertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+    transform.Translate(Vector3.forward * vertical);
+    var axe3 = Input.GetAxis("AxeLeftRight") * Time.deltaTime * speed;
+    //Up = Vecteur sur la verticale
+    transform.Rotate(Vector3.up * axe3);
+    transform.position = capsule.position;
+    //transform.LookAt(capsule);
+}
+     */
 }

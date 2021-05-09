@@ -2494,11 +2494,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBar: {fileID: 3960753277249834087}
   damage:
-    baseValue: 0
+    baseValue: 10
   spellDamage:
     baseValue: 0
   attackSpeed:
-    baseValue: 0
+    baseValue: 1
   cooldown:
     baseValue: 0
   healEffect: {fileID: 0}

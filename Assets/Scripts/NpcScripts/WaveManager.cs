@@ -9,14 +9,17 @@ public class WaveManager : MonoBehaviour
     public List<GameObject> prefabsNPC;
     public float time = 10f;
     public int _nbrNpcs = 0;
+    public float minX;
+    public float maxX;
+    public float minZ;
+    public float maxZ;
+    public float minY;
+    private Targeter _targeter;
     
-    /*
-     *  TODO: AJOUTER À LA LISTE DES TARGETS LORSQUE UN NPC SPAWN
-     */
-
     void Start()
     {
         StartCoroutine(GenerateNpc());
+        _targeter = GameObject.FindGameObjectWithTag("Player").GetComponent<Targeter>();
     }
 
     public IEnumerator GenerateNpc()
@@ -33,9 +36,10 @@ public class WaveManager : MonoBehaviour
     private void InstantiateAsChild(GameObject prefab)
     {
         GameObject npc = Instantiate(prefab,
-            new Vector3(Random.Range(-48, 48), -1, Random.Range(-24, 24)),
+            new Vector3(Random.Range(minX, maxX), minY, Random.Range(minZ, maxZ)),
             Quaternion.identity);
         npc.name = prefab.name;
         npc.transform.parent = transform;
+        _targeter.targets.Add(npc.transform);
     }
 }

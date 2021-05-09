@@ -49,6 +49,7 @@ public class MouseManager : MonoBehaviour
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
                 if (interactable)
                 {
+                    //SetCursor Attack
                     SetFocus(interactable);
                     _playerAnimator.Attack();
                     // CharacterStats targetStats = interactable.gameObject.GetComponent<CharacterStats>();
