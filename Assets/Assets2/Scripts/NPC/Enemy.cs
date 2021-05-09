@@ -20,6 +20,7 @@ public class Enemy : Interactable
         var playerCombat = playerManager.GetComponent<CharacterCombat>();
         if (playerCombat != null)
         {
+            //TODO: YAGNI?
             Debug.Log("Attack");
             playerCombat.Attack(enemyStats);
         }

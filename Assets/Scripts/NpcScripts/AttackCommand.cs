@@ -40,6 +40,7 @@ namespace Script
                 {
                     _animator.SetBool("isAttacking", true);
                     Debug.Log("startAttack" + _animator.GetBool("isAttacking"));
+                   //TODO : YAGNI? USE SingleAttack instead?
                     _combat.Attack(targetStats);
                 }
             }

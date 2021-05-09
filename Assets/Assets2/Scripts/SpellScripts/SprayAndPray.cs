@@ -14,13 +14,15 @@ public class SprayAndPray : Spell
     private float bulletSpeed;
     public float TimeStampFireRate { get; set; }
 
-    public float fireRate;
+    public float fireRate = 0.5f;
 
     private float maxRange;
 
     private void Start()
     {
         targeter = GetComponent<Targeter>();
+        fireRate = 0.5f;
+
     }   
 
     // Update is called once per frame
@@ -58,7 +60,6 @@ public class SprayAndPray : Spell
     public override void Shoot()
     {
         maxRange = 10f;
-        fireRate = 0.5f;
         bulletSpeed = 20;
         
         if (targeter.currentTarget.gameObject.activeInHierarchy)

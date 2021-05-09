@@ -11,7 +11,10 @@ public class CharacterCombat : MonoBehaviour
 
     private void Update()
     {
-        Stats.cooldown.decrementValue(Time.deltaTime);
+        if (Stats.cooldown.getValue() != 0)
+        {
+            Stats.cooldown.decrementValue(Time.deltaTime);
+        }
     }
     
     public void Attack(CharacterStats targetStats)
@@ -28,7 +31,7 @@ public class CharacterCombat : MonoBehaviour
         targetStats.TakeDamage(damage);
     }
     
-    public void PlayerSingleAttack(CharacterStats targetStats, float damage)
+    public void SingleAttack(CharacterStats targetStats, float damage)
     {
         if (Stats.cooldown.getValue() <= 0f)
         {
