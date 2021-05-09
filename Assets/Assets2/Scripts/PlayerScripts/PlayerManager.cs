@@ -17,7 +17,7 @@ public class PlayerManager : Singleton<PlayerManager>
     }
 
 
-    void UpdateGameState(PlayerState playerState)
+    public void UpdatePlayerState(PlayerState playerState)
     {
         var previousGameState = CurrentPlayerState;
         CurrentPlayerState = playerState;
