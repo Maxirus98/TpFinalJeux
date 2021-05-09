@@ -26,7 +26,7 @@ public class CharacterCombat : MonoBehaviour
         }
     }
     
-    public void AoEAttack(CharacterStats targetStats, float damage)
+    public void Attack(CharacterStats targetStats, float damage)
     {
         targetStats.TakeDamage(damage);
     }

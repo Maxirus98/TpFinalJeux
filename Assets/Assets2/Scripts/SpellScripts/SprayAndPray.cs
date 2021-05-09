@@ -17,7 +17,7 @@ public class SprayAndPray : Spell
     public float fireRate = 0.5f;
 
     private float maxRange;
-
+    
     private void Start()
     {
         targeter = GetComponent<Targeter>();
@@ -86,5 +86,10 @@ public class SprayAndPray : Spell
         Spawn();
         StartCoroutine(Cooldown.WaitFor(cooldown));
         TimeStamp = Time.time + cooldown;
+    }
+    
+    public GameObject GetBulletGo()
+    {
+        return bullet;
     }
 }

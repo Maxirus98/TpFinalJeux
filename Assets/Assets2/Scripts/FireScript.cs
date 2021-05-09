@@ -7,9 +7,8 @@ using UnityEngine.AI;
 public class FireScript : MonoBehaviour
 {
     private ParticleSystem particleSystem;
-    
-
     private GameObject player;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +33,18 @@ public class FireScript : MonoBehaviour
                     break;
                 case "RedFire":
                     //Augmente la vitesse de l'agent
-                    var agent = other.GetComponent<NavMeshAgent>();
-                    agent.speed *= 2f;
+                    // var agent = other.GetComponent<NavMeshAgent>();
+                    // agent.speed *= 2f;
+                    var spells = player.GetComponents<Spell>();
+                    foreach (var spell in spells)
+                    {
+                        var spellDamage = spell.go.GetComponent<SpellAoeHit>() != null ?
+                            spell.go.GetComponent<SpellAoeHit>() : 
+                            ((SprayAndPray)spell).GetBulletGo().GetComponent<SpellHit>();
+                        spellDamage.SetSpellDamage(spellDamage.GetSpellDamage() * 2);
+                        print(spell);
+                        print(spellDamage);
+                    }
                     break;
                 case "GreenFire":
                     //Heal le player et augmente ses max hp

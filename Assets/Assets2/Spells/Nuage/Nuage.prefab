@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 3945899008282555543}
   - component: {fileID: 3945899008282555548}
   - component: {fileID: 2104807040664278523}
-  - component: {fileID: -9054095016755130549}
   m_Layer: 0
   m_Name: Nuage
   m_TagString: Untagged
@@ -6164,18 +6163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combat: {fileID: 0}
+  damage: 40
   tag: Player
   targetTag: Enemy
---- !u!114 &-9054095016755130549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3945899008282555542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23f6bf6629a62dc40b1341073c0836cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 50
