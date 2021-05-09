@@ -15,7 +15,7 @@ public class SwitchLevel : MonoBehaviour
     public void FadeToLevel()
     {
         print("Start Animation");
-        animator.SetTrigger("FadeOut");
+        animator.SetBool("switch",true);
         SceneManager.LoadScene("SelectLevel", LoadSceneMode.Single);
     }
 }
