@@ -15,7 +15,6 @@ public class CharacterStats : MonoBehaviour
     public Stat cooldown;
     
     public HealEffect healEffect;
-
     public float currentHp { get; private set; }
     public float maxHp;
 
@@ -60,7 +59,6 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void Die()
     {
-        //Die meant to be over written
-        Debug.Log(transform.name + " died");
+        // Not used yet
     }
 }
