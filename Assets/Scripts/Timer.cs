@@ -22,6 +22,7 @@ public class Timer : MonoBehaviour
         else
         {
             timeLeft = 0;
+            GameManager.Instance.LoadLevel("GameOver");
         }
 
         DisplayTime(timeLeft);

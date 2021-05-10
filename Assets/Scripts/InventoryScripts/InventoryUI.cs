@@ -11,15 +11,6 @@ namespace InventoryScripts
         private InventoryManager _inventoryManager;
         private List<InventorySlotUI> _inventorySlotUIs;
 
-        private void Awake()
-        {
-            //_inventoryManager = InventoryManager.Instance;
-            //_inventoryManager.OnItemChangedCallBack += UpdateUI;
-           // _inventorySlotUIs =
-            //    new List<InventorySlotUI>(
-               //     GetComponentInChildren<Transform>().GetComponentsInChildren<InventorySlotUI>());
-        }
-
         private void Start()
         {
             _inventoryManager = InventoryManager.Instance;

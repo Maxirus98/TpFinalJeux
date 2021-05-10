@@ -16,7 +16,7 @@ public class CursorManager : MonoBehaviour
     {
         Cursor.SetCursor(texture2Ds[0],new Vector2(4,8),CursorMode.ForceSoftware);
     }
-
+    
 }
 
     

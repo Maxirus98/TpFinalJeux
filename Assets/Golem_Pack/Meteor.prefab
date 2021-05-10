@@ -12,11 +12,15 @@ GameObject:
   - component: {fileID: 908007879764072234}
   - component: {fileID: 908007879764072235}
   - component: {fileID: 908007879764072228}
+<<<<<<< HEAD
   - component: {fileID: 5459629632307643983}
   - component: {fileID: 7702627111260856677}
   - component: {fileID: 7266961114342990203}
+=======
+  - component: {fileID: 908007879764072229}
+>>>>>>> 90f919446e21dc75d9ed9679e4fa5028c3bc45fd
   m_Layer: 0
-  m_Name: Meteor
+  m_Name: Meteor 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2240,6 +2244,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908007879764072230}
   m_Mesh: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &5459629632307643983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2270,6 +2275,10 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!135 &7266961114342990203
 SphereCollider:
+=======
+--- !u!64 &908007879764072229
+MeshCollider:
+>>>>>>> 90f919446e21dc75d9ed9679e4fa5028c3bc45fd
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2278,9 +2287,16 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
+<<<<<<< HEAD
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 3, z: 0}
+=======
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+>>>>>>> 90f919446e21dc75d9ed9679e4fa5028c3bc45fd
 --- !u!1 &908007880528909432
 GameObject:
   m_ObjectHideFlags: 0

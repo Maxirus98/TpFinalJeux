@@ -7,16 +7,16 @@ public class FoodManager : MonoBehaviour
 {
     public int amount;
     public List<GameObject> _foodPrefabs;
+    public float minX;
+    public float maxX;
+    public float minZ;
+    public float maxZ;
+    public float minY;
     void Start()
     {
         InstantiateFood();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void InstantiateFood()
     {
@@ -24,16 +24,11 @@ public class FoodManager : MonoBehaviour
         {
             int positionInListPrefab = (int) Random.Range(0f, _foodPrefabs.Count - 1);
             GameObject foodPrefab = _foodPrefabs[positionInListPrefab];
-            GameObject food = Instantiate(foodPrefab, GenerateRandomVector3(0,100),
+            GameObject food = Instantiate(foodPrefab, new Vector3(Random.Range(minX,minY), 0, Random.Range(minZ,minZ)),
                 Quaternion.identity);
             food.name = foodPrefab.name;
             food.transform.parent = transform;
         }
         
-    }
-
-    private Vector3 GenerateRandomVector3(float min, float max)
-    {
-        return new Vector3(Random.Range(-48,48), 0, Random.Range(-24,24));
     }
 }
