@@ -150,12 +150,7 @@
           </e>
           <e p="Timer.cs" t="Include" />
         </e>
-<<<<<<< HEAD
-        <e p="SpawnFallingObject.cs" t="Include" />
-        <e p="SpellImageSelector.cs" t="Include" />
         <e p="SwitchLevel.cs" t="Include" />
-=======
->>>>>>> 1ea89c8239706275059ac80bdfc8c78d570b2c38
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
             <e p="Fonts" t="Include">
