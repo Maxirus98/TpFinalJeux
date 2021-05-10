@@ -39,8 +39,6 @@ namespace Script
                 if (distance <= _agent.stoppingDistance )
                 {
                     _animator.SetBool("isAttacking", true);
-                    Debug.Log("startAttack" + _animator.GetBool("isAttacking"));
-                   //TODO : YAGNI? USE SingleAttack instead?
                     _combat.Attack(targetStats);
                 }
             }
@@ -48,7 +46,6 @@ namespace Script
             if (distance > _agent.stoppingDistance && _animator.GetBool("isAttacking"))
             {
                 _animator.SetBool("isAttacking", false);
-                Debug.Log("stopAttack" + _animator.GetBool("isAttacking"));
             }
 
             yield break;

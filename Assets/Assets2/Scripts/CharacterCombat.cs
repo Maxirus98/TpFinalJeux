@@ -31,12 +31,4 @@ public class CharacterCombat : MonoBehaviour
         targetStats.TakeDamage(damage);
     }
     
-    public void SingleAttack(CharacterStats targetStats, float damage)
-    {
-        if (Stats.cooldown.getValue() <= 0f)
-        {
-            targetStats.TakeDamage(damage);
-            Stats.cooldown.setValue(1f / Stats.attackSpeed.getValue());
-        }
-    }
 }

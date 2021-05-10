@@ -42,6 +42,7 @@ public class PlayerAnimator : MonoBehaviour
             // CHANGE GAME STATE HERE SO THAT IT PROMPTS THE PAUSE MENU
             //PROMPTS MENU CHOIX # 1--> RESTART = RELOAD LEVEL
             //PROMPTS MENU CHOIX # 2 --> TO MAIN MENU
+            GameManager.Instance.LoadLevel("GameOver");
         }
     }
 

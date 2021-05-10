@@ -10,11 +10,6 @@ public class WaveManager : MonoBehaviour
     public List<GameObject> prefabsNPC;
     public float time = 10f;
     public int _nbrNpcs = 0;
-    public float minX;
-    public float maxX;
-    public float minZ;
-    public float maxZ;
-    public float minY;
     private Targeter _targeter;
 
     private List<Transform> _checkpoints;

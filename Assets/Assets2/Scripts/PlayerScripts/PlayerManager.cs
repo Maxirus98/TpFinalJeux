@@ -26,6 +26,7 @@ public class PlayerManager : Singleton<PlayerManager>
             case PlayerState.Alive:
                 break;
             case PlayerState.Dead:
+                //animation
                 break;
             default:
                 break;

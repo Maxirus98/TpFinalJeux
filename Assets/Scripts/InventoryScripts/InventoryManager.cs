@@ -5,21 +5,12 @@ namespace InventoryScripts
 {
     public class InventoryManager : MonoBehaviour
     {
-        /*
-        * 1) Define a delegate -> contract between the publisher and the subscriber,
-        *   determines the signature of the method that will be called when the publisher publish
-        * 2)Define an event based on that delegate
-        * 3)Raise the event
-        *                     
-        */
-
         #region Singleton
 
         public static InventoryManager Instance;
 
         private void Awake()
         {
-            DontDestroyOnLoad(this);
             if (Instance != null)
             {
                 print("More than one instance found");

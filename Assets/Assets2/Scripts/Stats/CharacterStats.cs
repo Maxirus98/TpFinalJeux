@@ -39,6 +39,7 @@ public class CharacterStats : MonoBehaviour
         if (currentHp <= 0)
         {
             Die();
+            
         }
     }
 
