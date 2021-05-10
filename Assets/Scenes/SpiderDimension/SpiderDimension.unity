@@ -51018,6 +51018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 811852545}
+  - component: {fileID: 811852546}
   m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
@@ -51163,6 +51164,18 @@ Transform:
   m_Father: {fileID: 450995036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811852546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811852544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8562838156631c4a95fdf59aa2d125c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &812627447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74727,6 +74740,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1834259461}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1377318578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377318569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08a1c7f9a11e0e4398cdee2029900e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go: {fileID: 908007879764072230, guid: e62b5d96d8b3cd242874ff8914aea8b7, type: 3}
+  sprite: {fileID: 0}
+  cooldown: 5
 --- !u!1001 &1384417822
 PrefabInstance:
   m_ObjectHideFlags: 0

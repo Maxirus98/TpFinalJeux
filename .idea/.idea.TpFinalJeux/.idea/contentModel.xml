@@ -102,7 +102,6 @@
           </e>
         </e>
         <e p="CameraControllerScene2.cs" t="Include" />
-        <e p="FallingMeteor.cs" t="Include" />
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
