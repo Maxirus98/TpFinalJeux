@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 908007879764072235}
   - component: {fileID: 908007879764072228}
   - component: {fileID: 908007879764072229}
+  - component: {fileID: 5459629632307643983}
   m_Layer: 0
-  m_Name: Meteor 1
+  m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2252,6 +2253,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &5459629632307643983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908007879764072230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8562838156631c4a95fdf59aa2d125c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &908007880528909432
 GameObject:
   m_ObjectHideFlags: 0

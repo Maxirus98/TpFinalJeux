@@ -8,15 +8,15 @@ public class SpellAoeHit : MonoBehaviour
     [SerializeField]protected float damage;
     [SerializeField]protected string tag;
     [SerializeField]protected  string targetTag;
-    protected float tmpDamage;
+    public float tmpDamage;
 
     public float GetSpellDamage()
     {
         return damage;
     }
-    public void SetSpellDamage(float newDamage)
+    public void DoubleSpellDamage()
     {
-        tmpDamage = newDamage;
+        tmpDamage = damage * 2;
     }
 
     private void Start()
@@ -24,7 +24,6 @@ public class SpellAoeHit : MonoBehaviour
         if (targetTag == null) targetTag = "Enemy";
         if (tag == null) targetTag = "Player";
         combat = GameObject.FindWithTag(tag).GetComponent<CharacterCombat>();
-        tmpDamage = damage;
     }
     
     //Will not destroy on hit
