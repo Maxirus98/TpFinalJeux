@@ -11,7 +11,6 @@ public class WaveManager : MonoBehaviour
     public float time = 10f;
     public int _nbrNpcs = 0;
     private Targeter _targeter;
-
     private List<Transform> _checkpoints;
     //ajouter checkpoints
     

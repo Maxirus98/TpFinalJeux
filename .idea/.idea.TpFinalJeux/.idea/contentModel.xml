@@ -150,6 +150,14 @@
           </e>
           <e p="Timer.cs" t="Include" />
         </e>
+        <e p="SpaceSkies Free" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="LookCamera.cs" t="Include" />
+              <e p="SkyboxChanger.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="SwitchLevel.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
