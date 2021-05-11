@@ -29,7 +29,6 @@ namespace Script
         public override IEnumerator Execute()
         {
             _distance = Vector3.Distance(_target.position, _transform.position);
-            //add a sound of war for npc
             if (_distance <= _lookRadius)
             {
                 _agent.isStopped = false;
