@@ -6166,3 +6166,4 @@ MonoBehaviour:
   damage: 40
   tag: Player
   targetTag: Enemy
+  tmpDamage: 40

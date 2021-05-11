@@ -1826,11 +1826,7 @@ GameObject:
   - component: {fileID: 6144908045761454292}
   - component: {fileID: 6144908045761454293}
   - component: {fileID: 6144908045761454280}
-<<<<<<< HEAD
-  - component: {fileID: 144641912147462104}
-=======
   - component: {fileID: 9029264720973427831}
->>>>>>> 5ecb01987a25d62c9696299a743088c775fb5c68
   m_Layer: 8
   m_Name: Boss
   m_TagString: Enemy
@@ -1988,11 +1984,7 @@ MonoBehaviour:
   go: {fileID: 908007879764072230, guid: e62b5d96d8b3cd242874ff8914aea8b7, type: 3}
   sprite: {fileID: 0}
   cooldown: 5
-<<<<<<< HEAD
---- !u!82 &144641912147462104
-=======
 --- !u!82 &9029264720973427831
->>>>>>> 5ecb01987a25d62c9696299a743088c775fb5c68
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2002,13 +1994,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-<<<<<<< HEAD
-  m_audioClip: {fileID: 8300000, guid: f6cfe7451040448269f1ddcde0deddce, type: 3}
-=======
   m_audioClip: {fileID: 0}
->>>>>>> 5ecb01987a25d62c9696299a743088c775fb5c68
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

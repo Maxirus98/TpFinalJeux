@@ -128,3 +128,4 @@ MonoBehaviour:
   damage: 10
   tag: Player
   targetTag: Enemy
+  tmpDamage: 10

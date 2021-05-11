@@ -10,15 +10,24 @@ public class CameraControllerScene2 : MonoBehaviour
     
     public Transform playerTransform;
     public Vector3 cameraOffset;
-    public float speed = 0.5f;
+    public float speed = 6f;
 
-    void LateUpdate()
+    /*void LateUpdate()
     {
         Vector3 desiredPosition = playerTransform.position + cameraOffset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position,desiredPosition,speed * Time.deltaTime);
         transform.position = smoothedPosition;
         var horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         transform.Rotate(horizontal * Vector3.up,Space.World);
+    }*/
+
+    private void Update()
+    {
+        var horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        var vertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
+         
+        transform.Rotate(Vector3.up * horizontal);
+        transform.Rotate(Vector3.right * vertical);
     }
 
 
