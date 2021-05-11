@@ -12,15 +12,11 @@ GameObject:
   - component: {fileID: 908007879764072234}
   - component: {fileID: 908007879764072235}
   - component: {fileID: 908007879764072228}
-<<<<<<< HEAD
-  - component: {fileID: 5459629632307643983}
-  - component: {fileID: 7702627111260856677}
-  - component: {fileID: 7266961114342990203}
-=======
-  - component: {fileID: 908007879764072229}
->>>>>>> 90f919446e21dc75d9ed9679e4fa5028c3bc45fd
+  - component: {fileID: 1494425208755544472}
+  - component: {fileID: 8229108561082214142}
+  - component: {fileID: 8016793431515798496}
   m_Layer: 0
-  m_Name: Meteor 1
+  m_Name: Meteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908007879764072230}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 908007880528909439}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &908007879764072234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2244,20 +2240,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908007879764072230}
   m_Mesh: {fileID: 0}
-<<<<<<< HEAD
---- !u!114 &5459629632307643983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908007879764072230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8562838156631c4a95fdf59aa2d125c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &7702627111260856677
+--- !u!54 &1494425208755544472
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2267,18 +2250,31 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!135 &7266961114342990203
+  m_Constraints: 42
+  m_CollisionDetection: 1
+--- !u!114 &8229108561082214142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908007879764072230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869570534b1446c4f9bb9b2418bf8d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combat: {fileID: 0}
+  damage: 200
+  tag: Enemy
+  targetTag: Player
+  tmpDamage: 0
+--- !u!135 &8016793431515798496
 SphereCollider:
-=======
---- !u!64 &908007879764072229
-MeshCollider:
->>>>>>> 90f919446e21dc75d9ed9679e4fa5028c3bc45fd
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2287,16 +2283,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-<<<<<<< HEAD
   serializedVersion: 2
-  m_Radius: 3
-  m_Center: {x: 0, y: 3, z: 0}
-=======
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
->>>>>>> 90f919446e21dc75d9ed9679e4fa5028c3bc45fd
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &908007880528909432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,13 +2311,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908007880528909432}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.49, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 908007879764072233}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &908007880528909437
 ParticleSystem:
   m_ObjectHideFlags: 0

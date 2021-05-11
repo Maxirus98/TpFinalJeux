@@ -41,9 +41,9 @@ public class FireScript : MonoBehaviour
                         var spellDamage = spell.go.GetComponent<SpellAoeHit>() != null ?
                             spell.go.GetComponent<SpellAoeHit>() : 
                             ((SprayAndPray)spell).GetBulletGo().GetComponent<SpellHit>();
-                        spellDamage.SetSpellDamage(spellDamage.GetSpellDamage() * 2);
+                        spellDamage.DoubleSpellDamage();
                         print(spell);
-                        print(spellDamage);
+                        print("spelldmg " + spellDamage.tmpDamage);
                     }
                     break;
                 case "GreenFire":

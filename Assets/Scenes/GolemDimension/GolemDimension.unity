@@ -16234,9 +16234,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3484736612732629340, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 373355255}
+    - target: {fileID: 3484736612732629340, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: maxHp
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3484736612732629340, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: healEffect
+      value: 
+      objectReference: {fileID: 1215930393}
+    - target: {fileID: 4886410633923079842, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 373355255}
     m_RemovedComponents:
     - {fileID: 8410168397452616836, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 8507809248601061342, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 3484736612732629340, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 4687979560761148514, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
 --- !u!1 &725327539
 GameObject:
@@ -27233,6 +27255,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1215930393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1327945484823277439, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 723246903}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a5df1bcbc8fe04fa5c7fa08960a20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1227549145
 GameObject:
   m_ObjectHideFlags: 0

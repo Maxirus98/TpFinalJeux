@@ -4626,6 +4626,9 @@ GameObject:
   - component: {fileID: 2739874043139665135}
   - component: {fileID: 3262550645110909294}
   - component: {fileID: 9204219094805795023}
+  - component: {fileID: 3484736612732629340}
+  - component: {fileID: 4687979560761148514}
+  - component: {fileID: 4886410633923079842}
   m_Layer: 0
   m_Name: Hog 1
   m_TagString: Player
@@ -4792,6 +4795,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &3484736612732629340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739197834573344563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166a33756f04c334f9bd39b20e9afd5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBar: {fileID: 0}
+  damage:
+    baseValue: 0
+  spellDamage:
+    baseValue: 0
+  attackSpeed:
+    baseValue: 0
+  cooldown:
+    baseValue: 0
+  healEffect: {fileID: 0}
+  maxHp: 0
+--- !u!114 &4687979560761148514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739197834573344563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fef014e96ce14845a5de6fa1d6d11eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4886410633923079842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739197834573344563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166a33756f04c334f9bd39b20e9afd5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBar: {fileID: 0}
+  damage:
+    baseValue: 0
+  spellDamage:
+    baseValue: 0
+  attackSpeed:
+    baseValue: 0
+  cooldown:
+    baseValue: 0
+  healEffect: {fileID: 1327945484823277439}
+  maxHp: 200
 --- !u!1 &2739244300620646147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,8 +5149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combat: {fileID: 0}
+  damage: 0
   tag: 
   targetTag: 
+  tmpDamage: 0
 --- !u!1 &2739884542143949101
 GameObject:
   m_ObjectHideFlags: 0
@@ -6258,15 +6321,15 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -6444183276411209369, guid: 33df3f0d98bede647b6b87fcde3c6730, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 33df3f0d98bede647b6b87fcde3c6730, type: 3}
---- !u!4 &2739874041141956211 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5166496006028646865, guid: 33df3f0d98bede647b6b87fcde3c6730,
-    type: 3}
-  m_PrefabInstance: {fileID: 7041070506381629346}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2739874041141956215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5166496006028646869, guid: 33df3f0d98bede647b6b87fcde3c6730,
+    type: 3}
+  m_PrefabInstance: {fileID: 7041070506381629346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2739874041141956211 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5166496006028646865, guid: 33df3f0d98bede647b6b87fcde3c6730,
     type: 3}
   m_PrefabInstance: {fileID: 7041070506381629346}
   m_PrefabAsset: {fileID: 0}
