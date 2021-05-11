@@ -43,6 +43,8 @@ public class NpcController : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    
+    
 
     private void SetCommands()
     {

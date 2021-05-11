@@ -2269,7 +2269,11 @@ GameObject:
   - component: {fileID: 3960753275917757638}
   - component: {fileID: 3960753275917757625}
   - component: {fileID: 1145746617865047295}
+<<<<<<< HEAD
   - component: {fileID: -7295923251036562679}
+=======
+  - component: {fileID: 2584610292455382728}
+>>>>>>> 5ecb01987a25d62c9696299a743088c775fb5c68
   m_Layer: 8
   m_Name: littleSpider
   m_TagString: Enemy
@@ -2298,7 +2302,7 @@ Transform:
   - {fileID: 3960753275917891128}
   - {fileID: 3960753275917891130}
   - {fileID: 3960753275917891530}
-  - {fileID: 7433783038072638492}
+  - {fileID: 3055603121009473629}
   - {fileID: 2598996441856270864}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2379,7 +2383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166a33756f04c334f9bd39b20e9afd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpBar: {fileID: 7433783038549606967}
+  hpBar: {fileID: 0}
   damage:
     baseValue: 10
   spellDamage:
@@ -2422,7 +2426,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!82 &-7295923251036562679
+=======
+--- !u!82 &2584610292455382728
+>>>>>>> 5ecb01987a25d62c9696299a743088c775fb5c68
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2432,15 +2440,25 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
+<<<<<<< HEAD
   m_audioClip: {fileID: 8300000, guid: f6cfe7451040448269f1ddcde0deddce, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
+=======
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+>>>>>>> 5ecb01987a25d62c9696299a743088c775fb5c68
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
+<<<<<<< HEAD
   Priority: 100
+=======
+  Priority: 128
+>>>>>>> 5ecb01987a25d62c9696299a743088c775fb5c68
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2518,6 +2536,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
 --- !u!1 &3960753275998376041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2659,8 @@ CanvasRenderer:
 --- !u!114 &3960753276421263845
 MonoBehaviour:
 =======
+=======
+>>>>>>> 5ecb01987a25d62c9696299a743088c775fb5c68
 --- !u!1001 &1262344485081110401
 PrefabInstance:
 >>>>>>> 288d510ca4c20b5438d018f1e84975d8780eeedd
@@ -2648,6 +2669,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3960753275917891532}
     m_Modifications:
+    - target: {fileID: 4315311867061268444, guid: 9197941f2c51a6b48b82e2664036ee3e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8551955086072282152, guid: 9197941f2c51a6b48b82e2664036ee3e,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2795,24 +2821,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9197941f2c51a6b48b82e2664036ee3e, type: 3}
---- !u!224 &7433783038072638492 stripped
+--- !u!224 &3055603121009473629 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8551955087151995805, guid: 9197941f2c51a6b48b82e2664036ee3e,
+  m_CorrespondingSourceObject: {fileID: 4315311867061268444, guid: 9197941f2c51a6b48b82e2664036ee3e,
     type: 3}
   m_PrefabInstance: {fileID: 1262344485081110401}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7433783038549606967 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8551955086861669814, guid: 9197941f2c51a6b48b82e2664036ee3e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1262344485081110401}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 642d5574dfeeb994f963c96e78a01f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8220211338854120815
 PrefabInstance:
   m_ObjectHideFlags: 0
