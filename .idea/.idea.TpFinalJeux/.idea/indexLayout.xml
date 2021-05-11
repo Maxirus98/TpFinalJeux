@@ -3,15 +3,20 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
+      <Path>../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.shadergraph@7.5.3</Path>
+      <Path>../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.visualeffectgraph@7.5.3</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.6</Path>
-      <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
+      <Path>Library/PackageCache/com.unity.ide.rider@1.2.1</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.2.3</Path>
       <Path>Library/PackageCache/com.unity.probuilder@4.5.0</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.core@7.5.3</Path>
       <Path>Library/PackageCache/com.unity.settings-manager@1.0.3</Path>
+      <Path>Library/PackageCache/com.unity.shadergraph@7.5.3</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.24</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@2.1.4</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.2.18</Path>
+      <Path>Library/PackageCache/com.unity.visualeffectgraph@7.5.3</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
     </explicitIncludes>
