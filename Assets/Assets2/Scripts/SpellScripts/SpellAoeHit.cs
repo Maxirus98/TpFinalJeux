@@ -15,6 +15,11 @@ public class SpellAoeHit : MonoBehaviour
         tmpDamage = damage * 2;
     }
 
+    private void OnDestroy()
+    {
+        tmpDamage = damage;
+    }
+
     private void Start()
     {
         if (targetTag == null) targetTag = "Enemy";
