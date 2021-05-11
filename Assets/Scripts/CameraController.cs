@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Numerics;
+using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class CameraController : MonoBehaviour
 {
-    public float smoothSpeed = 0.125f;
+    public float smoothSpeed = 0.3f;
     private Transform _playerTransform;
     public Vector3 offset;
     void Start()
@@ -17,8 +20,6 @@ public class CameraController : MonoBehaviour
         Vector3 smoothedPosition = Vector3.Lerp(transform.position,desiredPosition,smoothSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
         transform.LookAt(_playerTransform);
-        
-        
-
+      
     }
 }
