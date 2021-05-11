@@ -3,10 +3,11 @@
 public class CharacterCombat : MonoBehaviour
 {
     public CharacterStats Stats { set; get; }
-    
+    private AudioSource _audioSource;
     private void Start()
     {
         Stats = GetComponent<CharacterStats>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -23,6 +24,7 @@ public class CharacterCombat : MonoBehaviour
         {
             targetStats.TakeDamage(Stats.damage.getValue());
             Stats.cooldown.setValue(1f / Stats.attackSpeed.getValue());
+            _audioSource.Play();
         }
     }
     

@@ -8,6 +8,9 @@ public class CameraController : MonoBehaviour
     public float smoothSpeed = 0.3f;
     private Transform _playerTransform;
     public Vector3 offset;
+    private bool firstPersonMax = false;
+    private bool thirdPersonMax;
+    
     void Start()
     {
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -20,6 +23,17 @@ public class CameraController : MonoBehaviour
         Vector3 smoothedPosition = Vector3.Lerp(transform.position,desiredPosition,smoothSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
         transform.LookAt(_playerTransform);
-      
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.forward, out hit, 10))
+        {
+            if (!hit.collider.CompareTag("Player"))
+            {
+                hit.collider.GetComponent<MeshRenderer>().enabled = false;
+                hit.collider.enabled = false;
+                print(hit.collider.GetComponent<MeshRenderer>().enabled);
+            }
+        }
     }
+    
 }
