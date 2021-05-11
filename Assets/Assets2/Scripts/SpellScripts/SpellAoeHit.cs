@@ -8,23 +8,23 @@ public class SpellAoeHit : MonoBehaviour
     [SerializeField]protected float damage;
     [SerializeField]protected string tag;
     [SerializeField]protected  string targetTag;
-    protected float tmpDamage;
-
-    public float GetSpellDamage()
+    public float tmpDamage;
+    
+    public void DoubleSpellDamage()
     {
-        return damage;
+        tmpDamage = damage * 2;
     }
-    public void SetSpellDamage(float newDamage)
+
+    private void OnDestroy()
     {
-        tmpDamage = newDamage;
+        tmpDamage = damage;
     }
 
     private void Start()
     {
         if (targetTag == null) targetTag = "Enemy";
-        if (tag == null) targetTag = "Player";
+        if (tag == null) tag = "Player";
         combat = GameObject.FindWithTag(tag).GetComponent<CharacterCombat>();
-        tmpDamage = damage;
     }
     
     //Will not destroy on hit
@@ -42,8 +42,7 @@ public class SpellAoeHit : MonoBehaviour
     {
         if (other.gameObject.CompareTag(targetTag))
         {
-            print("spell hit");
-            combat.Attack(other.gameObject.GetComponent<CharacterCombat>().Stats, tmpDamage);
+            combat.Attack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage);
         }
     }
 
