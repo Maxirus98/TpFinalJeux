@@ -111,6 +111,7 @@
             <e p="vertexcolorsstandard.shader" t="Include" />
           </e>
         </e>
+        <e p="Portal.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="LevelTracking.txt" t="Include" />
         </e>
