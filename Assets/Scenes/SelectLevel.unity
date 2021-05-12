@@ -1716,6 +1716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CursorManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8054558383158461976, guid: 99d20e82eda79ea4a91bb49138441d3f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8054558383158461977, guid: 99d20e82eda79ea4a91bb49138441d3f,
         type: 3}
       propertyPath: m_RootOrder

@@ -9,6 +9,7 @@ public class CursorManager : MonoBehaviour
 
      void Start()
     {
+        DontDestroyOnLoad(this);
         DefaultCursor();
     }
 

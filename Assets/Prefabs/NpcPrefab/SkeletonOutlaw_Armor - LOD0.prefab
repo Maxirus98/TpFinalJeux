@@ -677,7 +677,6 @@ GameObject:
   - component: {fileID: 6413694919622838271}
   - component: {fileID: 6413694919622838270}
   - component: {fileID: 6413694919622838245}
-  - component: {fileID: 6413694919622838243}
   - component: {fileID: 6413694919622838242}
   - component: {fileID: 6413694919622838241}
   - component: {fileID: 6413694919622838240}
@@ -773,21 +772,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 5
---- !u!114 &6413694919622838243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6414366571607250059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1582bb81d131e994494113a1d0ebf60b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 6418541131723335135}
-  _player: {fileID: 0}
 --- !u!114 &6413694919622838242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -812,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166a33756f04c334f9bd39b20e9afd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpBar: {fileID: 0}
+  hpBar: {fileID: 2600809115156018564}
   damage:
     baseValue: 10
   spellDamage:
@@ -3606,6 +3590,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2302746079859840115}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2600809115156018564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4315311867753980407, guid: 9197941f2c51a6b48b82e2664036ee3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2302746079859840115}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642d5574dfeeb994f963c96e78a01f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7691014177752301022
 PrefabInstance:
   m_ObjectHideFlags: 0
