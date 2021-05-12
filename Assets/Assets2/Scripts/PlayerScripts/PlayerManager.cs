@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -28,10 +29,15 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void ResetPlayerSpellsDamage()
     {
-        spell1.GetComponent<SpellAoeHit>().tmpDamage = 40;
-        spell2.GetBulletGo().GetComponent<SpellHit>().tmpDamage = 10;
-        spell3.GetComponent<SpellAoeHit>().tmpDamage = 40;
-        attack.GetComponent<SpellAoeHit>().tmpDamage = 10;
+        spell1 = GetComponent<CriDuTonerre>();
+        spell2 = GetComponent<SprayAndPray>();
+        spell3 = GetComponent<Empaler>();
+        attack = GetComponent<Attack>();
+        
+        if(spell1.isActiveAndEnabled)spell1.GetComponent<SpellAoeHit>().tmpDamage = 40;
+        if(spell2.isActiveAndEnabled)spell2.GetBulletGo().GetComponent<SpellHit>().tmpDamage = 10;
+        if(spell3.isActiveAndEnabled)spell3.GetComponent<SpellAoeHit>().tmpDamage = 40;
+        if(attack.isActiveAndEnabled)attack.GetComponent<SpellAoeHit>().tmpDamage = 10;
     }
 
     public void UpdatePlayerState(PlayerState playerState)
