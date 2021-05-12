@@ -48,12 +48,4 @@ public class SpellAoeHit : MonoBehaviour
         }
     }
 
-    //Works on fixed update, which isn't good 
-    /*private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            print("tear hit");
-        }
-    }*/
 }

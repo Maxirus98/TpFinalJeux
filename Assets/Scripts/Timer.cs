@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
     {
         _textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
         _audioSource = GetComponent<AudioSource>();
-        print(_textMeshPro.name);
     }
 
     void Update()
@@ -22,7 +21,7 @@ public class Timer : MonoBehaviour
             timeLeft -= Time.deltaTime;
         }
 
-        else if(timeLeft == 30)
+        else if(Math.Abs(timeLeft) == 30)
         {
           _audioSource.Play();  
         }
@@ -33,7 +32,6 @@ public class Timer : MonoBehaviour
             _audioSource.Stop();
             GameManager.Instance.LoadLevel("GameOver");
         }
-        
         _audioSource.loop = timeLeft <= 30 && timeLeft >= 0;
         DisplayTime(timeLeft);
     }
@@ -49,11 +47,6 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(time % 60);
         if (minutes < 1)
         {
-            if (!_audioSource.isPlaying)
-            {
-                _audioSource.Play();
-            }
-
             _textMeshPro.color = Color.red;
         }
 
