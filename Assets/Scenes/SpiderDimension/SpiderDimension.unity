@@ -107854,6 +107854,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 541016998912109648, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: timeLeft
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 541016998912109651, guid: d277edec63bf6984fa6011c829676dc5,
         type: 3}
       propertyPath: m_Name
@@ -107962,6 +107967,11 @@ PrefabInstance:
     - target: {fileID: 541016998912109660, guid: d277edec63bf6984fa6011c829676dc5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541016998912109661, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

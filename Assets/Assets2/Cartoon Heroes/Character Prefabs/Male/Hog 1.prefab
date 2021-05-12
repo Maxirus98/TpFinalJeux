@@ -4822,7 +4822,7 @@ MonoBehaviour:
   cooldown:
     baseValue: 0
   healEffect: {fileID: 0}
-  maxHp: 0
+  maxHp: 200
 --- !u!114 &4687979560761148514
 MonoBehaviour:
   m_ObjectHideFlags: 0

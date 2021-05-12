@@ -44,6 +44,7 @@ public class GameManager : Singleton<GameManager>
         {
             TogglePause();
         }
+        
     }
     
     public void TogglePause()
