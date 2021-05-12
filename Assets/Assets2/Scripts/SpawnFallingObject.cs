@@ -49,7 +49,7 @@ public class SpawnFallingObject : MonoBehaviour
             cloneRandomTile.GetComponent<Renderer>().material.color = Color.red;
             spell.TimeStamp = Time.time + spell.cooldown;
             Destroy(cloneRandomTile, spell.cooldown);
-            //Destroy(cloneFallingObject, spell.cooldown);
+            Destroy(cloneFallingObject, spell.cooldown);
 
         }
     }
