@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Script;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
 
-[Serializable]
-public class OnBossDeath : UnityEvent<Vector3>
-{
-    //ICI : Vector3 est le paramètre pour le handler event qui va se faire appeler
-    //1. déFINIR LA CLASSE D'ÉVÉNEMENT avec les param qu'on veut passer
-}
 public class NpcController : MonoBehaviour
 {
     //Repasser pour voir ce qui n'ont pas besoin d'être private

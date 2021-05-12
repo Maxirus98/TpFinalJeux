@@ -6,11 +6,13 @@ public class Portal : MonoBehaviour
 {
     private ParticleSystem _particleSystem;
     private Transform _playerTransform;
+    private AudioSource _audioSource;
 
     void Start()
     {
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _particleSystem = GetComponent<ParticleSystem>();
+        _audioSource = GetComponent<AudioSource>();
         _particleSystem.Stop();
     }
 

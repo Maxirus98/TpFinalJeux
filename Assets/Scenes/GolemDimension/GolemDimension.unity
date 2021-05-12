@@ -7491,6 +7491,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 541017000349105238, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.9114454
+      objectReference: {fileID: 0}
+    - target: {fileID: 541017000349105238, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.9114454
+      objectReference: {fileID: 0}
+    - target: {fileID: 541017000349105238, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 541017000349105238, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293454060
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d277edec63bf6984fa6011c829676dc5, type: 3}
 --- !u!1001 &465946599
@@ -11841,7 +11861,7 @@ PrefabInstance:
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: _nbrNpcs
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
@@ -18762,6 +18782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920876873017682437, guid: fd54e970af70afb4e9b940eba0dd5b34,
+        type: 3}
+      propertyPath: amount
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd54e970af70afb4e9b940eba0dd5b34, type: 3}
@@ -31597,7 +31622,7 @@ MonoBehaviour:
     baseValue: 0
   cooldown:
     baseValue: 0
-  healEffect: {fileID: 0}
+  healEffect: {fileID: 1215930393}
   maxHp: 200
 --- !u!114 &1911910426
 MonoBehaviour:
