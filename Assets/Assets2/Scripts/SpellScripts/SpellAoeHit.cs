@@ -9,6 +9,7 @@ public class SpellAoeHit : MonoBehaviour
     //[SerializeField]protected string tag;
     [SerializeField]protected  string targetTag;
     public float tmpDamage;
+
     public void DoubleSpellDamage()
     {
         tmpDamage = damage * 2;

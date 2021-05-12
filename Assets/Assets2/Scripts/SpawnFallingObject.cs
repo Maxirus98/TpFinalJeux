@@ -26,7 +26,6 @@ public class SpawnFallingObject : MonoBehaviour
         foreach (Transform tile in transform)
         {
             _tiles.Add(tile);
-            print(tile);
         }
     }
 
