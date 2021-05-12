@@ -677,7 +677,6 @@ GameObject:
   - component: {fileID: 6413694919622838271}
   - component: {fileID: 6413694919622838270}
   - component: {fileID: 6413694919622838245}
-  - component: {fileID: 6413694919622838243}
   - component: {fileID: 6413694919622838242}
   - component: {fileID: 6413694919622838241}
   - component: {fileID: 6413694919622838240}
@@ -773,22 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38dbd6c314edce4795aca96dc70154b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 5
---- !u!114 &6413694919622838243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6414366571607250059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1582bb81d131e994494113a1d0ebf60b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 6418541131723335135}
-  _player: {fileID: 0}
+  lookRadius: 10
 --- !u!114 &6413694919622838242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,11 +799,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBar: {fileID: 2600809115156018564}
   damage:
-    baseValue: 10
+    baseValue: 5
   spellDamage:
-    baseValue: 0
+    baseValue: 10
   attackSpeed:
-    baseValue: 0
+    baseValue: 1
   cooldown:
     baseValue: 0
   healEffect: {fileID: 0}
@@ -3559,6 +3543,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315311867753980405, guid: 9197941f2c51a6b48b82e2664036ee3e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315311867753980405, guid: 9197941f2c51a6b48b82e2664036ee3e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315311867753980405, guid: 9197941f2c51a6b48b82e2664036ee3e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315311868140980329, guid: 9197941f2c51a6b48b82e2664036ee3e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315311868140980329, guid: 9197941f2c51a6b48b82e2664036ee3e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8551955086072282152, guid: 9197941f2c51a6b48b82e2664036ee3e,
         type: 3}

@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using NpcScripts;
 using Script;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
 
 public class NpcController : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class NpcController : MonoBehaviour
 
     void Start()
     {
+        NpcManager.Instance.AddNpcAlive();
         _target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
@@ -39,7 +39,8 @@ public class NpcController : MonoBehaviour
         if (_characterStats.currentHp <= 0)
         {
             //animation or effect
-            //Destroy(gameObject);
+            //Destroy(gameObject);pr
+            NpcManager.Instance.RemoveNpcAlive();
             gameObject.SetActive(false);
         }
     }

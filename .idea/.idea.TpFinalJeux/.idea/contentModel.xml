@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-44898168.00" t="ExcludeRecursive" />
-    <e p="C:\Users\dupui\Documents\TpFinalJeux" t="IncludeRecursive">
+    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-53696505.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mansa\Documents\OneDrive\Documents\techniqueInformatique\quatriemeSession\gaming\projects\TpFinalJeux" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -111,6 +111,7 @@
             <e p="vertexcolorsstandard.shader" t="Include" />
           </e>
         </e>
+        <e p="Portal.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="LevelTracking.txt" t="Include" />
         </e>
@@ -142,7 +143,8 @@
             <e p="DetectionCommand.cs" t="Include" />
             <e p="NavigationCommand.cs" t="Include" />
             <e p="NpcController.cs" t="Include" />
-            <e p="WaveManager.cs" t="Include" />
+            <e p="NpcManager.cs" t="Include" />
+            <e p="Wave.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
             <e p="LevelTrackerService.cs" t="Include" />

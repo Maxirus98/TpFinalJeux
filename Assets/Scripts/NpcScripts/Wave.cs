@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
-public class WaveManager : MonoBehaviour
+public class Wave : MonoBehaviour
 {
     public List<GameObject> prefabsNPC;
     public float time = 10f;
