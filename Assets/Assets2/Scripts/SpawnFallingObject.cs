@@ -46,6 +46,7 @@ public class SpawnFallingObject : MonoBehaviour
             var cloneFallingObject = Instantiate(spell.go, randomTile.position + offset, spell.go.transform.rotation);
             var cloneRandomTile = Instantiate(randomTile.gameObject, randomTile.position + Vector3.up/5, randomTile.rotation);
             
+            Destroy(cloneRandomTile.GetComponent<MeshCollider>());
             cloneRandomTile.GetComponent<Renderer>().material.color = Color.red;
             spell.TimeStamp = Time.time + spell.cooldown;
             Destroy(cloneRandomTile, spell.cooldown);
