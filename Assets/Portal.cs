@@ -30,6 +30,7 @@ public class Portal : MonoBehaviour
     public IEnumerator OnVoidAppear()
     {
         _particleSystem.Play();
+        //son de victoire
         yield return new WaitForSeconds(5f);
         GameManager.Instance.LoadLevel("SelectLevel");
     }
