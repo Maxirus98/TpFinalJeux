@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
+    public GameObject boss;
+    public GameObject waveManager;
     private ParticleSystem _particleSystem;
-    private Transform _playerTransform;
     private AudioSource _audioSource;
+    private 
 
     void Start()
     {
-        _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         _particleSystem = GetComponent<ParticleSystem>();
         _audioSource = GetComponent<AudioSource>();
         _particleSystem.Stop();
@@ -19,7 +20,7 @@ public class Portal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Boss") == null && !_particleSystem.isPlaying)
+        if (boss == null && waveManager.GetComponentInChildren<GameObject>()== null)
         {
             StartCoroutine(OnVoidAppear());
         }
@@ -27,8 +28,6 @@ public class Portal : MonoBehaviour
 
     public IEnumerator OnVoidAppear()
     {
-        transform.position = _playerTransform.position;
-        transform.LookAt(_playerTransform);
         _particleSystem.Play();
         yield return new WaitForSeconds(5f);
         GameManager.Instance.LoadLevel("SelectLevel");

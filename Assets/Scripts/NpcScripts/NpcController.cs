@@ -37,7 +37,7 @@ public class NpcController : MonoBehaviour
         if (_characterStats.currentHp <= 0)
         {
             //animation or effect
-            //Destroy(gameObject);
+            //Destroy(gameObject);pr
             gameObject.SetActive(false);
         }
     }
