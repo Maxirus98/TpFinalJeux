@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166a33756f04c334f9bd39b20e9afd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpBar: {fileID: 4979909492555158353}
+  hpBar: {fileID: 599407408017860368}
   damage:
     baseValue: 10
   spellDamage:
@@ -119,6 +119,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1954636935627498957}
     m_Modifications:
+    - target: {fileID: 4315311867061268444, guid: 9197941f2c51a6b48b82e2664036ee3e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 69
+      objectReference: {fileID: 0}
     - target: {fileID: 8551955086072282152, guid: 9197941f2c51a6b48b82e2664036ee3e,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -241,9 +246,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9197941f2c51a6b48b82e2664036ee3e, type: 3}
---- !u!114 &4979909492555158353 stripped
+--- !u!114 &599407408017860368 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8551955086861669814, guid: 9197941f2c51a6b48b82e2664036ee3e,
+  m_CorrespondingSourceObject: {fileID: 4315311867753980407, guid: 9197941f2c51a6b48b82e2664036ee3e,
     type: 3}
   m_PrefabInstance: {fileID: 3725203235802482407}
   m_PrefabAsset: {fileID: 0}

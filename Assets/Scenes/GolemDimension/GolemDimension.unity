@@ -2399,7 +2399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothSpeed: 0.125
-  offset: {x: 5, y: 2, z: 1}
 --- !u!1001 &177693355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11868,6 +11867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 6274618996944017997, guid: 79f96a7d73ed85c4cbc8aa8aed7073ea,
+        type: 3}
+      propertyPath: m_TagString
+      value: RedFire
+      objectReference: {fileID: 0}
     - target: {fileID: 6274618996944018000, guid: 79f96a7d73ed85c4cbc8aa8aed7073ea,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -15698,6 +15702,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 967296799}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &968338601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 599407408017860368, guid: 7b5b5a6a2809e5448ae29a2f35645765,
+    type: 3}
+  m_PrefabInstance: {fileID: 2844585647247996774}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642d5574dfeeb994f963c96e78a01f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &973155042 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a8081dad0949652458a38a771d5a7fa0,
@@ -34213,6 +34229,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 599407409411559054, guid: 7b5b5a6a2809e5448ae29a2f35645765,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 599407409411559054, guid: 7b5b5a6a2809e5448ae29a2f35645765,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097661560763950888, guid: 7b5b5a6a2809e5448ae29a2f35645765,
+        type: 3}
+      propertyPath: hpBar
+      value: 
+      objectReference: {fileID: 968338601}
     - target: {fileID: 1954636935627498957, guid: 7b5b5a6a2809e5448ae29a2f35645765,
         type: 3}
       propertyPath: m_RootOrder
@@ -34344,5 +34375,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  interactionTransform: {fileID: 0}
+  interactionTransform: {fileID: 2844585647247996785}
   _player: {fileID: 0}
+--- !u!4 &2844585647247996785 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1954636935627498957, guid: 7b5b5a6a2809e5448ae29a2f35645765,
+    type: 3}
+  m_PrefabInstance: {fileID: 2844585647247996774}
+  m_PrefabAsset: {fileID: 0}

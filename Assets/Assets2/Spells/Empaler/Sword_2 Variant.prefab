@@ -138,6 +138,7 @@ MonoBehaviour:
   damage: 40
   tag: Player
   targetTag: Enemy
+  tmpDamage: 40
 --- !u!1001 &8204171656955247043
 PrefabInstance:
   m_ObjectHideFlags: 0
