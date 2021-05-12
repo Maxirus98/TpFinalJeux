@@ -42,18 +42,7 @@ public class SpellAoeHit : MonoBehaviour
     {
         if (other.gameObject.CompareTag(targetTag))
         {
-            print(combat);
-            print(other);
             combat.Attack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage);
         }
     }
-
-    //Works on fixed update, which isn't good 
-    /*private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            print("tear hit");
-        }
-    }*/
 }
