@@ -29,4 +29,7 @@ public class CriDuTonerre : Spell
         StartCoroutine(Cooldown.WaitFor(cooldown));
         TimeStamp = Time.time + cooldown;
     }
+    
+    
+    
 }

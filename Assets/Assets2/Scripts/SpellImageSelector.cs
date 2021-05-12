@@ -13,7 +13,7 @@ public class SpellImageSelector : MonoBehaviour
         //If it has a sprite
         foreach (var spell in spells)
         {
-            if (spell.sprite && spell.enabled)
+            if (spell.sprite != null && spell.enabled)
             {
                 GetComponent<Image>().sprite = spell.sprite;
             }

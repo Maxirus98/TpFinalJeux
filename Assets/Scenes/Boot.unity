@@ -622,9 +622,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personnagesPrincipaux:
   - {fileID: 835242307}
+<<<<<<< HEAD:Assets/Scenes/Boot.unity
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+>>>>>>> 246d91d4772b9d91eff7ed853e8f5a34f55673ba:Assets/Assets2/Scenes/Boot.unity
   _nomTitre: {fileID: 52534071}
   _desc: {fileID: 1563554779}
 --- !u!1001 &340494126
@@ -951,6 +954,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340494128}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD:Assets/Scenes/Boot.unity
 --- !u!1 &448276991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1084,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448276991}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> 246d91d4772b9d91eff7ed853e8f5a34f55673ba:Assets/Assets2/Scenes/Boot.unity
 --- !u!1 &594510263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1248,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD:Assets/Scenes/Boot.unity
 --- !u!1 &637067208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1378,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637067208}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> 246d91d4772b9d91eff7ed853e8f5a34f55673ba:Assets/Assets2/Scenes/Boot.unity
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2252,7 +2261,7 @@ RectTransform:
   - {fileID: 52534070}
   - {fileID: 1563554778}
   m_Father: {fileID: 1985544248}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2458,8 +2467,6 @@ RectTransform:
   - {fileID: 1481877139}
   - {fileID: 340494127}
   - {fileID: 11398185}
-  - {fileID: 448276992}
-  - {fileID: 637067209}
   - {fileID: 1754034120}
   m_Father: {fileID: 0}
   m_RootOrder: 4
