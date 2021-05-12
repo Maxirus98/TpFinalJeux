@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NpcScripts;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    public GameObject boss;
-    public GameObject waveManager;
     private ParticleSystem _particleSystem;
     private AudioSource _audioSource;
     private 
@@ -14,14 +13,16 @@ public class Portal : MonoBehaviour
     {
         _particleSystem = GetComponent<ParticleSystem>();
         _audioSource = GetComponent<AudioSource>();
-        _particleSystem.Stop();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (boss == null && waveManager.GetComponentInChildren<GameObject>()== null)
+        if (GameObject.Find("Boss") == null && 
+            NpcManager.Instance.GetNbrNpcAlive() == 0
+            && _particleSystem.isStopped)
         {
+            print(NpcManager.Instance.GetNbrNpcAlive());
             StartCoroutine(OnVoidAppear());
         }
     }
