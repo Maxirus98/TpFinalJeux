@@ -19,20 +19,8 @@ public class CameraController : MonoBehaviour
     {
         camera = GetComponent<Camera>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        offset = player.transform.position;
+        offset = player.position;
     }
-
-    // Update is called once per frame
-    /*void LateUpdate()
-    {
-        Vector3 desiredPosition = _playerTransform.position + offset;
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position,desiredPosition,smoothSpeed * Time.deltaTime);
-        transform.position = smoothedPosition;
-        if(!MoveCameraManually())
-            transform.LookAt(_playerTransform);
-    }*/
-    
-   
 
     void LateUpdate()
     {

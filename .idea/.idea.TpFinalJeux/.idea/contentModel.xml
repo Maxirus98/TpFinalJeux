@@ -101,7 +101,7 @@
             </e>
           </e>
         </e>
-        <e p="CameraControllerScene2.cs" t="Include" />
+        <e p="CameraController2.cs" t="Include" />
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
