@@ -5,8 +5,8 @@ namespace InventoryScripts
 {
     public class InventorySlotUI : MonoBehaviour
     {
+        public Image icon;
         private Item _item;
-        public Image _icon;
         private GameObject _player;
 
         void Start()
@@ -17,15 +17,15 @@ namespace InventoryScripts
         public void PutItemInSlot(Item item)
         {
             _item = item;
-            _icon.sprite = item.icon;
-            _icon.enabled = true;
+            icon.sprite = item.icon;
+            icon.enabled = true;
         }
 
         public void ClearItemFromSlot()
         {
             _item = null;
-            _icon.sprite = null;
-            _icon.enabled = false;
+            icon.sprite = null;
+            icon.enabled = false;
         }
 
         public void OnClickConsume()

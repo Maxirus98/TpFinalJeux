@@ -7531,6 +7531,26 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 0428dc74e2d0dce47bda453f922b9543, type: 3}
+    - target: {fileID: 541017000349105238, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.91224635
+      objectReference: {fileID: 0}
+    - target: {fileID: 541017000349105238, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.91224635
+      objectReference: {fileID: 0}
+    - target: {fileID: 541017000349105238, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 541017000349105238, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293519857
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d277edec63bf6984fa6011c829676dc5, type: 3}
 --- !u!1001 &465946599
@@ -11206,7 +11226,7 @@ PrefabInstance:
     - target: {fileID: 2739197834573344563, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
       propertyPath: m_Name
-      value: Hog 1
+      value: Hog
       objectReference: {fileID: 0}
     - target: {fileID: 2739197834573344563, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
@@ -11558,6 +11578,11 @@ PrefabInstance:
     - {fileID: 8507809248601061342, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 3484736612732629340, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 4687979560761148514, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 8371490812768984081, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 895492777851369923, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 2373259680285240037, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 3196069803479539597, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 6723418980103509146, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
 --- !u!1 &723246904 stripped
 GameObject:
@@ -31831,7 +31856,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911910412}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f192a0fc0d69b0743b11c769feb492c7, type: 3}
   m_Name: 

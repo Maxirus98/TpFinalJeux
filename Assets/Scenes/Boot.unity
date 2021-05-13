@@ -518,12 +518,20 @@ PrefabInstance:
     - target: {fileID: 2739197834573344563, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Hog 1
+=======
+      value: Hog
+>>>>>>> 000ba453f8099d9e6780feff6a62482eb2da05a6
       objectReference: {fileID: 0}
     - target: {fileID: 2739874043139665134, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
       propertyPath: m_Enabled
+<<<<<<< HEAD
       value: 1
+=======
+      value: 0
+>>>>>>> 000ba453f8099d9e6780feff6a62482eb2da05a6
       objectReference: {fileID: 0}
     - target: {fileID: 2739874043139665135, guid: 9e5db976033e7f744ba1426c6b48c1c6,
         type: 3}
@@ -615,12 +623,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     m_RemovedComponents:
     - {fileID: 4886410633923079842, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 4687979560761148514, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 2739874043139665134, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 2739874043139665135, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 3484736612732629340, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+=======
+    - target: {fileID: 9204219094805795023, guid: 9e5db976033e7f744ba1426c6b48c1c6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2739874043139665134, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 2739874043139665135, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 3262550645110909294, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 9204219094805795023, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 4687979560761148514, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+    - {fileID: 4886410633923079842, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
+>>>>>>> 000ba453f8099d9e6780feff6a62482eb2da05a6
     - {fileID: 895492777851369923, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 6723418980103509146, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
     - {fileID: 8371490812768984081, guid: 9e5db976033e7f744ba1426c6b48c1c6, type: 3}
