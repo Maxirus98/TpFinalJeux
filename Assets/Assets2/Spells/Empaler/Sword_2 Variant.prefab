@@ -108,20 +108,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 1
---- !u!64 &1706385236227199635
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8204171656955215715}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: c529fabf72b012c4d9a881e4e3a22ab9, type: 3}
 --- !u!114 &8042882376844484196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,9 +122,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combat: {fileID: 0}
   damage: 40
-  tag: Player
   targetTag: Enemy
   tmpDamage: 40
+--- !u!65 &8805063887679813439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8204171656955215715}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.41, y: 0.2, z: 1.4}
+  m_Center: {x: -0.10679972, y: 0.03051027, z: 0.29333204}
 --- !u!1001 &8204171656955247043
 PrefabInstance:
   m_ObjectHideFlags: 0

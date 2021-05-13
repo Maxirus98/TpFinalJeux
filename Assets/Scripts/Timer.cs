@@ -20,19 +20,26 @@ public class Timer : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
         }
+<<<<<<< HEAD
 
         else if(Math.Abs(timeLeft) == 30)
         {
           _audioSource.Play();  
         }
         
+=======
+>>>>>>> 008aee8bc26f1eb9fe63ed2d4e68292eedecb795
         else
         {
             timeLeft = 0;
-            _audioSource.Stop();
             GameManager.Instance.LoadLevel("GameOver");
         }
+<<<<<<< HEAD
         _audioSource.loop = timeLeft <= 30 && timeLeft >= 0;
+=======
+        
+        //_audioSource.loop = timeLeft <= 30 && timeLeft >= 0;
+>>>>>>> 008aee8bc26f1eb9fe63ed2d4e68292eedecb795
         DisplayTime(timeLeft);
     }
 
@@ -48,6 +55,11 @@ public class Timer : MonoBehaviour
         if (minutes < 1)
         {
             _textMeshPro.color = Color.red;
+        }
+
+        if (seconds == 30 && minutes == 0)
+        {
+            _audioSource.Play();  
         }
 
         _textMeshPro.text = string.Format("{0:00}:{1:00}", minutes, seconds);

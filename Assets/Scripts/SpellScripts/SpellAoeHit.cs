@@ -42,10 +42,11 @@ public class SpellAoeHit : MonoBehaviour
     {
         if (other.gameObject.CompareTag(targetTag))
         {
-            print(combat);
-            print(other);
             combat.Attack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage);
         }
     }
+<<<<<<< HEAD:Assets/Assets2/Scripts/SpellScripts/SpellAoeHit.cs
 
+=======
+>>>>>>> 008aee8bc26f1eb9fe63ed2d4e68292eedecb795:Assets/Scripts/SpellScripts/SpellAoeHit.cs
 }

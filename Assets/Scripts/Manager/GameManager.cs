@@ -8,11 +8,8 @@ public class GameManager : Singleton<GameManager>
     [System.Serializable] public class EventGameState : UnityEvent<GameState, GameState> {}
     public enum GameState
     {
-        MainMenu,
         Running,
-        EncounterTutorial,
-        Death,
-        Pause
+        EncounterTutorial
     }
     public EventGameState gameStateHandler;
     
@@ -20,35 +17,40 @@ public class GameManager : Singleton<GameManager>
     
     [SerializeField] private GameObject[] systemPrefabs;
     private List<GameObject> instanceSystemPrefabsKept = new List<GameObject>();
-    private GameState _currentGameState = GameState.MainMenu;
+    private GameState _currentGameState = GameState.Running;
     
     private string _currentLevelName = string.Empty;
     
     void Start()
     {
         DontDestroyOnLoad(this);
-        //KeepSystemPrefabs();
+        KeepSystemPrefabs();
     }
 
     void KeepSystemPrefabs()
     {
         foreach (var go in systemPrefabs)
         {
-            instanceSystemPrefabsKept.Add(Instantiate(go));
+            var clonePrefab = Instantiate(go);
+            instanceSystemPrefabsKept.Add(clonePrefab);
+            
+            DontDestroyOnLoad(clonePrefab);
         }
+        
     }
     
     void Update()
     {
-        if (/*_currentGameState != GameState.MainMenu &&*/ Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
         }
+        
     }
     
     public void TogglePause()
     {
-        UpdateGameState(CurrentGameState == GameState.MainMenu ? GameState.EncounterTutorial : GameState.MainMenu);
+        UpdateGameState(CurrentGameState == GameState.Running ? GameState.EncounterTutorial : GameState.Running);
     }
 
     void UpdateGameState(GameState newGameState)
@@ -57,14 +59,13 @@ public class GameManager : Singleton<GameManager>
         CurrentGameState = newGameState;
         switch (_currentGameState)
         {
-            case GameState.MainMenu:
-                Time.timeScale = 1;
-                break;
             case GameState.Running:
                 Time.timeScale = 1;
+                instanceSystemPrefabsKept[0].gameObject.SetActive(false);
                 break;
             case GameState.EncounterTutorial:
                 Time.timeScale = 0;
+                instanceSystemPrefabsKept[0].gameObject.SetActive(true);
                 break;
             default:
                 break;
@@ -83,13 +84,6 @@ public class GameManager : Singleton<GameManager>
         }
         instanceSystemPrefabsKept.Clear();
     }
-    
-    //Attaché au bouton "Jouer"
-    public void StartGame()
-    {
-        LoadLevel("Niveau1");
-    }
-    
     public void LoadLevel(string levelName)
     {
         CurrentLevelName = levelName;
@@ -132,19 +126,12 @@ public class GameManager : Singleton<GameManager>
     {
         print("unload completed");
     }
-    
-    public void RestartGame()
-    {
-        UpdateGameState(GameState.MainMenu);
-        UnloadLevel(CurrentLevelName);
-    }
 
     /**
      * TODO: Vérifier que le jeu n'est pas en train de sauvegarder avant de fermer
      */
     public void QuitGame()
     {
-        print("Quitting game...");
         Application.Quit();
     }
 

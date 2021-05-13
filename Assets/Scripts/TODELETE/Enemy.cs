@@ -10,11 +10,11 @@ public class Enemy : Interactable
     private CharacterStats enemyStats;
     private void Start()
     {
-        playerManager = PlayerManager.Instance;
+        //playerManager = PlayerManager.Instance;
         enemyStats = GetComponent<CharacterStats>();
     }
 
-    public override void Interact()
+    /*public override void Interact()
     {
         base.Interact();
         var playerCombat = playerManager.GetComponent<CharacterCombat>();
@@ -24,5 +24,5 @@ public class Enemy : Interactable
             Debug.Log("Attack");
             playerCombat.Attack(enemyStats);
         }
-    }
+    }*/
 }

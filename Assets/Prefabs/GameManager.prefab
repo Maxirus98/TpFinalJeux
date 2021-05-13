@@ -46,4 +46,5 @@ MonoBehaviour:
   gameStateHandler:
     m_PersistentCalls:
       m_Calls: []
-  systemPrefabs: []
+  systemPrefabs:
+  - {fileID: 1125859233134952872, guid: 0cae66a1b81a579469d2a67c456b7c8a, type: 3}
