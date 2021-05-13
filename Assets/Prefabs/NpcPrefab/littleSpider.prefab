@@ -2270,6 +2270,7 @@ GameObject:
   - component: {fileID: 3960753275917757625}
   - component: {fileID: 1145746617865047295}
   - component: {fileID: 2584610292455382728}
+  - component: {fileID: 1394621797075408878}
   m_Layer: 8
   m_Name: littleSpider
   m_TagString: Enemy
@@ -2517,6 +2518,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1394621797075408878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3960753275917790188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e662c0a6f432ac40ae4d45cd864d481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 0}
+  _player: {fileID: 0}
 --- !u!1001 &1262344485081110401
 PrefabInstance:
   m_ObjectHideFlags: 0
