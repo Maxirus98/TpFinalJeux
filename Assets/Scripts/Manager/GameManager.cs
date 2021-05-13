@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -33,12 +35,11 @@ public class GameManager : Singleton<GameManager>
         {
             var clonePrefab = Instantiate(go);
             instanceSystemPrefabsKept.Add(clonePrefab);
-            
             DontDestroyOnLoad(clonePrefab);
         }
-        
+        instanceSystemPrefabsKept[0].gameObject.SetActive(false);
     }
-    
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -73,7 +74,29 @@ public class GameManager : Singleton<GameManager>
         
        gameStateHandler.Invoke(CurrentGameState, previousGameState);
     }
-    
+
+    public void Resume()
+    {
+        UpdateGameState(GameState.Running);
+    }
+
+    public void ChoisirSpell(String spellName)
+    {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player)
+        {
+            var spells = player.GetComponents<Spell>();
+            foreach (var spell in spells)
+            {
+                spell.enabled = false;
+                if (spell.go.name.Equals(spellName))
+                {
+                    spell.enabled = true;
+                }
+            }
+        }
+    }
+
     protected override void OnDestroy()
     {
         base.OnDestroy();
