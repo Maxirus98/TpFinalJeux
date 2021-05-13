@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Script
 {
-    public abstract class Command : MonoBehaviour
+    public abstract class Command 
     {
         public abstract IEnumerator Execute();
     }

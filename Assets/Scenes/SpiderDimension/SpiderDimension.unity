@@ -47007,6 +47007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
+      propertyPath: nbrNpcs
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
       propertyPath: _nbrNpcs
       value: 20
       objectReference: {fileID: 0}
@@ -47022,6 +47027,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
+      propertyPath: prefabsNpc.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
       propertyPath: prefabsNPC.Array.data[0]
       value: 
       objectReference: {fileID: 3960753275917790188, guid: 16544bd4b7e9979489d6e3dc4e5b8cf5,
@@ -47031,6 +47041,12 @@ PrefabInstance:
       propertyPath: prefabsNPC.Array.data[1]
       value: 
       objectReference: {fileID: 989887608}
+    - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
+      propertyPath: prefabsNpc.Array.data[0]
+      value: 
+      objectReference: {fileID: 3960753275917790188, guid: 16544bd4b7e9979489d6e3dc4e5b8cf5,
+        type: 3}
     - target: {fileID: 5245148275233536441, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: m_Name
@@ -103642,7 +103658,7 @@ PrefabInstance:
     - target: {fileID: 1920876873017682434, guid: fd54e970af70afb4e9b940eba0dd5b34,
         type: 3}
       propertyPath: m_Name
-      value: Foods
+      value: FoodManager
       objectReference: {fileID: 0}
     - target: {fileID: 1920876873017682436, guid: fd54e970af70afb4e9b940eba0dd5b34,
         type: 3}

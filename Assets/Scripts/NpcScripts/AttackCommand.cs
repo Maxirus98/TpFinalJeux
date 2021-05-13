@@ -11,15 +11,13 @@ namespace Script
         private readonly NavMeshAgent _agent;
         private readonly CharacterCombat _combat;
         private readonly Animator _animator;
-        private readonly AudioSource _audioSource;
 
         public AttackCommand(
             Transform transform,
             Transform target,
             NavMeshAgent agent,
             CharacterCombat combat,
-            Animator animator,
-            AudioSource audioSource
+            Animator animator
         )
         {
             _animator = animator;
@@ -27,7 +25,6 @@ namespace Script
             _target = target;
             _agent = agent;
             _combat = combat;
-            _audioSource = audioSource;
         }
 
 
