@@ -571,15 +571,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1327858540}
     m_Modifications:
+    - target: {fileID: 300510912126964015, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 300510912126964018, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
       value: -0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1092565790123681507, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790274940064, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790552817708, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790719342283, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565791317020015, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565791406690643, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662706487173919140, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3662706487173919161, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
       value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311511547714388259, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5311511547714388286, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
@@ -590,6 +635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Candelier_Triple (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266949716707160795, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8266949716707585787, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
@@ -7662,7 +7712,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163140595}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 4, z: 1}
@@ -7703,7 +7753,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!1001 &164349455
 PrefabInstance:
@@ -23178,6 +23228,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1327858540}
     m_Modifications:
+    - target: {fileID: 300510912126964015, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790123681507, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1092565790274939998, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
       propertyPath: m_Intensity
@@ -23187,6 +23247,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BounceIntensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790274940064, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790552817708, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1092565790719342281, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
@@ -23198,6 +23268,11 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1092565790719342283, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1092565791317020013, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
       propertyPath: m_Intensity
@@ -23207,11 +23282,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BounceIntensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565791317020015, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565791406690643, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662706487173919140, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311511547714388259, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8266949716707160795, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
       propertyPath: m_Name
       value: Candelier_Triple
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266949716707160795, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8266949716707585787, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
@@ -48485,10 +48585,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1327858540}
     m_Modifications:
+    - target: {fileID: 300510912126964015, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790123681507, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790274940064, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790552817708, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565790719342283, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565791317020015, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1092565791406690643, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3662706487173919140, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311511547714388259, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8266949716707160795, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
       propertyPath: m_Name
       value: Candelier_Triple (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266949716707160795, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8266949716707585787, guid: 34534f9a2d6df1c4f8dee201f8d50aaa,
         type: 3}
