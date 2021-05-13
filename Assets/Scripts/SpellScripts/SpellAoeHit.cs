@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpellAoeHit : MonoBehaviour
 {
     [SerializeField]protected CharacterCombat combat;
+    [SerializeField]protected CharacterCombat playerCombat;
     [SerializeField]protected float damage;
     //[SerializeField]protected string tag;
     [SerializeField]protected  string targetTag;
@@ -25,6 +26,7 @@ public class SpellAoeHit : MonoBehaviour
         if (targetTag == null) targetTag = "Enemy";
         //if (tag == null) tag = "Player";
         combat = GameObject.Find("Boss").GetComponent<CharacterCombat>();
+        playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterCombat>();
     }
     
     //Will not destroy on hit
@@ -33,7 +35,7 @@ public class SpellAoeHit : MonoBehaviour
         if (other.CompareTag(targetTag))
         {
             print("spell hit for " + damage);
-            combat.Attack(other.GetComponent<CharacterCombat>().Stats, tmpDamage);
+            playerCombat.Attack(other.GetComponent<CharacterCombat>().Stats, tmpDamage);
         }
     }
 

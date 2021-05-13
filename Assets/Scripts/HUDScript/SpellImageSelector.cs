@@ -9,15 +9,7 @@ public class SpellImageSelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var spells = GameObject.FindGameObjectWithTag("Player").GetComponents<Spell>();
-        //If it has a sprite
-        foreach (var spell in spells)
-        {
-            if (spell.sprite != null && spell.enabled)
-            {
-                GetComponent<Image>().sprite = spell.sprite;
-            }
-        }
+        
         
     }
 }

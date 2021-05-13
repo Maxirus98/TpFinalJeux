@@ -62,11 +62,11 @@ public class GameManager : Singleton<GameManager>
         {
             case GameState.Running:
                 Time.timeScale = 1;
-                instanceSystemPrefabsKept[0].gameObject.SetActive(false);
+                if(instanceSystemPrefabsKept.Count > 0)instanceSystemPrefabsKept[0].gameObject.SetActive(false);
                 break;
             case GameState.EncounterTutorial:
                 Time.timeScale = 0;
-                instanceSystemPrefabsKept[0].gameObject.SetActive(true);
+                if(instanceSystemPrefabsKept.Count > 0)instanceSystemPrefabsKept[0].gameObject.SetActive(true);
                 break;
             default:
                 break;
@@ -74,16 +74,12 @@ public class GameManager : Singleton<GameManager>
         
        gameStateHandler.Invoke(CurrentGameState, previousGameState);
     }
-
-    public void Resume()
-    {
-        UpdateGameState(GameState.Running);
-    }
-
+    
     public void ChoisirSpell(String spellName)
     {
         var player = GameObject.FindGameObjectWithTag("Player");
-        if (player)
+        var hud = GameObject.Find("HUD").transform.GetChild(1).gameObject;
+        if (player && hud)
         {
             var spells = player.GetComponents<Spell>();
             foreach (var spell in spells)
@@ -92,6 +88,7 @@ public class GameManager : Singleton<GameManager>
                 if (spell.go.name.Equals(spellName))
                 {
                     spell.enabled = true;
+                    hud.GetComponent<Image>().sprite = spell.sprite;
                 }
             }
         }
