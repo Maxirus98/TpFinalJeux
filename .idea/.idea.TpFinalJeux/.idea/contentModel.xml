@@ -101,17 +101,14 @@
             </e>
           </e>
         </e>
-        <e p="CameraController2.cs" t="Include" />
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
-        <e p="HealEffect.cs" t="Include" />
         <e p="Low Poly Graveyard" t="Include">
           <e p="Materials" t="Include">
             <e p="vertexcolorsstandard.shader" t="Include" />
           </e>
         </e>
-        <e p="Portal.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="LevelTracking.txt" t="Include" />
         </e>
@@ -124,16 +121,17 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Blurry.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="CameraController2.cs" t="Include" />
           <e p="CursorManager.cs" t="Include" />
-          <e p="FoodManager.cs" t="Include" />
+          <e p="HealEffect.cs" t="Include" />
           <e p="InventoryScripts" t="Include">
             <e p="InventoryManager.cs" t="Include" />
             <e p="InventorySlotUI.cs" t="Include" />
             <e p="InventoryUI.cs" t="Include" />
           </e>
           <e p="ItemScripts" t="Include">
+            <e p="FoodManager.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemController.cs" t="Include" />
           </e>
@@ -146,9 +144,7 @@
             <e p="NpcManager.cs" t="Include" />
             <e p="Wave.cs" t="Include" />
           </e>
-          <e p="Services" t="Include">
-            <e p="LevelTrackerService.cs" t="Include" />
-          </e>
+          <e p="Portal.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
         </e>
         <e p="SpaceSkies Free" t="Include">

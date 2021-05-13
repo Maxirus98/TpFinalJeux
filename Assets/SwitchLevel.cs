@@ -6,12 +6,6 @@ using UnityEngine.SceneManagement;
 public class SwitchLevel : MonoBehaviour
 {
     public Animator animator;
-    void Start()
-    {
-        
-    }
-
-
     public void FadeToLevel()
     {
         print("Start Animation");

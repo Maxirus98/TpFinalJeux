@@ -43,7 +43,7 @@ namespace InventoryScripts
             return false;
         }
 
-        public bool RemoveItem(Item item)
+        public void RemoveItem(Item item)
         {
             if (items.Count > 0)
             {
@@ -51,10 +51,7 @@ namespace InventoryScripts
 
                 if (CheckIfCallBackIsNull())
                     Instance.OnItemChangedCallBack.Invoke();
-                return true;
             }
-
-            return false;
         }
 
         private bool CheckIfCallBackIsNull()
