@@ -7586,31 +7586,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4460482016406539043, guid: 5bcbf31ded2e353449622ec74f8954da,
-        type: 3}
-      propertyPath: hpBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460482016406539043, guid: 5bcbf31ded2e353449622ec74f8954da,
-        type: 3}
-      propertyPath: maxHp
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460482016406539043, guid: 5bcbf31ded2e353449622ec74f8954da,
-        type: 3}
-      propertyPath: damage.baseValue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460482016406539043, guid: 5bcbf31ded2e353449622ec74f8954da,
-        type: 3}
-      propertyPath: attackSpeed.baseValue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4460482016406539043, guid: 5bcbf31ded2e353449622ec74f8954da,
-        type: 3}
-      propertyPath: spellDamage.baseValue
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 7397342800871341828, guid: 5bcbf31ded2e353449622ec74f8954da,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -7639,7 +7614,7 @@ PrefabInstance:
     - target: {fileID: 7397342801934833841, guid: 5bcbf31ded2e353449622ec74f8954da,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7397342801934833841, guid: 5bcbf31ded2e353449622ec74f8954da,
         type: 3}
