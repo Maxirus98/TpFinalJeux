@@ -39,11 +39,6 @@
               <e p="LowPolyWater.cs" t="Include" />
             </e>
           </e>
-          <e p="Spells" t="Include">
-            <e p="Puddle" t="Include">
-              <e p="WaterShaded.shader" t="Include" />
-            </e>
-          </e>
         </e>
         <e p="BrokenVector" t="Include">
           <e p="UltimateDungeonPack" t="Include">
@@ -139,10 +134,10 @@
             <e p="SpellAoeHit.cs" t="Include" />
             <e p="SpellHit.cs" t="Include" />
             <e p="SprayAndPray.cs" t="Include" />
-          </e>
-          <e p="Stats" t="Include">
-            <e p="CharacterStats.cs" t="Include" />
-            <e p="Stat.cs" t="Include" />
+            <e p="Stats" t="Include">
+              <e p="CharacterStats.cs" t="Include" />
+              <e p="Stat.cs" t="Include" />
+            </e>
           </e>
           <e p="Timer.cs" t="Include" />
           <e p="TODELETE" t="Include">
