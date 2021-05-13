@@ -85,7 +85,6 @@
           <e p="HUDScript" t="Include">
             <e p="HpScript.cs" t="Include" />
             <e p="NpcHpScript.cs" t="Include" />
-            <e p="SpellImageSelector.cs" t="Include" />
           </e>
           <e p="InventoryScripts" t="Include">
             <e p="InventoryManager.cs" t="Include" />
@@ -100,7 +99,6 @@
           <e p="Manager" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
-            <e p="MainMenuManager.cs" t="Include" />
             <e p="MouseManager.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
@@ -142,6 +140,8 @@
           <e p="Timer.cs" t="Include" />
           <e p="TODELETE" t="Include">
             <e p="Enemy.cs" t="Include" />
+            <e p="MainMenuManager.cs" t="Include" />
+            <e p="SpellImageSelector.cs" t="Include" />
           </e>
         </e>
         <e p="SpaceSkies Free" t="Include">

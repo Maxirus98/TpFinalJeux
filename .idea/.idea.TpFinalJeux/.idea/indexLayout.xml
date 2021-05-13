@@ -6,6 +6,7 @@
       <Path>../../AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.visualeffectgraph@7.5.3</Path>
     </attachedFolders>
     <explicitIncludes>
+      <Path>Assets</Path>
       <Path>Library/PackageCache/com.unity.ads@3.7.1</Path>
       <Path>Library/PackageCache/com.unity.analytics@3.3.5</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>

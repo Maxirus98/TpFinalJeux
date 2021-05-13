@@ -51,6 +51,8 @@ public class FireScript : MonoBehaviour
                     var playerStats = other.GetComponent<CharacterStats>();
                     playerStats.maxHp += 50;
                     playerStats.Heal(50);
+                    print(playerStats.maxHp);
+                    print(playerStats.currentHp);
                     break;
                 default:
                     break;

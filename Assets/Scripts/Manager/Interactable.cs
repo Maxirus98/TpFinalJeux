@@ -11,12 +11,11 @@ public class Interactable : MonoBehaviour
 
     private bool hasInteracted;
 
-    public virtual void Interact()
+    private void Awake()
     {
-        //This method is meant to be overwritten
-        Debug.Log("Interacting with " + transform.name);
-        //A virtual method is different for each overrides
+        _player = GameObject.Find("Hog").transform;
     }
+
     private void Update()
     {
         if (isFocus && !hasInteracted)
@@ -24,7 +23,6 @@ public class Interactable : MonoBehaviour
             float distance = Vector3.Distance(_player.position, interactionTransform.position);
             if (distance <= radius)
             {
-                Interact();
                 hasInteracted = true;
             }
         }

@@ -10,11 +10,10 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] private HpScript hpBar;
     
     public Stat damage;
-    public Stat spellDamage;
     public Stat attackSpeed;
     public Stat cooldown;
     
-    public HealEffect healEffect;
+    [SerializeField] private HealEffect healEffect;
     public float currentHp { get; private set; }
     public float maxHp;
 
@@ -26,7 +25,6 @@ public class CharacterStats : MonoBehaviour
 
     private void Start()
     {
-        spellDamage.setValue(50f);
         cooldown.setValue(0f);
         attackSpeed.setValue(1f);
     }
@@ -35,12 +33,6 @@ public class CharacterStats : MonoBehaviour
     {
         currentHp -= damage;
         hpBar.SetHp(currentHp);
-        Debug.Log(transform.name + "takes " + damage + " damage");
-        if (currentHp <= 0)
-        {
-            Die();
-            
-        }
     }
 
     public void Heal(float bonusLife)
@@ -56,10 +48,5 @@ public class CharacterStats : MonoBehaviour
 
         StartCoroutine(healEffect.Effect());
         hpBar.SetHp(currentHp);
-    }
-
-    public virtual void Die()
-    {
-        // Not used yet
     }
 }
