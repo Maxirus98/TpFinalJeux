@@ -33,7 +33,7 @@ public class SpawnFallingObject : MonoBehaviour
     void Update()
     {
         //Every 5 seconds spawn a random falling bus 
-        if (Time.time >= spell.TimeStamp)
+        if (spell && Time.time >= spell.TimeStamp)
         {
             Spawn();
         }

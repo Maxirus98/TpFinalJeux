@@ -78,9 +78,10 @@ public class GameManager : Singleton<GameManager>
     public void ChoisirSpell(String spellName)
     {
         var player = GameObject.FindGameObjectWithTag("Player");
-        var hud = GameObject.Find("HUD").transform.GetChild(1).gameObject;
+        var hud = GameObject.Find("HUD");
         if (player && hud)
         {
+            var spellFill = hud.transform.GetChild(1).GetChild(0).gameObject;
             var spells = player.GetComponents<Spell>();
             foreach (var spell in spells)
             {
@@ -88,7 +89,7 @@ public class GameManager : Singleton<GameManager>
                 if (spell.go.name.Equals(spellName))
                 {
                     spell.enabled = true;
-                    hud.GetComponent<Image>().sprite = spell.sprite;
+                    spellFill.GetComponent<Image>().sprite = spell.sprite;
                 }
             }
         }

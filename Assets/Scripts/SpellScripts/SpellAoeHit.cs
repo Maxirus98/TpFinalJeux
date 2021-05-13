@@ -42,7 +42,7 @@ public class SpellAoeHit : MonoBehaviour
     //Used for meteors and buses
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag(targetTag))
+        if (combat && other.gameObject.CompareTag(targetTag))
         {
             combat.Attack(other.gameObject.GetComponent<CharacterCombat>().Stats, damage);
         }
