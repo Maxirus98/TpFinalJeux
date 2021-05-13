@@ -1,11 +1,11 @@
 ﻿using System;
+using InventoryScripts;
 using UnityEngine;
 
-namespace InventoryScripts
+namespace ItemScripts
 {
     public class ItemController : MonoBehaviour
     {
-        // Start is called before the first frame update
         private InventoryManager _inventoryManager;
         public Item item;
         public float radius = 3f;
@@ -31,7 +31,6 @@ namespace InventoryScripts
             bool wasPickedUp = _inventoryManager.AddItem(item);
             if (wasPickedUp)
             {
-                Debug.Log("picking this item" + item.name);
                 Destroy(gameObject);
             }
         }
