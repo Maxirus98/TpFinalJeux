@@ -23,16 +23,18 @@ public class SpellAoeHit : MonoBehaviour
 
     private void Start()
     {
-        if (targetTag == null) targetTag = "Enemy";
+        if (combat && targetTag == null) targetTag = "Enemy";
         //if (tag == null) tag = "Player";
-        combat = GameObject.Find("Boss").GetComponent<CharacterCombat>();
+        
+        if(GameObject.Find("Boss"))
+            combat = GameObject.Find("Boss").GetComponent<CharacterCombat>();
         playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterCombat>();
     }
     
     //Will not destroy on hit
     public virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(targetTag))
+        if (playerCombat && other.CompareTag(targetTag))
         {
             print("spell hit for " + damage);
             playerCombat.Attack(other.GetComponent<CharacterCombat>().Stats, tmpDamage);

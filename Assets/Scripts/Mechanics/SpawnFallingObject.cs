@@ -33,25 +33,23 @@ public class SpawnFallingObject : MonoBehaviour
     void Update()
     {
         //Every 5 seconds spawn a random falling bus 
-        if (spell && Time.time >= spell.TimeStamp)
+        if (GameObject.Find("Boss") && Time.time >= spell.TimeStamp)
         {
             Spawn();
         }
-
-        void Spawn()
-        {
-           
-            var randomTile = _tiles[random.Next(_tiles.Count)];
-            var cloneFallingObject = Instantiate(spell.go, randomTile.position + offset, spell.go.transform.rotation);
-            var cloneRandomTile = Instantiate(randomTile.gameObject, randomTile.position + Vector3.up/5, randomTile.rotation);
+    }
+    
+    void Spawn()
+    {
+        var randomTile = _tiles[random.Next(_tiles.Count)];
+        var cloneFallingObject = Instantiate(spell.go, randomTile.position + offset, spell.go.transform.rotation);
+        var cloneRandomTile = Instantiate(randomTile.gameObject, randomTile.position + Vector3.up/5, randomTile.rotation);
             
-            Destroy(cloneRandomTile.GetComponent<MeshCollider>());
-            cloneRandomTile.GetComponent<Renderer>().material.color = Color.red;
-            spell.TimeStamp = Time.time + spell.cooldown;
-            Destroy(cloneRandomTile, spell.cooldown);
-            Destroy(cloneFallingObject, spell.cooldown);
-
-        }
+        Destroy(cloneRandomTile.GetComponent<MeshCollider>());
+        cloneRandomTile.GetComponent<Renderer>().material.color = Color.red;
+        spell.TimeStamp = Time.time + spell.cooldown;
+        Destroy(cloneRandomTile, spell.cooldown);
+        Destroy(cloneFallingObject, spell.cooldown);
     }
 
 }
