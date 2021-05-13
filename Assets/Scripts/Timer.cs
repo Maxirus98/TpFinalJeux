@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Timer : MonoBehaviour
     {
         _textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
         _audioSource = GetComponent<AudioSource>();
+        print(_textMeshPro.name);
     }
 
     void Update()
@@ -20,26 +22,13 @@ public class Timer : MonoBehaviour
         {
             timeLeft -= Time.deltaTime;
         }
-<<<<<<< HEAD
-
-        else if(Math.Abs(timeLeft) == 30)
-        {
-          _audioSource.Play();  
-        }
-        
-=======
->>>>>>> 008aee8bc26f1eb9fe63ed2d4e68292eedecb795
         else
         {
             timeLeft = 0;
             GameManager.Instance.LoadLevel("GameOver");
         }
-<<<<<<< HEAD
-        _audioSource.loop = timeLeft <= 30 && timeLeft >= 0;
-=======
         
         //_audioSource.loop = timeLeft <= 30 && timeLeft >= 0;
->>>>>>> 008aee8bc26f1eb9fe63ed2d4e68292eedecb795
         DisplayTime(timeLeft);
     }
 
