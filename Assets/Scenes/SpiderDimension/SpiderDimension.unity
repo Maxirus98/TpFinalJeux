@@ -108905,6 +108905,11 @@ PrefabInstance:
       propertyPath: hpBar
       value: 
       objectReference: {fileID: 134214735}
+    - target: {fileID: 1622612899114689339, guid: a601912e7356a7342809512a26091970,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7125035546120252068, guid: a601912e7356a7342809512a26091970,
         type: 3}
       propertyPath: hpBar

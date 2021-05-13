@@ -44,4 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 10
-  foodPrefabs: []
+  foodPrefabs:
+  - {fileID: 1310611259822616, guid: adc1f0e5c2a025b488cad3fb21d4f3b6, type: 3}
+  - {fileID: 1228994051241028, guid: e6002bc2297e85f4d9fc76b8248feb5a, type: 3}
+  - {fileID: 1151177373984322, guid: 1cc7cbbec1f220841a9ed6c3046dddfb, type: 3}
+  - {fileID: 1103729609193184, guid: b5633769281ca0940b368cbed17b7ec0, type: 3}
+  - {fileID: 1519909849242270, guid: 47da0668706b5f54483e2e89a36e774e, type: 3}
+  - {fileID: 1455914188938112, guid: dfca154787e1ae143bb61db3e936f56c, type: 3}
+  - {fileID: 1228912776443452, guid: 67d272003e829744b87737100e2371ca, type: 3}
