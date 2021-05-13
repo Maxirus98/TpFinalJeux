@@ -681,6 +681,7 @@ GameObject:
   - component: {fileID: 6413694919622838241}
   - component: {fileID: 6413694919622838240}
   - component: {fileID: 3605564389935536401}
+  - component: {fileID: 4575490886094875392}
   m_Layer: 8
   m_Name: SkeletonOutlaw_Armor - LOD0
   m_TagString: Enemy
@@ -926,6 +927,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4575490886094875392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414366571607250059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e662c0a6f432ac40ae4d45cd864d481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 0}
+  _player: {fileID: 0}
 --- !u!1 &6414379418453765395
 GameObject:
   m_ObjectHideFlags: 0

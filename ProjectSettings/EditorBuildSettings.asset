@@ -17,9 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GolemDimension/GolemDimension.unity
     guid: 489d0872c67ba4d45b32d237abc5ba49
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OrcDimension.unity
     guid: b94ee59f12f411f488e6df197429e012
+  - enabled: 1
+    path: Assets/Scenes/OrcDimension/OrcDimension.unity
+    guid: 95ef9cd8d89782c4bb5c136b0871bdc5
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 3fae55825b280ce4394fb54d7e6e61e3
