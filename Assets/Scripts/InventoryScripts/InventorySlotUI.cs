@@ -7,12 +7,10 @@ namespace InventoryScripts
     {
         private Item _item;
         public Image _icon;
-        private Button _removeButton;
         private GameObject _player;
 
         void Start()
         {
-            _removeButton = GetComponentsInChildren<Button>()[1];
             _player = GameObject.FindGameObjectWithTag("Player");
         }
 
@@ -21,8 +19,6 @@ namespace InventoryScripts
             _item = item;
             _icon.sprite = item.icon;
             _icon.enabled = true;
-            _removeButton.interactable = true;
-            print("put in slot");
         }
 
         public void ClearItemFromSlot()
@@ -30,14 +26,6 @@ namespace InventoryScripts
             _item = null;
             _icon.sprite = null;
             _icon.enabled = false;
-            _removeButton.interactable = false;
-        }
-
-        public void OnClickRemoveItem()
-        {
-            print("removing");
-            Instantiate(_item.gameObject,transform.position, Quaternion.identity);
-            InventoryManager.Instance.RemoveItem(_item);
         }
 
         public void OnClickConsume()

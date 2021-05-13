@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\dupui\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-44898168.00" t="ExcludeRecursive" />
-    <e p="C:\Users\dupui\Documents\TpFinalJeux" t="IncludeRecursive">
+    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mansa\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TpFinalJeux.-53696505.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mansa\Documents\OneDrive\Documents\techniqueInformatique\quatriemeSession\gaming\projects\TpFinalJeux" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -57,17 +57,14 @@
             </e>
           </e>
         </e>
-        <e p="CameraControllerScene2.cs" t="Include" />
         <e p="fantasySpider" t="Include">
           <e p="FSP_ContinuousRotation.cs" t="Include" />
         </e>
-        <e p="HealEffect.cs" t="Include" />
         <e p="Low Poly Graveyard" t="Include">
           <e p="Materials" t="Include">
             <e p="vertexcolorsstandard.shader" t="Include" />
           </e>
         </e>
-        <e p="Portal.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="LevelTracking.txt" t="Include" />
         </e>
@@ -80,11 +77,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Blurry.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="CameraController2.cs" t="Include" />
           <e p="CursorManager.cs" t="Include" />
           <e p="DescriptionBD.cs" t="Include" />
-          <e p="FoodManager.cs" t="Include" />
+          <e p="HealEffect.cs" t="Include" />
           <e p="HUDScript" t="Include">
             <e p="HpScript.cs" t="Include" />
             <e p="NpcHpScript.cs" t="Include" />
@@ -96,6 +93,7 @@
             <e p="InventoryUI.cs" t="Include" />
           </e>
           <e p="ItemScripts" t="Include">
+            <e p="FoodManager.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemController.cs" t="Include" />
           </e>
@@ -126,9 +124,7 @@
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerManager.cs" t="Include" />
           </e>
-          <e p="Services" t="Include">
-            <e p="LevelTrackerService.cs" t="Include" />
-          </e>
+          <e p="Portal.cs" t="Include" />
           <e p="SpellScripts" t="Include">
             <e p="Attack.cs" t="Include" />
             <e p="Cooldown.cs" t="Include" />
