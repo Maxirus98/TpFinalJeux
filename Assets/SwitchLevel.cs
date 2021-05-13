@@ -9,7 +9,13 @@ public class SwitchLevel : MonoBehaviour
     public void FadeToLevel()
     {
         print("Start Animation");
+        StartCoroutine(WaitForFadeOutAnimation());
+    }
+
+    public IEnumerator WaitForFadeOutAnimation()
+    {
         animator.SetBool("switch",true);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("SelectLevel", LoadSceneMode.Single);
     }
 }
