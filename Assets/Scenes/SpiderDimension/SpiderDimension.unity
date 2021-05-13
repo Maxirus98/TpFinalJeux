@@ -47003,12 +47003,12 @@ PrefabInstance:
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: time
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: nbrNpcs
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
@@ -103371,7 +103371,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -107999,7 +107999,7 @@ PrefabInstance:
     - target: {fileID: 541016998912109648, guid: d277edec63bf6984fa6011c829676dc5,
         type: 3}
       propertyPath: timeLeft
-      value: 600
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 541016998912109651, guid: d277edec63bf6984fa6011c829676dc5,
         type: 3}
@@ -109060,27 +109060,6 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f6cfe7451040448269f1ddcde0deddce, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd3d1bd93663d924d98e408ba8acc1f6, type: 3}
---- !u!1 &6144908044453353083 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6144908044774933883, guid: fd3d1bd93663d924d98e408ba8acc1f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 6144908044453353082}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6144908044453353084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6144908044453353083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1582bb81d131e994494113a1d0ebf60b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 6144908044453353093}
-  _player: {fileID: 0}
 --- !u!4 &6144908044453353093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6144908044775430299, guid: fd3d1bd93663d924d98e408ba8acc1f6,
@@ -109662,12 +109641,12 @@ PrefabInstance:
     - target: {fileID: 8211890918674945088, guid: 0ac817817e069da439a6b8db5c0bcc2a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -464.5
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 8211890918674945088, guid: 0ac817817e069da439a6b8db5c0bcc2a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -144
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 8211890918798014248, guid: 0ac817817e069da439a6b8db5c0bcc2a,
         type: 3}

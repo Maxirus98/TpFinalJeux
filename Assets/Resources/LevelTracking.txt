@@ -1,3 +1,0 @@
-Spider Dimension:unlocked,
-Golem Dimension:locked,
-Orc Dimension:locked

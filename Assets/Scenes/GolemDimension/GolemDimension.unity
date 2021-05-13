@@ -5750,12 +5750,12 @@ PrefabInstance:
     - target: {fileID: 8211890918674945088, guid: 0ac817817e069da439a6b8db5c0bcc2a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -571.4
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 8211890918674945088, guid: 0ac817817e069da439a6b8db5c0bcc2a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -137.6
+      value: 109
       objectReference: {fileID: 0}
     - target: {fileID: 8211890918674945090, guid: 0ac817817e069da439a6b8db5c0bcc2a,
         type: 3}
@@ -7503,6 +7503,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 541016998912109648, guid: d277edec63bf6984fa6011c829676dc5,
+        type: 3}
+      propertyPath: timeLeft
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 541016998912109651, guid: d277edec63bf6984fa6011c829676dc5,
         type: 3}
       propertyPath: m_Name
@@ -8595,8 +8600,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1097661560763950888, guid: 7b5b5a6a2809e5448ae29a2f35645765,
         type: 3}
+      propertyPath: maxHp
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097661560763950888, guid: 7b5b5a6a2809e5448ae29a2f35645765,
+        type: 3}
       propertyPath: damage.baseValue
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1954636935627498957, guid: 7b5b5a6a2809e5448ae29a2f35645765,
         type: 3}
@@ -12153,8 +12163,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
+      propertyPath: time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
+        type: 3}
       propertyPath: nbrNpcs
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
@@ -30920,8 +30935,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBar: {fileID: 373355255}
   damage:
-    baseValue: 0
-  spellDamage:
     baseValue: 0
   attackSpeed:
     baseValue: 0

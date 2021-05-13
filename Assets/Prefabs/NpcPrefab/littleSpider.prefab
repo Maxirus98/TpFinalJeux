@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 3960753275917757625}
   - component: {fileID: 1145746617865047295}
   - component: {fileID: 2584610292455382728}
-  - component: {fileID: 1394621797075408878}
+  - component: {fileID: 306440944179862458}
   m_Layer: 8
   m_Name: littleSpider
   m_TagString: Enemy
@@ -2383,8 +2383,6 @@ MonoBehaviour:
   hpBar: {fileID: 3055603120398546550}
   damage:
     baseValue: 5
-  spellDamage:
-    baseValue: 0
   attackSpeed:
     baseValue: 1
   cooldown:
@@ -2518,7 +2516,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1394621797075408878
+--- !u!114 &306440944179862458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2531,7 +2529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  interactionTransform: {fileID: 0}
+  interactionTransform: {fileID: 3960753275917891532}
   _player: {fileID: 0}
 --- !u!1001 &1262344485081110401
 PrefabInstance:

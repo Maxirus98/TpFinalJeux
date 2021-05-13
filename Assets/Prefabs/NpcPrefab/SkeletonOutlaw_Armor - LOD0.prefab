@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 6413694919622838241}
   - component: {fileID: 6413694919622838240}
   - component: {fileID: 3605564389935536401}
-  - component: {fileID: 4575490886094875392}
+  - component: {fileID: 7826450646005822496}
   m_Layer: 8
   m_Name: SkeletonOutlaw_Armor - LOD0
   m_TagString: Enemy
@@ -801,8 +801,6 @@ MonoBehaviour:
   hpBar: {fileID: 2600809115156018564}
   damage:
     baseValue: 5
-  spellDamage:
-    baseValue: 10
   attackSpeed:
     baseValue: 1
   cooldown:
@@ -927,7 +925,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4575490886094875392
+--- !u!114 &7826450646005822496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

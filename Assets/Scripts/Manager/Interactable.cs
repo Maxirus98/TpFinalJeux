@@ -4,9 +4,8 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public float radius = 3f;
-    public Transform interactionTransform;
-    
-    private bool isFocus = false;
+
+    private bool isFocus;
     [SerializeField] private Transform _player;
 
     private bool hasInteracted;
@@ -20,7 +19,7 @@ public class Interactable : MonoBehaviour
     {
         if (isFocus && !hasInteracted)
         {
-            float distance = Vector3.Distance(_player.position, interactionTransform.position);
+            float distance = Vector3.Distance(_player.position, transform.position);
             if (distance <= radius)
             {
                 hasInteracted = true;
@@ -44,13 +43,9 @@ public class Interactable : MonoBehaviour
     }
     private void OnDrawGizmosSelected()
     {
-        if (interactionTransform == null)
-        {
-            interactionTransform = transform;
-        }
         //callback function in unity
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(interactionTransform.position, radius);
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
     
 }

@@ -39,7 +39,7 @@ public class SprayAndPray : Spell
             targeter.CheckForClosestTarget();
             //Rotate en fonction des ennemis
             Vector3 direction = targeter.currentTarget.position - cloneRifle.transform.position;
-            Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(90, 0, 0);
+            Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.identity;
             cloneRifle.transform.rotation = rotation;
             StartCoroutine(Cooldown.WaitFor(fireRate));
             Shoot();
@@ -53,7 +53,7 @@ public class SprayAndPray : Spell
 
     public override void Spawn()
     {
-        cloneRifle = Instantiate(go, position, Quaternion.Euler(90, 180, 0));
+        cloneRifle = Instantiate(go, position, Quaternion.identity);
         Destroy(cloneRifle, cooldown);
     }
 

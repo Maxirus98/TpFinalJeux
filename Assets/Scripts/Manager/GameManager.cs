@@ -86,10 +86,11 @@ public class GameManager : Singleton<GameManager>
             foreach (var spell in spells)
             {
                 spell.enabled = false;
-                if (spell.go.name.Equals(spellName))
+                if (spell.go.name.Equals(spellName) || spell.go.name.Equals("AttackArea"))
                 {
                     spell.enabled = true;
-                    spellFill.GetComponent<Image>().sprite = spell.sprite;
+                    if (spell.go.name.Equals(spellName))
+                        spellFill.GetComponent<Image>().sprite = spell.sprite;
                 }
             }
         }
