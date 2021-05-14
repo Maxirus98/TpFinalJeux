@@ -31,7 +31,6 @@ public class SpellAoeHit : MonoBehaviour
         playerCombat = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterCombat>();
     }
     
-    //Will not destroy on hit
     public virtual void OnTriggerEnter(Collider other)
     {
         if (playerCombat && other.CompareTag(targetTag))

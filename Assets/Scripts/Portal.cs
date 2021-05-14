@@ -14,15 +14,13 @@ public class Portal : MonoBehaviour
         _particleSystem = GetComponent<ParticleSystem>();
         _audioSource = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (GameObject.Find("Boss") == null && 
             NpcManager.Instance.GetNbrNpcAlive() == 0
             && _particleSystem.isStopped)
         {
-            print(NpcManager.Instance.GetNbrNpcAlive());
             StartCoroutine(OnVoidAppear());
         }
     }

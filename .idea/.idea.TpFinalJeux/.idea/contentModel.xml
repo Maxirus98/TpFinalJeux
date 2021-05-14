@@ -132,7 +132,6 @@
           <e p="CameraController.cs" t="Include" />
           <e p="CameraController2.cs" t="Include" />
           <e p="CursorManager.cs" t="Include" />
-          <e p="DescriptionBD.cs" t="Include" />
           <e p="HealEffect.cs" t="Include" />
           <e p="HUDScript" t="Include">
             <e p="HpScript.cs" t="Include" />
@@ -191,11 +190,6 @@
           </e>
           <e p="SwitchLevel.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
-          <e p="TODELETE" t="Include">
-            <e p="Enemy.cs" t="Include" />
-            <e p="MainMenuManager.cs" t="Include" />
-            <e p="SpellImageSelector.cs" t="Include" />
-          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

@@ -24,8 +24,7 @@ public class SprayAndPray : Spell
         fireRate = 0.5f;
 
     }   
-
-    // Update is called once per frame
+    
     void Update()
     {
         offset = new Vector3(1, 1, 0);
@@ -33,11 +32,11 @@ public class SprayAndPray : Spell
         if (cloneRifle)
         {
             
-            //Suivre le joueur;
+            
             cloneRifle.transform.position = position;
         
             targeter.CheckForClosestTarget();
-            //Rotate en fonction des ennemis
+            
             Vector3 direction = targeter.currentTarget.position - cloneRifle.transform.position;
             Quaternion rotation = Quaternion.LookRotation(direction) * Quaternion.identity;
             cloneRifle.transform.rotation = rotation;

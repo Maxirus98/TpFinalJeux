@@ -31,8 +31,6 @@ namespace InventoryScripts
 
         public void UpdateUI()
         {
-            print("updatingUI");
-
             for (int i = 0; i < _inventorySlotUIs.Count; i++)
             {
                 if (i < _inventoryManager.items.Count)

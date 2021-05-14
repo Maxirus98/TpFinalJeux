@@ -47003,12 +47003,12 @@ PrefabInstance:
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: time
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
       propertyPath: nbrNpcs
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5245148275233536440, guid: 5c22b7603653d354aab6e32499823c3a,
         type: 3}
@@ -107999,7 +107999,7 @@ PrefabInstance:
     - target: {fileID: 541016998912109648, guid: d277edec63bf6984fa6011c829676dc5,
         type: 3}
       propertyPath: timeLeft
-      value: 180
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 541016998912109651, guid: d277edec63bf6984fa6011c829676dc5,
         type: 3}
@@ -109028,6 +109028,11 @@ PrefabInstance:
       propertyPath: hpBar
       value: 
       objectReference: {fileID: 803735479}
+    - target: {fileID: 6144908045761454292, guid: fd3d1bd93663d924d98e408ba8acc1f6,
+        type: 3}
+      propertyPath: maxHp
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 9014239312168987767, guid: fd3d1bd93663d924d98e408ba8acc1f6,
         type: 3}
       propertyPath: m_AnchorMax.x

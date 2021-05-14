@@ -25,16 +25,11 @@ public class FireScript : MonoBehaviour
             Destroy(GetComponent<Collider>());
             switch (tag)
             {
-                //the firecamps exhaust themselves
                 case "BlueFire":
                     Timer timer = GameObject.Find("Timer").GetComponent<Timer>();
                     timer.timeLeft += 20;
-                    print(timer.timeLeft);
                     break;
                 case "RedFire":
-                    //Augmente la vitesse de l'agent
-                    // var agent = other.GetComponent<NavMeshAgent>();
-                    // agent.speed *= 2f;
                     var spells = player.GetComponents<Spell>();
                     foreach (var spell in spells)
                     {
@@ -42,17 +37,12 @@ public class FireScript : MonoBehaviour
                             spell.go.GetComponent<SpellAoeHit>() : 
                             ((SprayAndPray)spell).GetBulletGo().GetComponent<SpellHit>();
                         spellDamage.DoubleSpellDamage();
-                        print(spell);
-                        print("spelldmg " + spellDamage.tmpDamage);
                     }
                     break;
                 case "GreenFire":
-                    //Heal le player et augmente ses max hp
                     var playerStats = other.GetComponent<CharacterStats>();
                     playerStats.maxHp += 50;
                     playerStats.Heal(50);
-                    print(playerStats.maxHp);
-                    print(playerStats.currentHp);
                     break;
                 default:
                     break;

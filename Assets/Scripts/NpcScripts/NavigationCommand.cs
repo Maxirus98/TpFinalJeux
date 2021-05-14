@@ -18,8 +18,7 @@ namespace Script
             _agent = agent;
             _agent.isStopped = false;
         }
-
-        //Passer le NpcState??
+        
         public override IEnumerator Execute()
         {
             while (_agent)
@@ -27,7 +26,6 @@ namespace Script
                 int position = (int) Random.Range(0f, _checkpoints.Count - 1);
                 if (_agent.remainingDistance <= 3)
                 {
-                    Debug.Log("Has reached target");
                     _agent.SetDestination(_checkpoints[position].position);
                 }
 

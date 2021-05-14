@@ -5,7 +5,6 @@ using Random = UnityEngine.Random;
 
 public class HealEffect : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Transform _playerTransform;
     private ParticleSystem _particleSystem;
 

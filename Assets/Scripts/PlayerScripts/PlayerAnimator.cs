@@ -32,16 +32,13 @@ public class PlayerAnimator : MonoBehaviour
     void Update()
     {
         targeter.CheckForClosestTarget();
-        //agent current speed / agent maximum speed
-        float speedPercent = _agent.velocity.magnitude / _agent.speed * 10; 
-        //Will take 0.1 sec to change animation
+       
+        float speedPercent = _agent.velocity.magnitude / _agent.speed * 10;
         _animator.SetFloat("speedPercent", speedPercent);
+        
         if (stats.currentHp <= 0)
         {
             _animator.SetBool("isDead", true);
-            // CHANGE GAME STATE HERE SO THAT IT PROMPTS THE PAUSE MENU
-            //PROMPTS MENU CHOIX # 1--> RESTART = RELOAD LEVEL
-            //PROMPTS MENU CHOIX # 2 --> TO MAIN MENU
             GameManager.Instance.LoadLevel("GameOver");
         }
     }
@@ -59,7 +56,6 @@ public class PlayerAnimator : MonoBehaviour
     }
     public IEnumerator CoroutineAttack()
     {
-        //Change for Animation Time?
         yield return new WaitForSeconds(coolDownPeriodAttacks);
         _isAttacking = false;
         _animator.SetBool("isAttacking", _isAttacking);

@@ -8,7 +8,6 @@ public class SwitchLevel : MonoBehaviour
     public Animator animator;
     public void FadeToLevel()
     {
-        print("Start Animation");
         StartCoroutine(WaitForFadeOutAnimation());
     }
 

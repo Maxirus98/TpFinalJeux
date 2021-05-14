@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.Events;
 
 [System.Serializable]
@@ -21,16 +17,10 @@ public class MouseManager : MonoBehaviour
 
     [SerializeField] private Interactable focus;
     [SerializeField] private PlayerAnimator _playerAnimator;
-    private CharacterCombat combat;
 
     //2e étape, déclarer le handler
     public EventVector3 OnClickEnvironment;
-
-    private void Start()
-    {
-        combat = _playerAnimator.gameObject.GetComponent<CharacterCombat>();
-    }
-
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -50,15 +40,8 @@ public class MouseManager : MonoBehaviour
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
                 if (interactable)
                 {
-                    //SetCursor Attack
                     SetFocus(interactable);
-                    print("clicked rught");
                     _playerAnimator.Attack();
-                    // CharacterStats targetStats = interactable.gameObject.GetComponent<CharacterStats>();
-                    // if (targetStats)
-                    // {
-                    //     combat.Attack(targetStats);
-                    // }
                 }
             }
         }

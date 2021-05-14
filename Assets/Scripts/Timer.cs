@@ -13,7 +13,6 @@ public class Timer : MonoBehaviour
     {
         _textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
         _audioSource = GetComponent<AudioSource>();
-        print(_textMeshPro.name);
     }
 
     void Update()
@@ -27,8 +26,6 @@ public class Timer : MonoBehaviour
             timeLeft = 0;
             GameManager.Instance.LoadLevel("GameOver");
         }
-        
-        //_audioSource.loop = timeLeft <= 30 && timeLeft >= 0;
         DisplayTime(timeLeft);
     }
 

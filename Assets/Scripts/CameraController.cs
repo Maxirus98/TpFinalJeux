@@ -34,16 +34,6 @@ public class CameraController : MonoBehaviour
         fieldOfView = fieldOfView < FOV_MIN ? FOV_MIN :
             fieldOfView > FOV_MAX ? FOV_MAX : fieldOfView - scroll * SPEED;
         camera.fieldOfView = fieldOfView;
-
-        /*if (camera.fieldOfView < FOV_MIN)
-        {
-            camera.fieldOfView = FOV_MIN;
-        }
-
-        if (camera.fieldOfView > FOV_MAX)
-        {
-            camera.fieldOfView = FOV_MAX;
-        }*/
         transform.LookAt(player.position);
     }
     

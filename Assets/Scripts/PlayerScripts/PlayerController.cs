@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour
     private float _rotationSpeed = 999f;
     private float _accelerationSpeed = 999f;
     private float _stoppingDistance = 1f;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();

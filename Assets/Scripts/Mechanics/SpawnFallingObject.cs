@@ -10,8 +10,7 @@ public class SpawnFallingObject : MonoBehaviour
     private Spell spell;
     private Vector3 offset;
     Random random = new Random();
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         spell = GameObject.Find("Boss").GetComponent<Spell>();
@@ -28,11 +27,9 @@ public class SpawnFallingObject : MonoBehaviour
             _tiles.Add(tile);
         }
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        //Every 5 seconds spawn a random falling bus 
         if (GameObject.Find("Boss") && Time.time >= spell.TimeStamp)
         {
             Spawn();

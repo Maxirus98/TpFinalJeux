@@ -7,7 +7,6 @@ namespace NpcScripts
 {
     public class NpcController : MonoBehaviour
     {
-        //Repasser pour voir ce qui n'ont pas besoin d'être private
         public float lookRadius = 50f;
         private Transform _target;
         private Animator _animator;
